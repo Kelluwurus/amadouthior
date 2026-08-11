@@ -4,12 +4,14 @@ import Container from "@/components/ui/Container";
 import CTAButton from "@/components/ui/CTAButton";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Reveal from "@/components/ui/Reveal";
+import Badge from "@/components/ui/Badge";
 import FilmCard from "@/components/films/FilmCard";
 import Timeline from "@/components/timeline/Timeline";
 import { siteConfig } from "@/content/site";
 import { featuredFilms } from "@/content/films";
 import { timeline } from "@/content/timeline";
 import { introText } from "@/content/biography";
+import { cineclubProject } from "@/data/cineclub-project";
 
 export default function HomePage() {
   return (
@@ -140,6 +142,43 @@ export default function HomePage() {
                 <ArrowRight size={14} />
               </CTAButton>
             </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* ===== PROJET EN VEDETTE ===== */}
+      <section className="section-py border-t border-[#1F4D1E]/15">
+        <Container>
+          <Reveal>
+            <SectionHeader
+              label="Projet en vedette"
+              title="CINECLUB – DÎNER DÉBAT"
+              description="Le cinéma au service de l'humanitaire"
+            />
+          </Reveal>
+          <Reveal delay={100}>
+            <Link
+              href="/projets/cineclub-diner-debat"
+              className="group block bg-[#1F4D1E]/8 border border-[#1F4D1E]/20 rounded-xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/30"
+            >
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                <div className="flex-1">
+                  <Badge variant="accent" className="mb-3">Nouveau projet</Badge>
+                  <p className="text-body text-[--color-fg-muted] leading-relaxed mb-4 max-w-xl">
+                    {cineclubProject.heroDescription}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-[#D4AF37] group-hover:gap-3 transition-all duration-300">
+                    Découvrir CINECLUB
+                    <ArrowRight size={14} />
+                  </span>
+                </div>
+                <div className="hidden md:block text-right">
+                  <span className="text-meta text-[#D4AF37]/60">
+                    {cineclubProject.tagline}
+                  </span>
+                </div>
+              </div>
+            </Link>
           </Reveal>
         </Container>
       </section>
