@@ -2,22 +2,31 @@
 
 /* ============================================
    AMADOU THIOR — DESIGN SYSTEM
-   Archive cinématographique institutionnelle
+   Direction Artistique : Cinématographique,
+   patrimonial, haut de gamme, éditorial.
+   
+   Palette :
+   - Noir Profond (#121212) — L'obscurité noble des salles de cinéma
+   - Ocre/Or Mat (#C8A24A) — Hommage à la terre du Sine-Saloum
+   - Ivoire (#F8F5EF) — Typographie et lisibilité
+   - Vert Émeraude Profond (#0F382C) — Élégance institutionnelle
    ============================================ */
 
 @theme inline {
   /* --- Color System --- */
-  --color-bg: #0C0C0C;
-  --color-surface: #161616;
-  --color-surface-2: #1E1E1E;
-  --color-fg: #F5F0EB;
-  --color-fg-muted: #8A8A8A;
-  --color-fg-subtle: #5A5A5A;
-  --color-accent: #C4723A;
-  --color-accent-hover: #D4845A;
-  --color-accent-muted: #8B5E3C;
-  --color-border: #2A2A2A;
-  --color-border-accent: rgba(196, 114, 58, 0.2);
+  --color-bg: #121212;
+  --color-surface: #1A1A1A;
+  --color-surface-2: #242424;
+  --color-fg: #F8F5EF;
+  --color-fg-muted: #B8B0A4;
+  --color-fg-subtle: #736B62;
+  --color-accent: #C8A24A;
+  --color-accent-hover: #D4B05C;
+  --color-accent-muted: #9A7D3C;
+  --color-emerald: #0F382C;
+  --color-emerald-light: #164A3A;
+  --color-border: #2E2A25;
+  --color-border-accent: rgba(200, 162, 74, 0.2);
 
   /* --- Typography --- */
   --font-display: var(--font-playfair);
@@ -49,7 +58,7 @@ body {
   line-height: 1.7;
 }
 
-/* --- Typography Scale --- */
+/* --- Typography Scale (Serif Display + Sans Body) --- */
 .text-display {
   font-family: var(--font-display), serif;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -122,11 +131,11 @@ body {
   }
 }
 
-/* --- Animations --- */
+/* --- Animations (fade-up 500ms, transitions douces) --- */
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -140,7 +149,7 @@ body {
 }
 
 .animate-fade-up {
-  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   opacity: 0;
 }
 
@@ -149,14 +158,13 @@ body {
   opacity: 0;
 }
 
-/* Stagger delays */
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
 
-/* --- Film Grain Texture --- */
+/* --- Film Grain Argentique (discret, overlay) --- */
 .grain {
   position: relative;
 }
@@ -165,9 +173,10 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.03;
+  opacity: 0.04;
   pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* --- Focus Styles (Accessibility) --- */
@@ -179,11 +188,11 @@ body {
 
 /* --- Selection --- */
 ::selection {
-  background-color: rgba(196, 114, 58, 0.25);
+  background-color: rgba(200, 162, 74, 0.2);
   color: var(--color-fg);
 }
 
-/* --- Scrollbar --- */
+/* --- Scrollbar (Or Mat subtil) --- */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -193,10 +202,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(196, 114, 58, 0.3);
+  background: rgba(200, 162, 74, 0.2);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(196, 114, 58, 0.6);
+  background: rgba(200, 162, 74, 0.45);
 }

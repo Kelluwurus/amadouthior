@@ -146,7 +146,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== PROJET EN VEDETTE ===== */}
-      <section className="section-py border-t border-[#1F4D1E]/15">
+      <section className="section-py border-t border-[#0F382C]/15">
         <Container>
           <Reveal>
             <SectionHeader
@@ -158,7 +158,7 @@ export default function HomePage() {
           <Reveal delay={100}>
             <Link
               href="/projets/cineclub-diner-debat"
-              className="group block bg-[#1F4D1E]/8 border border-[#1F4D1E]/20 rounded-xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-[#D4AF37]/30"
+              className="group block bg-[#0F382C]/8 border border-[#0F382C]/20 rounded-xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-[#C8A24A]/30"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="flex-1">
@@ -166,13 +166,13 @@ export default function HomePage() {
                   <p className="text-body text-[--color-fg-muted] leading-relaxed mb-4 max-w-xl">
                     {cineclubProject.heroDescription}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-[#D4AF37] group-hover:gap-3 transition-all duration-300">
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-[#C8A24A] group-hover:gap-3 transition-all duration-300">
                     Découvrir CINECLUB
                     <ArrowRight size={14} />
                   </span>
                 </div>
                 <div className="hidden md:block text-right">
-                  <span className="text-meta text-[#D4AF37]/60">
+                  <span className="text-meta text-[#C8A24A]/60">
                     {cineclubProject.tagline}
                   </span>
                 </div>

@@ -3,7 +3,7 @@ import { Calendar, MapPin, Clock, Clapperboard, Award, Radio, Tag, Users, Target
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
 import Badge from "@/components/ui/Badge";
-import { editions } from "@/data/cineclub-project";
+import { cineclubProject, editions } from "@/data/cineclub-project";
 
 interface EditionPageProps {
   params: Promise<{ year: string }>;
@@ -18,8 +18,8 @@ export async function generateMetadata({ params }: EditionPageProps) {
   const edition = editions.find((e) => e.year === Number(year));
   if (!edition) return {};
   return {
-    title: `Édition ${edition.year} — ${edition.title}`,
-    description: edition.description || `Édition ${edition.year} du CINECLUB – DÎNER DÉBAT`,
+    title: `Édition ${edition.year} — ${edition.title} | ${cineclubProject.title}`,
+    description: edition.description || `Édition ${edition.year} du ${cineclubProject.title}`,
   };
 }
 
@@ -42,10 +42,8 @@ export default async function EditionPage({ params }: EditionPageProps) {
                 {edition.status === "upcoming" && "Prochaine édition"}
                 {edition.status === "in-progress" && "En cours d'élaboration"}
               </Badge>
-              <h1 className="text-display text-[--color-fg] mb-3">
-                {edition.year}
-              </h1>
-              <h2 className="text-h2 text-[#D4AF37] mb-4">{edition.title}</h2>
+              <h1 className="text-display text-[--color-fg] mb-3">{edition.year}</h1>
+              <h2 className="text-h2 text-[#C8A24A] mb-4">{edition.title}</h2>
               {edition.internationalDay && (
                 <p className="text-caption text-[--color-fg-muted]">
                   {edition.internationalDay}
@@ -58,7 +56,7 @@ export default async function EditionPage({ params }: EditionPageProps) {
         </Container>
       </section>
 
-      {/* IN PROGRESS STATE */}
+      {/* IN PROGRESS */}
       {isInProgress && (
         <section className="pb-20">
           <Container narrow>
@@ -69,16 +67,9 @@ export default async function EditionPage({ params }: EditionPageProps) {
                 </p>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {["Thématique", "Film", "Date", "Lieu"].map((item) => (
-                    <div
-                      key={item}
-                      className="bg-[--color-surface-2] border border-[--color-border] rounded-lg p-4 text-center"
-                    >
-                      <span className="text-meta text-[--color-fg-subtle] block mb-1">
-                        {item}
-                      </span>
-                      <span className="text-caption text-[--color-fg-muted]">
-                        À venir
-                      </span>
+                    <div key={item} className="bg-[--color-surface-2] border border-[--color-border] rounded-lg p-4 text-center">
+                      <span className="text-meta text-[--color-fg-subtle] block mb-1">{item}</span>
+                      <span className="text-caption text-[--color-fg-muted]">À venir</span>
                     </div>
                   ))}
                 </div>
@@ -88,69 +79,57 @@ export default async function EditionPage({ params }: EditionPageProps) {
         </section>
       )}
 
-      {/* FILM INFO */}
+      {/* FILM */}
       {edition.film && !isInProgress && (
         <section className="pb-12 border-t border-[--color-border] pt-12">
           <Container narrow>
             <Reveal>
-              <span className="text-meta text-[#D4AF37] block mb-4">Le film</span>
+              <span className="text-meta text-[#C8A24A] block mb-4">Le film</span>
               <h3 className="text-h2 text-[--color-fg] mb-6">{edition.film.title}</h3>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-                  <Clapperboard size={14} className="text-[#C97B5A]" />
+                  <Clapperboard size={14} className="text-[#9A7D3C]" />
                   {edition.film.director}
                 </div>
                 {edition.film.producer && (
                   <div className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-                    <Target size={14} className="text-[#C97B5A]" />
+                    <Target size={14} className="text-[#9A7D3C]" />
                     {edition.film.producer}
                   </div>
                 )}
                 <div className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-                  <MapPin size={14} className="text-[#C97B5A]" />
+                  <MapPin size={14} className="text-[#9A7D3C]" />
                   {edition.film.country}
                 </div>
                 <div className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-                  <Clock size={14} className="text-[#C97B5A]" />
+                  <Clock size={14} className="text-[#9A7D3C]" />
                   {edition.film.duration}
                 </div>
               </div>
-
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-2 mb-6">
                 <Badge>{edition.film.genre}</Badge>
-                <Badge>{edition.film.language}{edition.film.subtitles && ` (sous-titré ${edition.film.subtitles})`}</Badge>
+                <Badge>{edition.film.language}{edition.film.subtitles ? ` (sous-titré ${edition.film.subtitles})` : ""}</Badge>
               </div>
-
               {edition.film.recognition && (
-                <p className="text-sm italic text-[#D4AF37] mb-6">
-                  {edition.film.recognition}
-                </p>
+                <p className="text-sm italic text-[#C8A24A] mb-6">{edition.film.recognition}</p>
               )}
-
-              <div className="mb-8">
-                <h4 className="text-sm font-semibold text-[--color-fg] mb-2">Synopsis</h4>
-                <p className="text-body text-[--color-fg-muted] leading-relaxed">
-                  {edition.film.synopsis}
-                </p>
-              </div>
+              <h4 className="text-sm font-semibold text-[--color-fg] mb-2">Synopsis</h4>
+              <p className="text-body text-[--color-fg-muted] leading-relaxed">{edition.film.synopsis}</p>
             </Reveal>
           </Container>
         </section>
       )}
 
-      {/* EVENT STORY (2016) */}
+      {/* EVENT STORY */}
       {edition.eventStory && (
         <section className="pb-12 border-t border-[--color-border] pt-12">
           <Container narrow>
             <Reveal>
-              <span className="text-meta text-[#D4AF37] block mb-4">Contexte</span>
-              <p className="text-body text-[--color-fg-muted] leading-relaxed mb-4">
-                {edition.eventStory}
-              </p>
+              <span className="text-meta text-[#C8A24A] block mb-4">Contexte</span>
+              <p className="text-body text-[--color-fg-muted] leading-relaxed mb-4">{edition.eventStory}</p>
               {edition.venue && (
                 <div className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
-                  <MapPin size={14} className="text-[#D4AF37]" />
+                  <MapPin size={14} className="text-[#C8A24A]" />
                   {edition.venue}
                 </div>
               )}
@@ -159,19 +138,19 @@ export default async function EditionPage({ params }: EditionPageProps) {
         </section>
       )}
 
-      {/* MEDIA (2016) */}
+      {/* MEDIA */}
       {edition.mediaAppearances && edition.mediaAppearances.length > 0 && (
         <section className="pb-12 border-t border-[--color-border] pt-12">
           <Container narrow>
             <Reveal>
               <div className="flex items-center gap-2 mb-4">
-                <Radio size={16} className="text-[#D4AF37]" />
-                <span className="text-meta text-[#D4AF37]">Couverture médiatique</span>
+                <Radio size={16} className="text-[#C8A24A]" />
+                <span className="text-meta text-[#C8A24A]">Couverture médiatique</span>
               </div>
               <ul className="space-y-2">
                 {edition.mediaAppearances.map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-caption text-[--color-fg-muted]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#C8A24A]" />
                     {item}
                   </li>
                 ))}
@@ -181,19 +160,19 @@ export default async function EditionPage({ params }: EditionPageProps) {
         </section>
       )}
 
-      {/* OBJECTIVES (2026) */}
+      {/* OBJECTIVES */}
       {edition.objectives && (
         <section className="pb-12 border-t border-[--color-border] pt-12">
           <Container narrow>
             <Reveal>
               <div className="flex items-center gap-2 mb-6">
-                <Award size={16} className="text-[#D4AF37]" />
-                <span className="text-meta text-[#D4AF37]">Objectifs de l&apos;édition</span>
+                <Award size={16} className="text-[#C8A24A]" />
+                <span className="text-meta text-[#C8A24A]">Objectifs de l&apos;édition</span>
               </div>
               <ul className="space-y-3">
                 {edition.objectives.map((obj) => (
                   <li key={obj} className="flex items-start gap-3 text-body text-[--color-fg-muted]">
-                    <span className="w-2 h-2 rounded-full bg-[#D4AF37] shrink-0 mt-2" />
+                    <span className="w-2 h-2 rounded-full bg-[#C8A24A] shrink-0 mt-2" />
                     {obj}
                   </li>
                 ))}
@@ -203,21 +182,18 @@ export default async function EditionPage({ params }: EditionPageProps) {
         </section>
       )}
 
-      {/* THEMES (2026) */}
+      {/* THEMES */}
       {edition.themes && (
         <section className="pb-12 border-t border-[--color-border] pt-12">
           <Container narrow>
             <Reveal>
               <div className="flex items-center gap-2 mb-6">
-                <Tag size={16} className="text-[#D4AF37]" />
-                <span className="text-meta text-[#D4AF37]">Thématiques</span>
+                <Tag size={16} className="text-[#C8A24A]" />
+                <span className="text-meta text-[#C8A24A]">Thématiques</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {edition.themes.map((theme) => (
-                  <span
-                    key={theme}
-                    className="px-4 py-2 text-sm bg-[#1F4D1E]/10 border border-[#1F4D1E]/25 rounded-full text-[#D4AF37]"
-                  >
+                  <span key={theme} className="px-4 py-2 text-sm bg-[#0F382C]/10 border border-[#0F382C]/25 rounded-full text-[#C8A24A]">
                     {theme}
                   </span>
                 ))}
@@ -227,22 +203,19 @@ export default async function EditionPage({ params }: EditionPageProps) {
         </section>
       )}
 
-      {/* TARGET AUDIENCES (2026) */}
+      {/* TARGET AUDIENCES */}
       {edition.targetAudiences && (
         <section className="pb-20 border-t border-[--color-border] pt-12">
           <Container narrow>
             <Reveal>
               <div className="flex items-center gap-2 mb-6">
-                <Users size={16} className="text-[#D4AF37]" />
-                <span className="text-meta text-[#D4AF37]">Publics cibles</span>
+                <Users size={16} className="text-[#C8A24A]" />
+                <span className="text-meta text-[#C8A24A]">Publics cibles</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {edition.targetAudiences.map((audience) => (
-                  <div
-                    key={audience}
-                    className="flex items-center gap-2.5 text-caption text-[--color-fg-muted]"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C97B5A]" />
+                  <div key={audience} className="flex items-center gap-2.5 text-caption text-[--color-fg-muted]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#9A7D3C]" />
                     {audience}
                   </div>
                 ))}

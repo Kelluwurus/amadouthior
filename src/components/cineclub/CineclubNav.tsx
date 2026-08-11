@@ -9,7 +9,7 @@ export default function CineclubNav() {
 
   return (
     <nav
-      className="sticky top-[57px] z-40 bg-[#0C0C0C]/95 backdrop-blur-md border-b border-[#1F4D1E]/20"
+      className="sticky top-[57px] z-40 bg-[#0C0C0C]/95 backdrop-blur-md border-b border-[#0F382C]/20"
       aria-label="Navigation CINECLUB"
     >
       <div className="max-w-6xl mx-auto px-6">
@@ -26,8 +26,8 @@ export default function CineclubNav() {
                 href={link.href}
                 className={`shrink-0 px-4 py-2 text-sm rounded-full transition-all duration-300 ${
                   isActive
-                    ? "bg-[#1F4D1E] text-[#D4AF37] font-medium"
-                    : "text-[#8A8A8A] hover:text-[#F5F0EB] hover:bg-[#1F4D1E]/20"
+                    ? "bg-[#0F382C] text-[#C8A24A] font-medium"
+                    : "text-[#8A8A8A] hover:text-[#F5F0EB] hover:bg-[#0F382C]/20"
                 }`}
               >
                 {link.label}
