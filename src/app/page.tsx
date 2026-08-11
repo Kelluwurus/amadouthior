@@ -1,27 +1,205 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Filmography from "@/components/Filmography";
-import Experience from "@/components/Experience";
-import Services from "@/components/Services";
-import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import Container from "@/components/ui/Container";
+import CTAButton from "@/components/ui/CTAButton";
+import SectionHeader from "@/components/ui/SectionHeader";
+import Reveal from "@/components/ui/Reveal";
+import FilmCard from "@/components/films/FilmCard";
+import Timeline from "@/components/timeline/Timeline";
+import { siteConfig } from "@/content/site";
+import { featuredFilms } from "@/content/films";
+import { timeline } from "@/content/timeline";
+import { introText } from "@/content/biography";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Filmography />
-        <Experience />
-        <Services />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
+      {/* ===== HERO ===== */}
+      <section className="grain relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[--color-bg] via-[--color-surface] to-[--color-bg]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,rgba(196,114,58,0.04)_0%,transparent_50%)]" />
+
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+          <Reveal>
+            <h1 className="text-display text-[--color-fg] mb-4">
+              {siteConfig.name.toUpperCase()}
+            </h1>
+          </Reveal>
+          <Reveal delay={100}>
+            <p className="text-meta text-[--color-accent] mb-8">
+              {siteConfig.subtitle}
+            </p>
+          </Reveal>
+          <Reveal delay={200}>
+            <p className="text-h3 text-[--color-fg-muted] font-normal max-w-xl mx-auto mb-12 leading-relaxed">
+              {siteConfig.signature}
+            </p>
+          </Reveal>
+          <Reveal delay={300}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <CTAButton href="/parcours" variant="primary">
+                Découvrir son parcours
+              </CTAButton>
+              <CTAButton href="/oeuvre" variant="secondary">
+                Explorer l&apos;œuvre
+              </CTAButton>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ===== INTRODUCTION ===== */}
+      <section className="section-py bg-[--color-surface]">
+        <Container narrow>
+          <Reveal>
+            <p className="text-body text-[--color-fg-muted] leading-relaxed text-lg">
+              {introText}
+            </p>
+            <Link
+              href="/parcours"
+              className="inline-flex items-center gap-2 mt-6 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+            >
+              Lire la biographie
+              <ArrowRight size={14} />
+            </Link>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* ===== ŒUVRES MAJEURES ===== */}
+      <section className="section-py">
+        <Container>
+          <Reveal>
+            <SectionHeader
+              label="Filmographie"
+              title="Œuvres majeures"
+            />
+          </Reveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredFilms.slice(0, 4).map((film, i) => (
+              <Reveal key={film.slug} delay={i * 100}>
+                <FilmCard film={film} />
+              </Reveal>
+            ))}
+          </div>
+          <Reveal delay={400}>
+            <div className="mt-10">
+              <Link
+                href="/oeuvre"
+                className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+              >
+                Voir toute la filmographie
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* ===== TIMELINE ===== */}
+      <section className="section-py bg-[--color-surface]">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
+            <Reveal>
+              <div>
+                <SectionHeader
+                  label="Chronologie"
+                  title="Plus de quatre décennies d'audiovisuel"
+                />
+                <Link
+                  href="/parcours"
+                  className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+                >
+                  Parcours complet
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
+            </Reveal>
+            <Reveal delay={150}>
+              <Timeline events={timeline} limit={8} />
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* ===== TRANSMISSION ===== */}
+      <section className="section-py">
+        <Container narrow>
+          <Reveal>
+            <SectionHeader
+              label="Transmission"
+              title="Former, transmettre, accompagner"
+              description="Amadou Thior consacre aujourd'hui une part essentielle de son activité à la formation des nouvelles générations de cinéastes et à la préservation du patrimoine audiovisuel sénégalais."
+              align="center"
+            />
+          </Reveal>
+          <Reveal delay={100}>
+            <div className="text-center">
+              <CTAButton href="/transmission" variant="secondary">
+                Découvrir son travail de transmission
+                <ArrowRight size={14} />
+              </CTAButton>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* ===== ARCHIVES ===== */}
+      <section className="section-py bg-[--color-surface]">
+        <Container>
+          <Reveal>
+            <SectionHeader
+              label="Mémoire"
+              title="Archives"
+              description="Photographies, affiches, documents de tournage, articles de presse. Une mémoire visuelle du parcours d'Amadou Thior dans le cinéma sénégalais."
+            />
+          </Reveal>
+          <Reveal delay={100}>
+            {/* Placeholder grid for archives */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {["Photographies", "Tournages", "Affiches", "Presse"].map(
+                (cat) => (
+                  <div
+                    key={cat}
+                    className="aspect-square bg-[--color-surface-2] border border-[--color-border] rounded-lg flex items-center justify-center"
+                  >
+                    <span className="text-caption text-[--color-fg-subtle]">
+                      {cat}
+                    </span>
+                  </div>
+                )
+              )}
+            </div>
+            <div className="mt-8">
+              <Link
+                href="/archives"
+                className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+              >
+                Explorer les archives
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
+
+      {/* ===== CONTACT ===== */}
+      <section className="section-py">
+        <Container narrow>
+          <Reveal>
+            <div className="text-center">
+              <p className="text-body text-[--color-fg-muted] mb-8 max-w-lg mx-auto">
+                Vous souhaitez inviter Amadou Thior, organiser une projection,
+                une formation, une interview ou collaborer sur un projet ?
+              </p>
+              <CTAButton href="/contact" variant="primary">
+                Prendre contact
+                <ArrowRight size={14} />
+              </CTAButton>
+            </div>
+          </Reveal>
+        </Container>
+      </section>
     </>
   );
 }
