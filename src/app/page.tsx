@@ -4,6 +4,7 @@ import About from "@/components/About";
 import Filmography from "@/components/Filmography";
 import Experience from "@/components/Experience";
 import Services from "@/components/Services";
+import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <Filmography />
         <Experience />
         <Services />
+        <Projects />
         <Contact />
       </main>
       <Footer />

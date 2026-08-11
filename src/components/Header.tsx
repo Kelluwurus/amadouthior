@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Filmographie", href: "#filmography" },
   { label: "Parcours", href: "#experience" },
   { label: "Services", href: "#services" },
+  { label: "Projets", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
 
