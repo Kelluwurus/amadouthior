@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amadou Thior — Portfolio & Archives
 
-## Getting Started
+Site web portfolio professionnel, éditorial et patrimonial consacré à **Amadou Thior**, réalisateur, producteur, scénariste et formateur audiovisuel sénégalais.
 
-First, run the development server:
+Conçu comme une **archive numérique vivante** d'une carrière de plus de quatre décennies dans le cinéma et l'audiovisuel.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Stack
+
+- [Next.js](https://nextjs.org) 16 (App Router)
+- [TypeScript](https://www.typescriptlang.org)
+- [Tailwind CSS](https://tailwindcss.com) v4
+- [Lucide React](https://lucide.dev) (icônes)
+- Déploiement : [Vercel](https://vercel.com)
+
+## Structure
+
+```
+src/
+├── app/                    # Pages (Next.js App Router)
+│   ├── page.tsx            # Accueil
+│   ├── oeuvre/             # Filmographie + fiches films
+│   ├── almodou/            # Page spéciale Almodou
+│   ├── parcours/           # Biographie + timeline
+│   ├── archives/           # Galerie d'archives
+│   ├── transmission/       # Formation & conseil
+│   ├── actualites/         # Articles
+│   ├── distinctions/       # Prix & récompenses
+│   ├── collaborations/     # Partenaires
+│   ├── contact/            # Formulaire
+│   └── projets/            # Projets (CineClub)
+├── components/             # Composants réutilisables
+│   ├── ui/                 # Container, CTAButton, SectionHeader, Reveal, Badge
+│   ├── layout/             # Navbar, Footer
+│   ├── films/              # FilmCard, FilmGrid
+│   ├── timeline/           # Timeline, TimelineItem
+│   ├── cineclub/           # Composants CineClub
+│   └── ...
+├── content/                # Données (séparées du code)
+│   ├── types.ts            # Interfaces TypeScript
+│   ├── site.ts             # Configuration + navigation
+│   ├── films.ts            # Filmographie
+│   ├── timeline.ts         # Chronologie
+│   ├── awards.ts           # Distinctions
+│   ├── biography.ts        # Biographie + collaborations
+│   ├── archives.ts         # Archives (métadonnées)
+│   └── articles.ts         # Actualités
+└── data/                   # Données projets
+    └── cineclub-project.ts # CineClub – Dîner Débat
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Développement
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ouvrir [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Principes
 
-To learn more about Next.js, take a look at the following resources:
+- **Séparation contenu / présentation** — tout le contenu dans `content/`, modifiable sans toucher aux composants
+- **Règle éditoriale** — aucune information inventée. Données incertaines marquées `status: "to-confirm"` ou omises
+- **Design** — cinématographique, patrimonial, sobre et premium
+- **Accessibilité** — navigation clavier, contrastes WCAG, `prefers-reduced-motion`
+- **Performance** — composants serveur, lazy loading, images optimisées
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Déploiement
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Le projet est prêt pour un déploiement sur Vercel connecté à GitHub.
 
-## Deploy on Vercel
+```bash
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Cahier des charges
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Le document de spécification complet est disponible dans :
+
+```
+public/docs/cahier-des-charges.md
+```
+
+---
+
+© Amadou Thior — Réalisateur · Producteur · Scénariste · Formateur

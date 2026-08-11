@@ -1,9 +1,5 @@
-// ============================================
-// AMADOU THIOR — PORTFOLIO & ARCHIVES
-// TypeScript Interfaces
-// ============================================
-
-// --- Sources & References ---
+// content/types.ts
+// Interfaces TypeScript communes à tout le contenu du site Amadou Thior
 
 export interface Source {
   title: string;
@@ -12,25 +8,12 @@ export interface Source {
   date?: string;
 }
 
-// --- Films & Filmography ---
-
-export type FilmType =
-  | "documentaire"
-  | "fiction"
-  | "long-metrage"
-  | "court-metrage"
-  | "telefilm";
-
-export interface Credit {
-  role: string;
-  name: string;
-}
-
 export interface Film {
   slug: string;
   title: string;
-  year?: number;
-  type: FilmType;
+  year?: number | string; // string autorisé pour "années 1980" quand l'année exacte n'est pas confirmée
+  yearStatus?: "confirmed" | "to-confirm";
+  type: string; // "Documentaire" | "Fiction" | "Long métrage" | "Court métrage" | "Téléfilm"
   duration?: string;
   country?: string;
   language?: string;
@@ -38,130 +21,41 @@ export interface Film {
   writer?: string;
   production?: string;
   synopsis?: string;
-  context?: string;
   image?: string;
-  poster?: string;
   trailer?: string;
-  awards?: Award[];
+  awards?: string[];
   festivals?: string[];
   cast?: string[];
-  credits?: Credit[];
+  credits?: string[];
   sources?: Source[];
   featured?: boolean;
-  status?: "confirmed" | "to-confirm";
+  status?: "confirmed" | "to-confirm"; // statut global de la fiche
 }
-
-// --- Timeline ---
-
-export type TimelineCategory =
-  | "formation"
-  | "realisation"
-  | "collaboration"
-  | "institution"
-  | "production"
-  | "transmission";
 
 export interface TimelineEvent {
   year: string;
   title: string;
   description: string;
-  category?: TimelineCategory;
+  category?: "formation" | "institution" | "film" | "award" | "production" | "transmission" | "patrimoine";
   image?: string;
-  link?: string;
-}
-
-// --- Awards & Distinctions ---
-
-export interface Award {
-  year: number;
-  title: string;
-  festival: string;
-  film?: string;
-  filmSlug?: string;
-  source?: Source;
-}
-
-// --- Archives ---
-
-export type ArchiveCategory =
-  | "photographie"
-  | "tournage"
-  | "affiche"
-  | "document"
-  | "presse"
-  | "festival"
-  | "portrait"
-  | "video";
-
-export interface ArchiveItem {
-  id: string;
-  title: string;
-  category: ArchiveCategory;
-  year?: string;
-  description?: string;
-  image: string;
-  credit?: string;
-  source?: Source;
-}
-
-// --- Articles / Actualités ---
-
-export type ArticleCategory =
-  | "actualite"
-  | "cinema"
-  | "patrimoine"
-  | "formation"
-  | "presse"
-  | "archives";
-
-export interface Article {
-  slug: string;
-  title: string;
-  date: string;
-  category: ArticleCategory;
-  excerpt: string;
-  content: string;
-  image?: string;
-  source?: Source;
-}
-
-// --- Collaborations ---
-
-export interface Collaboration {
-  name: string;
-  role?: string;
-  period?: string;
-  description: string;
-  type: "personne" | "institution" | "production";
-  image?: string;
-  films?: string[];
-}
-
-// --- Biography ---
-
-export interface BiographySection {
-  id: string;
-  title: string;
-  content: string;
+  status?: "confirmed" | "to-confirm";
   sources?: Source[];
 }
 
-// --- Navigation ---
-
-export interface NavLink {
-  label: string;
-  href: string;
-  children?: NavLink[];
+export interface Award {
+  year: string;
+  title: string;
+  work?: string; // titre du film associé
+  organization?: string;
+  status?: "confirmed" | "to-confirm";
+  sources?: Source[];
 }
 
-// --- Site Metadata ---
-
-export interface SiteConfig {
+export interface Collaboration {
   name: string;
-  title: string;
-  subtitle: string;
-  signature: string;
-  description: string;
-  url?: string;
-  locale: string;
+  role: string; // description de la nature de la collaboration
+  period?: string;
+  relatedWorks?: string[];
+  status?: "confirmed" | "to-confirm";
+  sources?: Source[];
 }

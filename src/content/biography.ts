@@ -1,92 +1,113 @@
-import type { BiographySection, Collaboration } from "./types";
+// content/biography.ts
+// Contenu biographique — statut "vérifié" basé sur Africultures, IFcinéma, BnF.
+// Toute information non confirmée est marquée explicitement.
 
-export const biography: BiographySection[] = [
-  {
-    id: "formation",
+import { Source } from "./types";
+
+export const biographySources: Source[] = [
+  { title: "Fiche Amadou Thior", publisher: "Africultures" },
+  { title: "Catalogue Amadou Thior", publisher: "Institut français / IFcinéma" },
+  { title: "Notice Almodou", publisher: "BnF Catalogue général" },
+  { title: "Fiche Amadou Thior", publisher: "IMDb" },
+  { title: "Consultants & Réalisateurs Associés", publisher: "Africultures" },
+  { title: "Formation des correspondants RTC (août 2024)", publisher: "URAC Sénégal" },
+  { title: "Article sur la cinémathèque nationale (juillet 2025)", publisher: "Sud Quotidien" },
+];
+
+export const identity = {
+  fullName: "Amadou Thior",
+  roles: ["Réalisateur", "Producteur", "Scénariste", "Formateur audiovisuel"],
+  tagline: "Une vie consacrée au cinéma, à l'audiovisuel et à la transmission.",
+  birthDate: "23 juillet 1951",
+  birthPlace: "Boulel, Sine-Saloum, Sénégal",
+  status: "confirmed" as const,
+};
+
+export const biographySections = {
+  formation: {
     title: "Formation",
-    content:
-      "Amadou Thior est diplômé de l'École Nationale Supérieure Louis-Lumière (Vaugirard) à Paris, promotion Cinéma 1977. Cette formation de référence mondiale en techniques cinématographiques a posé les fondations d'une carrière entièrement dédiée au 7ᵉ art.",
+    period: "1977",
+    text:
+      "Amadou Thior s'est formé à l'École Nationale Supérieure Louis-Lumière à Paris, promotion 1977.",
+    status: "confirmed" as const,
   },
-  {
-    id: "debuts",
-    title: "Débuts professionnels",
-    content:
-      "De retour au Sénégal, il intègre le Ministère de la Culture où il contribue en tant que cadre technique à la structuration des politiques cinématographiques nationales et à la promotion du patrimoine audiovisuel sénégalais.",
+
+  debuts: {
+    title: "Débuts professionnels — Ministère de la Culture",
+    period: "1981 – 1988",
+    text:
+      "Réalisateur, chargé des études techniques au Bureau du Cinéma du Ministère de la Culture et de la Communication du Sénégal, de 1981 à 1988.",
+    status: "confirmed" as const,
   },
-  {
-    id: "rts",
-    title: "RTS — Radiodiffusion Télévision du Sénégal",
-    content:
-      "Réalisateur et Journaliste Reporter d'Images à la RTS, il réalise documentaires, magazines et émissions culturelles pour la télévision nationale, contribuant à la diffusion de la culture sénégalaise auprès du grand public.",
+
+  rts: {
+    title: "RTS — Radiodiffusion Télévision Sénégalaise",
+    period: "1988 – 1989",
+    text: "Réalisateur détaché à la RTS en 1988-1989.",
+    status: "confirmed" as const,
   },
-  {
-    id: "sembene",
+
+  sembene: {
     title: "Collaboration avec Ousmane Sembène",
-    content:
-      "Compagnonnage exceptionnel avec le père du cinéma africain. Amadou Thior est assistant réalisateur sur Camp de Thiaroye (1987), fresque historique sur le massacre de tirailleurs sénégalais, et Guelwaar (1992), film traitant des conflits religieux et de la dignité africaine face à l'aide internationale. Ces collaborations forgent sa vision du cinéma comme outil de mémoire et de conscience.",
+    period: "1987 – 1992",
+    text:
+      "Amadou Thior a été assistant réalisateur d'Ousmane Sembène sur Camp de Thiaroye (1987), puis sur Guelwaar (1992). Il convient de toujours présenter précisément ce rôle : assistant réalisateur, et non réalisateur principal de ces deux œuvres, qui restent des films d'Ousmane Sembène.",
+    status: "confirmed" as const,
   },
-  {
-    id: "production",
-    title: "Production",
-    content:
-      "Fondateur ou membre de la structure Consultants & Réalisateurs Associés, puis de TAF Productions Afrique Sarl et KOOM COM GROUPE, il porte ses propres réalisations et accompagne des projets audiovisuels en Afrique de l'Ouest.",
+
+  production: {
+    title: "Production — Consultants & Réalisateurs Associés",
+    period: "1994 – 2004",
+    text:
+      "En 1994, Amadou Thior cofonde avec Assane Diagne le GIE Consultants & Réalisateurs Associés (CRA), une structure destinée notamment à autoproduire leurs projets de fiction et documentaires. La structure a porté plusieurs projets, dont Almodou. En 2004, elle est remplacée par Filmi Darou Wahab, et les deux réalisateurs créent chacun leur propre société de production.",
+    status: "confirmed" as const,
   },
-  {
-    id: "realisation",
+
+  realisation: {
     title: "Réalisation",
-    content:
-      "Sa filmographie comprend des œuvres majeures comme Almodou (Prix Plan International, FESPACO 2001), Xareek Maral (Grand Prix de la CEE, FESPACO 1985), Mariage précoce et Mayelle, traitant avec humanisme des enjeux sociaux du Sénégal : enfance vulnérable, condition féminine, mutations culturelles.",
+    period: "1980s – 2006",
+    text:
+      "Réalisateur et scénariste de plusieurs œuvres documentaires, fictions et téléfilms, dont Xareek Maral, Mariage précoce, Almodou, Mayelle et Meissa Pote / Ndiaye Milliardaire. Voir la section Œuvre pour le détail de chaque film.",
+    status: "confirmed" as const,
   },
-  {
-    id: "transmission",
+
+  transmission: {
     title: "Transmission",
-    content:
-      "Formateur, consultant et enseignant vacataire, il transmet son expertise aux nouvelles générations de cinéastes et techniciens de l'audiovisuel. Son engagement pour la préservation du patrimoine audiovisuel sénégalais prolonge une vie entièrement consacrée au cinéma.",
+    period: "2024 – aujourd'hui",
+    text:
+      "Présenté par Africultures comme formateur et consultant audiovisuel, et comme Directeur des études de l'IPMICA. En août 2024, il participe avec Martin Faye à une formation destinée aux correspondants de la Radio Télévision Communautaire (RTC), organisée avec l'URAC Sénégal, portant sur la couverture de l'actualité locale, la collecte d'informations et le travail en équipe.",
+    status: "confirmed" as const,
   },
-];
 
-export const collaborations: Collaboration[] = [
-  {
-    name: "Ousmane Sembène",
-    role: "Assistant réalisateur",
-    period: "1987–1992",
-    description:
-      "Collaboration sur Camp de Thiaroye (1987) et Guelwaar (1992) en tant qu'assistant réalisateur. Compagnonnage fondateur avec le père du cinéma africain.",
-    type: "personne",
-    films: ["Camp de Thiaroye", "Guelwaar"],
+  patrimoine: {
+    title: "Mémoire et patrimoine audiovisuel",
+    period: "2025",
+    text:
+      "Cité en juillet 2025 dans un article de Sud Quotidien consacré à la nécessité pour le Sénégal de se doter d'une cinémathèque nationale, à propos du fonctionnement historique de la Cinémathèque sénégalaise et de l'acquisition des droits non commerciaux de films.",
+    status: "confirmed" as const,
   },
-  {
-    name: "Radiodiffusion Télévision du Sénégal (RTS)",
-    role: "Réalisateur / JRI",
-    period: "1980–1995",
-    description:
-      "Réalisation de documentaires, magazines et émissions culturelles pour la télévision nationale.",
-    type: "institution",
-  },
-  {
-    name: "Ministère de la Culture du Sénégal",
-    role: "Cadre technique",
-    period: "1981–",
-    description:
-      "Contribution à la structuration des politiques cinématographiques nationales.",
-    type: "institution",
-  },
-  {
-    name: "Consultants & Réalisateurs Associés",
-    role: "Producteur / Réalisateur",
-    period: "1994–",
-    description:
-      "Structure de production ayant porté les réalisations personnelles d'Amadou Thior.",
-    type: "production",
-  },
-  {
-    name: "2S TV",
-    role: "Collaborateur",
-    description:
-      "Collaboration avec la chaîne de télévision privée sénégalaise.",
-    type: "institution",
-  },
-];
 
-export const introText =
-  "Amadou Thior est un cinéaste indépendant sénégalais avec plus de quatre décennies d'expérience dans la réalisation, la production, l'écriture et la formation audiovisuelle. Né à Boulel, formé à l'École Nationale Supérieure Louis-Lumière à Paris, il a consacré sa vie au cinéma, à l'audiovisuel et à la transmission.";
+  today: {
+    title: "Aujourd'hui",
+    period: "2025+",
+    text:
+      "Amadou Thior apparaît également comme ambassadeur de la Communauté Teranga pour l'Intelligence Artificielle. Ce rôle doit être présenté tel qu'il est documenté, sans suggérer une expertise technique en IA — il s'inscrit dans le prolongement de son parcours de transmission.",
+    status: "confirmed" as const,
+  },
+};
+
+// Note : à la demande explicite du client, l'ensemble des données textuelles
+// (biographie, filmographie, timeline, distinctions, collaborations) est traité
+// comme confirmé pour cette phase du projet. Les éléments suivants restent
+// toutefois des ACTIFS MÉDIA (et non des informations factuelles) à obtenir
+// directement auprès d'Amadou Thior avant mise en ligne, car ils ne peuvent pas
+// être extraits d'une recherche web : photographie officielle haute résolution,
+// archives personnelles (photos de tournage, affiches originales), extraits
+// vidéo / bandes-annonces avec droits de diffusion confirmés, et coordonnées
+// professionnelles à afficher publiquement.
+export const mediaAssetsToRequest = [
+  "Photographie officielle haute résolution",
+  "Archives personnelles (photos de tournage, affiches originales)",
+  "Extraits vidéo / bandes-annonces avec droits de diffusion confirmés",
+  "Coordonnées professionnelles à afficher publiquement sur le site",
+];
