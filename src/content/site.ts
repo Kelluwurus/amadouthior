@@ -1,4 +1,19 @@
-import type { SiteConfig, NavLink } from "./types";
+// content/site.ts
+// Configuration du site et navigation
+
+export interface NavLink {
+  label: string;
+  href: string;
+}
+
+export interface SiteConfig {
+  name: string;
+  title: string;
+  subtitle: string;
+  signature: string;
+  description: string;
+  locale: string;
+}
 
 export const siteConfig: SiteConfig = {
   name: "Amadou Thior",

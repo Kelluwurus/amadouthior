@@ -1,26 +1,23 @@
 "use client";
 
-import { useState } from "react";
-import type { Film, FilmType } from "@/content/types";
+import { useState, useMemo } from "react";
+import type { Film } from "@/content/types";
 import FilmCard from "./FilmCard";
 
 interface FilmGridProps {
   films: Film[];
 }
 
-const filters: { label: string; value: FilmType | "all" }[] = [
-  { label: "Tous", value: "all" },
-  { label: "Documentaires", value: "documentaire" },
-  { label: "Fictions", value: "fiction" },
-  { label: "Longs métrages", value: "long-metrage" },
-  { label: "Courts métrages", value: "court-metrage" },
-  { label: "Téléfilms", value: "telefilm" },
-];
-
 export default function FilmGrid({ films }: FilmGridProps) {
-  const [active, setActive] = useState<FilmType | "all">("all");
+  const [active, setActive] = useState("all");
 
-  // Only show confirmed films in the grid
+  // Generate filters dynamically from unique film.type values
+  const filterOptions = useMemo(() => {
+    const types = Array.from(new Set(films.map((f) => f.type)));
+    return [{ label: "Tous", value: "all" }, ...types.map((t) => ({ label: t, value: t }))];
+  }, [films]);
+
+  // Only show confirmed films
   const confirmedFilms = films.filter((f) => f.status !== "to-confirm");
 
   const filtered =
@@ -28,16 +25,11 @@ export default function FilmGrid({ films }: FilmGridProps) {
       ? confirmedFilms
       : confirmedFilms.filter((f) => f.type === active);
 
-  // Only show filter buttons for types that have films
-  const availableFilters = filters.filter(
-    (f) => f.value === "all" || confirmedFilms.some((film) => film.type === f.value)
-  );
-
   return (
     <div>
       {/* Filters */}
       <div className="flex flex-wrap items-center gap-2 mb-10" role="tablist" aria-label="Filtrer par type">
-        {availableFilters.map((filter) => (
+        {filterOptions.map((filter) => (
           <button
             key={filter.value}
             onClick={() => setActive(filter.value)}

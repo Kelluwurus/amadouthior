@@ -30,16 +30,18 @@ export default function FilmCard({ film }: FilmCardProps) {
         <span className="text-meta text-[--color-accent] block mb-1.5">
           {film.type}
         </span>
-        <h3 className="text-h3 text-[--color-fg] mb-2 text-lg">{film.title}</h3>
+        <h3 className="font-[family-name:var(--font-playfair)] text-lg text-[--color-fg] mb-2">
+          {film.title}
+        </h3>
         {film.synopsis && (
           <p className="text-caption text-[--color-fg-muted] line-clamp-2 mb-3">
             {film.synopsis}
           </p>
         )}
         {film.awards && film.awards.length > 0 && (
-          <div className="flex items-center gap-1.5 text-xs text-[--color-accent]">
-            <Award size={12} />
-            <span>{film.awards[0].title}</span>
+          <div className="flex items-start gap-1.5 text-xs text-[--color-accent]">
+            <Award size={12} className="shrink-0 mt-0.5" />
+            <span className="line-clamp-1">{film.awards[0]}</span>
           </div>
         )}
       </div>

@@ -7,10 +7,9 @@ import Reveal from "@/components/ui/Reveal";
 import Badge from "@/components/ui/Badge";
 import FilmCard from "@/components/films/FilmCard";
 import Timeline from "@/components/timeline/Timeline";
-import { siteConfig } from "@/content/site";
+import { identity, biographySections } from "@/content/biography";
 import { featuredFilms } from "@/content/films";
 import { timeline } from "@/content/timeline";
-import { introText } from "@/content/biography";
 import { cineclubProject } from "@/data/cineclub-project";
 
 export default function HomePage() {
@@ -24,17 +23,17 @@ export default function HomePage() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <Reveal>
             <h1 className="text-display text-[--color-fg] mb-4">
-              {siteConfig.name.toUpperCase()}
+              {identity.fullName.toUpperCase()}
             </h1>
           </Reveal>
           <Reveal delay={100}>
             <p className="text-meta text-[--color-accent] mb-8">
-              {siteConfig.subtitle}
+              {identity.roles.join(" · ")}
             </p>
           </Reveal>
           <Reveal delay={200}>
             <p className="text-h3 text-[--color-fg-muted] font-normal max-w-xl mx-auto mb-12 leading-relaxed">
-              {siteConfig.signature}
+              {identity.tagline}
             </p>
           </Reveal>
           <Reveal delay={300}>
@@ -55,7 +54,7 @@ export default function HomePage() {
         <Container narrow>
           <Reveal>
             <p className="text-body text-[--color-fg-muted] leading-relaxed text-lg">
-              {introText}
+              {biographySections.formation.text} {biographySections.realisation.text.split(". Voir")[0]}.
             </p>
             <Link
               href="/parcours"
@@ -131,7 +130,7 @@ export default function HomePage() {
             <SectionHeader
               label="Transmission"
               title="Former, transmettre, accompagner"
-              description="Amadou Thior consacre aujourd'hui une part essentielle de son activité à la formation des nouvelles générations de cinéastes et à la préservation du patrimoine audiovisuel sénégalais."
+              description={biographySections.transmission.text}
               align="center"
             />
           </Reveal>
@@ -153,7 +152,7 @@ export default function HomePage() {
             <SectionHeader
               label="Projet en vedette"
               title="CINECLUB – DÎNER DÉBAT"
-              description="Le cinéma au service de l'humanitaire"
+              description={cineclubProject.slogan}
             />
           </Reveal>
           <Reveal delay={100}>
@@ -194,7 +193,6 @@ export default function HomePage() {
             />
           </Reveal>
           <Reveal delay={100}>
-            {/* Placeholder grid for archives */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
               {["Photographies", "Tournages", "Affiches", "Presse"].map(
                 (cat) => (

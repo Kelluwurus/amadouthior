@@ -1,11 +1,17 @@
-import type { Article } from "./types";
-
+// content/articles.ts
 // Articles / Actualités — à compléter au fur et à mesure des publications
-// Structure prête pour un futur CMS (cf. CDC §31)
 
-export const articles: Article[] = [
-  // Les articles seront ajoutés progressivement
-];
+export interface Article {
+  slug: string;
+  title: string;
+  date: string;
+  category: string;
+  excerpt: string;
+  content: string;
+  image?: string;
+}
+
+export const articles: Article[] = [];
 
 export const articleCategories = [
   { id: "actualite", label: "Actualité" },

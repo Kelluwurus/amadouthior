@@ -31,6 +31,11 @@ export default function Timeline({ events, limit }: TimelineProps) {
             <p className="text-caption text-[--color-fg-muted] leading-relaxed">
               {event.description}
             </p>
+            {event.sources && event.sources.length > 0 && (
+              <p className="text-xs text-[--color-fg-subtle] mt-2">
+                Source : {event.sources[0].publisher}
+              </p>
+            )}
           </div>
         </div>
       ))}

@@ -1,12 +1,18 @@
-import type { ArchiveItem } from "./types";
-
+// content/archives.ts
 // Archives — à compléter lorsque les fichiers originaux et autorisations seront disponibles
 // Ne pas télécharger d'images provenant d'Internet sans autorisation (cf. CDC §35)
 
-export const archives: ArchiveItem[] = [
-  // Placeholder : les archives seront ajoutées progressivement
-  // avec les fichiers originaux fournis par Amadou Thior
-];
+export interface ArchiveItem {
+  id: string;
+  title: string;
+  category: string;
+  year?: string;
+  description?: string;
+  image: string;
+  credit?: string;
+}
+
+export const archives: ArchiveItem[] = [];
 
 export const archiveCategories = [
   { id: "photographie", label: "Photographies" },
