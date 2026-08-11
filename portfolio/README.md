@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amadou Thior — Portfolio Cinématographique
 
-## Getting Started
+Site web portfolio premium et immersif d'**Amadou Thior**, réalisateur, producteur et consultant cinématographique sénégalais avec plus de 30 ans de carrière au cœur du 7ᵉ art africain.
 
-First, run the development server:
+## Stack Technique
+
+| Technologie | Version | Rôle |
+|---|---|---|
+| [Next.js](https://nextjs.org) | 16.3 | Framework React (App Router) |
+| [React](https://react.dev) | 19.2 | Bibliothèque UI |
+| [TypeScript](https://www.typescriptlang.org) | 5.x | Typage statique |
+| [Tailwind CSS](https://tailwindcss.com) | 4.x | Styling utilitaire |
+| [Lucide React](https://lucide.dev) | 1.31+ | Icônes SVG |
+
+## Installation
+
+```bash
+npm install
+```
+
+## Développement
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ouvrir [http://localhost:3000](http://localhost:3000) dans le navigateur.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build & Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Déploiement
 
-To learn more about Next.js, take a look at the following resources:
+Prêt pour [Vercel](https://vercel.com) — connecter le dépôt GitHub et le déploiement se fait automatiquement.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Architecture du Projet
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+src/
+├── app/
+│   ├── globals.css             # Thème Tailwind v4 (tokens couleurs, fonts, scrollbar)
+│   ├── layout.tsx              # Layout racine — métadonnées SEO/OpenGraph, fonts Google
+│   └── page.tsx                # Page d'accueil — assemblage de tous les composants
+└── components/
+    ├── Navbar.tsx              # Navigation fixe avec détection du scroll + menu mobile
+    ├── Hero.tsx                # Section héro plein écran cinématographique
+    ├── Vision.tsx              # Vision & Impact — grille de 4 cartes + bloc émeraude
+    ├── Filmography.tsx         # Filmographie — filtres par onglets interactifs
+    ├── Experience.tsx          # Parcours (timeline verticale) & Distinctions (badges)
+    ├── Services.tsx            # Expertise — 3 cartes de services institutionnels
+    ├── Contact.tsx             # Formulaire de contact avec validation
+    └── Footer.tsx              # Pied de page avec navigation et mentions légales
+```
 
-## Deploy on Vercel
+## Direction Artistique
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Palette de couleurs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Nom | Hex | Usage |
+|---|---|---|
+| Noir Profond | `#121212` | Fond principal |
+| Anthracite | `#1E1E1E` | Fond des cartes et sections alternées |
+| Or Mat | `#C8A24A` | Accent principal (titres, bordures, CTA) |
+| Vert Émeraude | `#0F382C` | Bloc immersif (citation) |
+| Ivoire | `#F8F5EF` | Texte principal |
+
+### Typographies
+
+- **Titres** : Cormorant Garamond (serif, élégante et prestigieuse)
+- **Corps de texte** : Inter (sans-serif, épurée et lisible)
+
+Chargées via `next/font/google` pour une optimisation automatique.
+
+### Style visuel
+
+- Mode sombre par défaut
+- Bordures fines dorées semi-transparentes (`border-[#C8A24A]/20`)
+- Ombres portées subtiles au survol
+- Transitions fluides (300ms, ease)
+- Effets de grain cinématographique sur le hero
+- Gradient radial lumineux sur les blocs immersifs
+
+## Sections de la Page
+
+### 1. Hero — « L'Empreinte »
+
+Section plein écran avec fond cinématographique (grain + gradient), accroche de présentation et deux boutons d'appel à l'action.
+
+### 2. Vision & Impact
+
+Philosophie artistique présentée en 4 piliers (Éveiller, Transmettre, Penser, Façonner) sous forme de cartes interactives. Bloc immersif en fond émeraude sur l'impact culturel du cinéma.
+
+### 3. Filmographie & Projets Majeurs
+
+Système de filtres par onglets (Tous / Longs-métrages / Courts & Documentaires / Collaborations O. Sembène). Cartes de films avec année, synopsis et distinctions.
+
+**Œuvres présentées :**
+- *Almodou* — Prix Spécial PLAN International, FESPACO 2001
+- *Xareek Maral* — Grand Prix de la CEE, FESPACO 1985
+- *Camp de Thiaroye & Guelwaar* — Collaboration avec Ousmane Sembène
+- *Mayelle / Mariage Précoce* — Courts-métrages de fiction sociétale
+
+### 4. Parcours & Distinctions
+
+Double colonne avec timeline verticale (Louis-Lumière 1977, RTS, Ministère, Consultant) et grille de récompenses (FESPACO, FESTEL, sélections internationales).
+
+### 5. Expertise & Services
+
+Trois cartes de services institutionnels : Masterclasses & Enseignement, Conseil en Politiques Cinématographiques, Jury & Conférences.
+
+### 6. Contact
+
+Formulaire de sollicitation professionnelle avec champs : Nom, Email, Organisation, Motif (Masterclass, Consultance, Jury, Presse, Autre), Message.
+
+## Responsive Design
+
+- **Mobile** : Navigation en overlay, cartes empilées, marges généreuses
+- **Tablette** : Grilles adaptées (2 colonnes)
+- **Desktop** : Grilles complètes (3-4 colonnes), espaces d'air généreux
+
+## SEO & Métadonnées
+
+Configuré dans `layout.tsx` :
+- Titre et description optimisés
+- Balises OpenGraph (type, locale fr_FR, siteName)
+- Langue HTML en français (`lang="fr"`)
+
+## Auteur
+
+**Amadou Thior**  
+Réalisateur, Producteur & Consultant Cinématographique  
+Sénégal | Formation Louis-Lumière (Paris, 1977)
+
+---
+
+© Amadou Thior — Cinéaste & Consultant. Tous droits réservés.
