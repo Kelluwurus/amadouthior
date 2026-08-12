@@ -16,13 +16,39 @@
     "Notre ambition est de faire de Dakar un rendez-vous incontournable du cinéma citoyen en Afrique, capable de rayonner progressivement à l'échelle régionale et internationale."
   ],
   "cinqTemps": [
-    { "numero": 1, "titre": "La Projection", "description": "Projection d'un film de référence internationale, sélectionné pour la qualité de son message et sa portée sociale. Le film est le point de départ de la réflexion collective." },
-    { "numero": 2, "titre": "Le Dîner", "description": "Un moment de convivialité favorisant les échanges informels entre invités, décideurs, partenaires, diplomatiques, artistes, universitaires, médias et membres de la société civile." },
-    { "numero": 3, "titre": "Le Débat", "description": "Animé par un modérateur expérimenté, le débat réunit les différentes parties prenantes autour des thématiques abordées par le film dans une session interactive de questions-réponses avec le public." },
-    { "numero": 4, "titre": "La Mise en réseau", "description": "Un espace privilégié de rencontres entre institutions publiques, entreprises, fondations, ONG, médias et porteurs de projets pour créer des synergies et bâtir des partenariats durables." },
-    { "numero": 5, "titre": "L'Action", "description": "Transformer les échanges en engagements concrets : campagnes, financement, soutien aux associations, projets collaboratifs, mécénat ou volontariat. Chaque édition laisse une empreinte durable." }
+    {
+      "numero": 1,
+      "titre": "La Projection",
+      "description": "Projection d'un film de référence internationale, sélectionné pour la qualité de son message et sa portée sociale. Le film est le point de départ de la réflexion collective."
+    },
+    {
+      "numero": 2,
+      "titre": "Le Dîner",
+      "description": "Un moment de convivialité favorisant les échanges informels entre invités, décideurs, partenaires, diplomatiques, artistes, universitaires, médias et membres de la société civile."
+    },
+    {
+      "numero": 3,
+      "titre": "Le Débat",
+      "description": "Animé par un modérateur expérimenté, le débat réunit les différentes parties prenantes autour des thématiques abordées par le film dans une session interactive de questions-réponses avec le public."
+    },
+    {
+      "numero": 4,
+      "titre": "La Mise en réseau",
+      "description": "Un espace privilégié de rencontres entre institutions publiques, entreprises, fondations, ONG, médias et porteurs de projets pour créer des synergies et bâtir des partenariats durables."
+    },
+    {
+      "numero": 5,
+      "titre": "L'Action",
+      "description": "Transformer les échanges en engagements concrets : campagnes, financement, soutien aux associations, projets collaboratifs, mécénat ou volontariat. Chaque édition laisse une empreinte durable."
+    }
   ],
-  "chaineDeValeur": ["Émouvoir", "Comprendre", "Dialoguer", "Mobiliser", "Agir"],
+  "chaineDeValeur": [
+    "Émouvoir",
+    "Comprendre",
+    "Dialoguer",
+    "Mobiliser",
+    "Agir"
+  ],
   "distingue": [
     "Une programmation alignée aux Journées Internationales des Nations Unies",
     "Une sélection d'œuvres cinématographiques à fort impact social",
@@ -31,7 +57,16 @@
     "Un dispositif favorisant la naissance de partenariats et d'actions concrètes",
     "Un programme appelé à devenir un rendez-vous annuel de référence au Sénégal, avec une vocation régionale et internationale"
   ],
-  "ecosysteme": ["Institutions publiques", "Organisations internationales", "Entreprises privées", "ONG et associations", "Fondations", "Médias", "Professionnels du cinéma", "Citoyens"],
+  "ecosysteme": [
+    "Institutions publiques",
+    "Organisations internationales",
+    "Entreprises privées",
+    "ONG et associations",
+    "Fondations",
+    "Médias",
+    "Professionnels du cinéma",
+    "Citoyens"
+  ],
   "cibles": [
     "Associations caritatives",
     "Organisations féminines et pour l'enfance",
@@ -39,10 +74,22 @@
     "ONG de développement communautaire"
   ],
   "impact": [
-    { "titre": "Sensibiliser", "description": "Faire émerger une réflexion autour d'une problématique sociale." },
-    { "titre": "Connecter", "description": "Créer des rencontres entre acteurs qui ne se rencontrent pas toujours." },
-    { "titre": "Mobiliser", "description": "Faire émerger des engagements." },
-    { "titre": "Agir", "description": "Orienter ces engagements vers des actions concrètes." }
+    {
+      "titre": "Sensibiliser",
+      "description": "Faire émerger une réflexion autour d'une problématique sociale."
+    },
+    {
+      "titre": "Connecter",
+      "description": "Créer des rencontres entre acteurs qui ne se rencontrent pas toujours."
+    },
+    {
+      "titre": "Mobiliser",
+      "description": "Faire émerger des engagements."
+    },
+    {
+      "titre": "Agir",
+      "description": "Orienter ces engagements vers des actions concrètes."
+    }
   ],
   "editions": [
     {
@@ -59,13 +106,24 @@
         "langue": "Arabe",
         "genre": "Documentaire long métrage",
         "synopsis": "Ce long métrage retrace les périodes noires de l'histoire du Liban à travers une voiture de marque Mercedes.",
-        "distinctions": ["Dubai International Film Festival 2011 — Nominé Muhr Arab Award", "2011 — Gagnant FIPRESCI Prize"]
+        "distinctions": [
+          "Dubai International Film Festival 2011 — Nominé Muhr Arab Award",
+          "2011 — Gagnant FIPRESCI Prize"
+        ],
+        "image": "/images/cineclub/marcedes.jpeg"
       },
       "contexte": "Projection organisée par TAF PRODUCTION AFRIQUE sous le parrainage de M. Mbagnick Ndiaye, Ministre de la Culture et de la Communication, en présence de S.E. M. Khalil El Habre, Ambassadeur du Liban au Sénégal.",
-      "medias": ["Émission matinale « Kenkelibaa » sur la RTS", "Émission sur Vibe Radio en compagnie d'Amadou Thior"],
+      "medias": [
+        "Émission matinale « Kenkelibaa » sur la RTS",
+        "Émission sur Vibe Radio en compagnie d'Amadou Thior"
+      ],
       "objectifs": [],
       "resultats": [],
-      "sources": [{ "nom": "Dossier CINECLUB — KOOM COM GROUPE" }]
+      "sources": [
+        {
+          "nom": "Dossier CINECLUB — KOOM COM GROUPE"
+        }
+      ]
     },
     {
       "annee": "2026",
@@ -83,7 +141,8 @@
         "langue": "Arabe (sous-titré en français)",
         "genre": "Fiction — Comédie dramatique",
         "synopsis": "Après plusieurs années passées à l'étranger, Leba et Lara reviennent s'installer dans leur quartier d'enfance à Beyrouth. Leur bonheur est immense lorsqu'ils donnent naissance à leur troisième enfant, Ghadi. Mais très vite, ils découvrent que celui-ci est porteur d'une différence. Alors que le voisinage manifeste son incompréhension et son rejet, la famille va devoir faire face aux préjugés et apprendre à transformer cette différence en force. À travers humour, émotion et humanité, le film nous invite à porter un regard nouveau sur le handicap, la diversité et l'acceptation de l'autre.",
-        "succes": "Plus de 17 000 entrées dans les cinémas libanais lors de sa première semaine de sortie."
+        "succes": "Plus de 17 000 entrées dans les cinémas libanais lors de sa première semaine de sortie.",
+        "image": "/images/cineclub/ghadi.jpg"
       },
       "objectifs": [
         "Sensibiliser le grand public aux questions du handicap",
@@ -113,18 +172,89 @@
         "Grand public"
       ],
       "resultats": [],
-      "sources": [{ "nom": "Dossier CINECLUB — KOOM COM GROUPE" }]
+      "sources": [
+        {
+          "nom": "Dossier CINECLUB — KOOM COM GROUPE"
+        }
+      ]
     },
     {
       "annee": "2027",
-      "statut": "en_preparation",
-      "titre": "Édition 2027",
-      "lieu": null,
-      "film": null,
-      "theme": "En cours d'élaboration",
-      "objectifs": [],
+      "statut": "a_venir",
+      "titre": "Le cinéma au service des droits des femmes",
+      "lieu": "Dakar",
+      "theme": "Journée internationale des femmes — 8 mars",
+      "objectifs": [
+        "Sensibiliser aux droits des femmes et des jeunes filles",
+        "Dénoncer les mariages précoces et forcés",
+        "Promouvoir l'égalité des genres à travers le cinéma",
+        "Favoriser le dialogue entre générations et entre genres",
+        "Mobiliser les institutions et la société civile"
+      ],
       "resultats": [],
-      "sources": []
+      "sources": [],
+      "date": "Mars 2027",
+      "films": [
+        {
+          "titre": "Taafé Fanga — Pouvoir du pagne",
+          "realisateur": "Adama Drabo",
+          "pays": "Mali",
+          "duree": "1h41",
+          "langue": "Bambara (sous-titré en français)",
+          "genre": "Fiction, Comédie dramatique, Conte",
+          "annee": "1997",
+          "synopsis": "Sous la forme d'un conte philosophique et d'une comédie, le film s'ouvre sur les falaises sacrées de Bandiagara au Mali. Un illustre griot invite les villageois à une veillée traditionnelle, au cours de laquelle une jeune femme brise les codes en venant s'asseoir au milieu des hommes. Grâce à la découverte de l'Albarga, un masque sacré, les femmes décident de renverser l'ordre patriarcal : les rôles de genre s'inversent du tout au tout.",
+          "festivals": [
+            "Quinzaine des Réalisateurs — Festival de Cannes"
+          ],
+          "image": "/images/cineclub/taafe_fanga.jpg",
+          "thematiques": [
+            "Rapports de genre et inversion des rôles",
+            "Fardeau domestique invisible",
+            "Tradition vs Modernité",
+            "Égalité et harmonie",
+            "Transmission par le conte et la parole"
+          ]
+        },
+        {
+          "titre": "Nour",
+          "realisateur": "Khalil Dreyfus Zaarour",
+          "pays": "Liban",
+          "duree": "1h31",
+          "langue": "Arabe (sous-titré en français)",
+          "genre": "Drame social, Romance",
+          "annee": "2017",
+          "synopsis": "Nour est une adolescente de 15 ans dont le quotidien insouciant s'effondre lorsqu'un homme de 35 ans, issu d'une famille de notables, jette son dévolu sur elle. Malgré son refus, les rouages d'une société patriarcale se mettent en marche : mariée de force, elle est arrachée à son enfance.",
+          "distinctions": [
+            "Prix du meilleur film, du meilleur réalisateur et de la meilleure actrice — Festival du film arabe 2018"
+          ],
+          "image": "/images/cineclub/nour.jpeg",
+          "thematiques": [
+            "Mariage précoce et forcé",
+            "Protection de l'enfance",
+            "Dynamiques familiales et pressions sociales",
+            "Enjeux socio-économiques et précarité",
+            "Cadre légal et droits des mineurs"
+          ]
+        }
+      ],
+      "thematiques": [
+        "Droits des femmes",
+        "Mariage précoce et forcé",
+        "Égalité des genres",
+        "Patriarcat et domination",
+        "Éducation et transmission",
+        "Protection de l'enfance"
+      ],
+      "publics": [
+        "Institutions publiques",
+        "Organisations internationales",
+        "Associations féminines et pour l'enfance",
+        "Professionnels du droit",
+        "Universités et établissements scolaires",
+        "Médias",
+        "Grand public"
+      ]
     }
   ],
   "partenariat": {
@@ -140,24 +270,82 @@
       "Accès aux acteurs institutionnels"
     ],
     "categories": [
-      { "nom": "Partenaire principal", "description": "Association complète à l'édition, visibilité maximale.", "avantages": ["Naming de l'édition", "Prise de parole", "Visibilité premium sur tous les supports"] },
-      { "nom": "Partenaire engagement", "description": "Soutien fort à la dimension dialogue et réseau.", "avantages": ["Table dédiée au dîner-débat", "Visibilité sur les supports de l'édition"] },
-      { "nom": "Partenaire solidarité", "description": "Association à la dimension humanitaire et inclusive du projet.", "avantages": ["Association à la cause de l'édition", "Mentions presse"] },
-      { "nom": "Partenaire média", "description": "Couverture et relais médiatique de l'événement.", "avantages": ["Accès presse", "Contenus exclusifs"] },
-      { "nom": "Partenaire institutionnel", "description": "Association institutionnelle au projet.", "avantages": ["Présence lors des rencontres institutionnelles", "Networking ciblé"] }
+      {
+        "nom": "Partenaire principal",
+        "description": "Association complète à l'édition, visibilité maximale.",
+        "avantages": [
+          "Naming de l'édition",
+          "Prise de parole",
+          "Visibilité premium sur tous les supports"
+        ]
+      },
+      {
+        "nom": "Partenaire engagement",
+        "description": "Soutien fort à la dimension dialogue et réseau.",
+        "avantages": [
+          "Table dédiée au dîner-débat",
+          "Visibilité sur les supports de l'édition"
+        ]
+      },
+      {
+        "nom": "Partenaire solidarité",
+        "description": "Association à la dimension humanitaire et inclusive du projet.",
+        "avantages": [
+          "Association à la cause de l'édition",
+          "Mentions presse"
+        ]
+      },
+      {
+        "nom": "Partenaire média",
+        "description": "Couverture et relais médiatique de l'événement.",
+        "avantages": [
+          "Accès presse",
+          "Contenus exclusifs"
+        ]
+      },
+      {
+        "nom": "Partenaire institutionnel",
+        "description": "Association institutionnelle au projet.",
+        "avantages": [
+          "Présence lors des rencontres institutionnelles",
+          "Networking ciblé"
+        ]
+      }
     ],
     "note": "Un tableau détaillé des avantages par niveau de partenariat est disponible sur demande.",
     "imageOffres": "/images/offres sponsors cineclub.png"
   },
-  "partenairesPrives": ["Opérateur de Mobile Money (Wave / Orange Money / Mixx by YAS) + E-Ticketing", "Novotel", "Seanema — Hôtel Sea Plaza", "Pathé Cinéma Dakar"],
-  "partenairesInstitutionnels": ["Musée des Civilisations Noires", "Monument de la Renaissance Africaine", "Place du Souvenir Africain", "Grand Théâtre National Doudou Ndiaye Rose", "Ambassades et Fondations au Sénégal", "Ministère de la Santé", "Ministère de la Femme et de l'Enfant", "Ministère de la Culture, de l'Artisanat et du Tourisme", "Ville de Dakar"],
+  "partenairesPrives": [
+    "Opérateur de Mobile Money (Wave / Orange Money / Mixx by YAS) + E-Ticketing",
+    "Novotel",
+    "Seanema — Hôtel Sea Plaza",
+    "Pathé Cinéma Dakar"
+  ],
+  "partenairesInstitutionnels": [
+    "Musée des Civilisations Noires",
+    "Monument de la Renaissance Africaine",
+    "Place du Souvenir Africain",
+    "Grand Théâtre National Doudou Ndiaye Rose",
+    "Ambassades et Fondations au Sénégal",
+    "Ministère de la Santé",
+    "Ministère de la Femme et de l'Enfant",
+    "Ministère de la Culture, de l'Artisanat et du Tourisme",
+    "Ville de Dakar"
+  ],
   "organisateur": {
     "structure": "KOOM COM GROUPE",
     "gerant": "Amadou Thior — Cinéaste, Producteur-Réalisateur",
     "adresse": "N° 69 TE Cité Diamalaye 2, Dakar — Sénégal",
-    "telephones": ["+221 77 656 56 60", "+221 33 820 29 31"],
+    "telephones": [
+      "+221 77 656 56 60",
+      "+221 33 820 29 31"
+    ],
     "email": "thioramadou@gmail.com",
     "logo": "/images/Logo Koom Com Group.png"
   },
-  "sources": [{ "nom": "Dossier CINECLUB — Dîner Débat, KOOM COM GROUPE" }]
+  "sources": [
+    {
+      "nom": "Dossier CINECLUB — Dîner Débat, KOOM COM GROUPE"
+    }
+  ]
 }
