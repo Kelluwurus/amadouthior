@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-8">
           <div>
-            <span className="font-[family-name:var(--font-cormorant)] text-lg text-[--color-fg]">
+            <span className="font-[family-name:var(--font-display)] text-lg text-[--color-fg]">
               Amadou Thior
             </span>
             <p className="text-xs text-[--color-fg-subtle] mt-1">

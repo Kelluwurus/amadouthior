@@ -20,7 +20,7 @@ export default function EditionCard({ edition }: EditionCardProps) {
       className="group block border border-[--color-border] p-6 hover:border-[--color-accent]/40 transition-colors"
     >
       <div className="flex items-baseline justify-between mb-3">
-        <span className="font-[family-name:var(--font-cormorant)] text-3xl text-[--color-accent]">
+        <span className="font-[family-name:var(--font-display)] text-3xl text-[--color-accent]">
           {edition.annee}
         </span>
         <Badge variant="accent">{statutLabels[edition.statut]}</Badge>

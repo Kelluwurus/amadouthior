@@ -38,7 +38,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <Link
           href="/"
-          className="font-[family-name:var(--font-cormorant)] text-xl font-medium text-[--color-fg]"
+          className="font-[family-name:var(--font-display)] text-xl font-medium text-[--color-fg]"
         >
           Amadou Thior
         </Link>

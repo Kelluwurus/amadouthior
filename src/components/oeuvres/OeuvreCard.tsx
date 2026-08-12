@@ -34,7 +34,7 @@ export default function OeuvreCard({ oeuvre }: OeuvreCardProps) {
           <Badge>{oeuvre.genre}</Badge>
         </div>
 
-        <h3 className="font-[family-name:var(--font-cormorant)] text-lg text-[--color-fg] group-hover:text-[--color-accent] transition-colors duration-200 mb-1">
+        <h3 className="font-[family-name:var(--font-display)] text-lg text-[--color-fg] group-hover:text-[--color-accent] transition-colors duration-200 mb-1">
           {oeuvre.titre}
         </h3>
 

@@ -53,7 +53,7 @@ export default function VisionSection() {
           {axes.map((axe, i) => (
             <Reveal key={axe.numero} delay={i * 80}>
               <Link href={axe.href} className="group block">
-                <span className="font-[family-name:var(--font-cormorant)] text-4xl text-[--color-accent]/25 group-hover:text-[--color-accent]/60 transition-colors">
+                <span className="font-[family-name:var(--font-display)] text-4xl text-[--color-accent]/25 group-hover:text-[--color-accent]/60 transition-colors">
                   {axe.numero}
                 </span>
                 <h3 className="text-h3 mt-2 mb-2 group-hover:text-[--color-accent] transition-colors">

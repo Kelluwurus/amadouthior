@@ -48,7 +48,7 @@ export default async function EditionPage({ params }: Props) {
         {/* Header */}
         <Reveal>
           <div className="flex items-baseline gap-4 mb-4">
-            <span className="font-[family-name:var(--font-cormorant)] text-4xl md:text-5xl text-[--color-accent]">
+            <span className="font-[family-name:var(--font-display)] text-4xl md:text-5xl text-[--color-accent]">
               {edition.annee}
             </span>
             <Badge variant="accent">{statutLabel}</Badge>

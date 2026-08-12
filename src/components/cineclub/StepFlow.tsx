@@ -20,7 +20,7 @@ export default function StepFlow({ steps }: StepFlowProps) {
               {/* Number + connector */}
               <div className="flex flex-col items-center">
                 <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border-2 border-[--color-accent] flex items-center justify-center shrink-0">
-                  <span className="font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl text-[--color-accent]">
+                  <span className="font-[family-name:var(--font-display)] text-2xl md:text-3xl text-[--color-accent]">
                     {String(step.numero).padStart(2, "0")}
                   </span>
                 </div>

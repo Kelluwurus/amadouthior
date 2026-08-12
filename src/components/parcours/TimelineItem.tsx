@@ -24,7 +24,7 @@ export default function TimelineItem({ event }: TimelineItemProps) {
       {/* Content */}
       <div className="flex-1 min-w-0 pb-2">
         <span className="text-meta block mb-1">{event.periode}</span>
-        <h3 className="font-[family-name:var(--font-cormorant)] text-base md:text-lg text-[--color-fg] mb-1">
+        <h3 className="font-[family-name:var(--font-display)] text-base md:text-lg text-[--color-fg] mb-1">
           {event.titre}
         </h3>
 
