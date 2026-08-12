@@ -12,15 +12,39 @@
     "dureeStatut": "confirme",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "realisation", "label": "Réalisateur" },
+    "role": {
+      "fonction": "realisation",
+      "label": "Réalisateur"
+    },
     "synopsis": "Le film s'inscrit dans une problématique de lutte contre la sécheresse et de développement au Sénégal. Il documente les conséquences de la désertification et les efforts entrepris pour préserver les conditions de vie des populations. Synopsis détaillé à vérifier à partir d'une copie du film ou de son dossier de production.",
     "ficheTechnique": [
-      { "label": "Format", "valeur": "16 mm couleur" },
-      { "label": "Thématique", "valeur": "Désertification / développement" }
+      {
+        "label": "Format",
+        "valeur": "16 mm couleur"
+      },
+      {
+        "label": "Thématique",
+        "valeur": "Désertification / développement"
+      }
     ],
-    "distinctions": ["Grand Prix de la Communauté économique européenne — FESPACO 1985, meilleur court métrage sur le développement"],
-    "festivals": ["FESPACO 1985"],
-    "sources": [{ "nom": "CV Amadou Thior 2024" }, { "nom": "Africultures" }, { "nom": "BnF" }]
+    "distinctions": [
+      "Grand Prix de la Communauté économique européenne — FESPACO 1985, meilleur court métrage sur le développement"
+    ],
+    "festivals": [
+      "FESPACO 1985"
+    ],
+    "sources": [
+      {
+        "nom": "CV Amadou Thior 2024"
+      },
+      {
+        "nom": "Africultures"
+      },
+      {
+        "nom": "BnF"
+      }
+    ],
+    "image": "/images/oeuvres/Plateau_tournage.jpg"
   },
   {
     "slug": "mariage-precoce",
@@ -34,22 +58,62 @@
     "dureeStatut": "confirme",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "realisation", "label": "Réalisateur" },
+    "role": {
+      "fonction": "realisation",
+      "label": "Réalisateur"
+    },
     "synopsis": "Dans une classe d'un village sénégalais, une place reste vide : celle de Bana, une jeune fille de 13 ans donnée en mariage à un vieil ami de son père. Après la nuit de noces, au cours de laquelle elle subit un viol, Bana décide de fuir. Aidée par une camarade d'école, elle se rend en ville chez une cousine pour y trouver protection. Le film aborde les conséquences du mariage précoce et forcé.",
     "ficheTechnique": [
-      { "label": "Format", "valeur": "16 mm / Umatic / VHS" },
-      { "label": "Production", "valeur": "Consultants et Réalisateurs Associés" },
-      { "label": "Distribution", "valeur": "Consultants et Réalisateurs Associés / Cinémathèque Afrique" },
-      { "label": "Directeur photo", "valeur": "Makhète Diallo" },
-      { "label": "Image", "valeur": "Adama Ndiaye / Makhète Diallo" },
-      { "label": "Son", "valeur": "Jules Diagne / Alioune Mbow" },
-      { "label": "Montage", "valeur": "Martine Brun / Pierre Ménard" },
-      { "label": "Musique", "valeur": "Salif Keïta / Madou Diabaté / musiques du Fouta Djalon" },
-      { "label": "Financement", "valeur": "Organisation internationale de la Francophonie" }
+      {
+        "label": "Format",
+        "valeur": "16 mm / Umatic / VHS"
+      },
+      {
+        "label": "Production",
+        "valeur": "Consultants et Réalisateurs Associés"
+      },
+      {
+        "label": "Distribution",
+        "valeur": "Consultants et Réalisateurs Associés / Cinémathèque Afrique"
+      },
+      {
+        "label": "Directeur photo",
+        "valeur": "Makhète Diallo"
+      },
+      {
+        "label": "Image",
+        "valeur": "Adama Ndiaye / Makhète Diallo"
+      },
+      {
+        "label": "Son",
+        "valeur": "Jules Diagne / Alioune Mbow"
+      },
+      {
+        "label": "Montage",
+        "valeur": "Martine Brun / Pierre Ménard"
+      },
+      {
+        "label": "Musique",
+        "valeur": "Salif Keïta / Madou Diabaté / musiques du Fouta Djalon"
+      },
+      {
+        "label": "Financement",
+        "valeur": "Organisation internationale de la Francophonie"
+      }
     ],
     "distinctions": [],
-    "festivals": ["Festival international du film francophone de Namur, 1995"],
-    "sources": [{ "nom": "Images Francophones" }, { "nom": "Archives FIFF Namur" }]
+    "festivals": [
+      "Festival international du film francophone de Namur, 1995"
+    ],
+    "sources": [
+      {
+        "nom": "Images Francophones"
+      },
+      {
+        "nom": "Archives FIFF Namur"
+      }
+    ],
+    "image": "/images/oeuvres/Mariage_precoce.jpeg"
   },
   {
     "slug": "exchange-cross-road",
@@ -63,15 +127,28 @@
     "dureeStatut": "a_confirmer",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "realisation", "label": "Réalisateur" },
+    "role": {
+      "fonction": "realisation",
+      "label": "Réalisateur"
+    },
     "synopsis": "Documentaire réalisé par Amadou Thior en 1994. Les sources actuellement accessibles ne permettent pas d'établir un synopsis détaillé fiable — aucun synopsis n'a été inventé.",
     "ficheTechnique": [
-      { "label": "Format", "valeur": "À confirmer" },
-      { "label": "Production", "valeur": "À confirmer" }
+      {
+        "label": "Format",
+        "valeur": "À confirmer"
+      },
+      {
+        "label": "Production",
+        "valeur": "À confirmer"
+      }
     ],
     "distinctions": [],
     "festivals": [],
-    "sources": [{ "nom": "CV Amadou Thior 2024" }]
+    "sources": [
+      {
+        "nom": "CV Amadou Thior 2024"
+      }
+    ]
   },
   {
     "slug": "almodou",
@@ -85,21 +162,65 @@
     "dureeStatut": "confirme",
     "pays": "Sénégal",
     "langue": "Wolof (sous-titres français)",
-    "role": { "fonction": "realisation_scenario", "label": "Réalisateur et scénariste" },
+    "role": {
+      "fonction": "realisation_scenario",
+      "label": "Réalisateur et scénariste"
+    },
     "synopsis": "Modou, un garçon sénégalais de douze ans, est confié à une école coranique dirigée par Maître Sérigné, qui utilise ses jeunes élèves pour obtenir de l'argent par la mendicité. Après avoir fui une première fois, Modou est ramené auprès de son maître par son propre père. Il parvient à s'échapper de nouveau et trouve le soutien de Mère Coumba, une vendeuse de beignets et de café, qui l'aide à échapper à l'emprise de son maître. Le film met en scène la situation des enfants talibés confrontés à la mendicité, à la violence et à l'exploitation.",
     "ficheTechnique": [
-      { "label": "Scénario", "valeur": "Amadou Thior" },
-      { "label": "Production", "valeur": "Consultants et Réalisateurs Associés / RTS" },
-      { "label": "Producteur", "valeur": "Assane Diagne" },
-      { "label": "Directeur photo", "valeur": "Médoune Ndiaye" },
-      { "label": "Montage", "valeur": "El Hadj Malick Diop" },
-      { "label": "Son", "valeur": "Jules Diagne / Lamine Fall" },
-      { "label": "Image", "valeur": "Lamine Sarr" },
-      { "label": "Distribution principale", "valeur": "Doudou Guillaume Faye, Ndèye Fatou Dione, Bassirou Diakhaté, Die Astou Diop, Mamadou Pène, Djibril Gueye, Moustapha Niang" }
+      {
+        "label": "Scénario",
+        "valeur": "Amadou Thior"
+      },
+      {
+        "label": "Production",
+        "valeur": "Consultants et Réalisateurs Associés / RTS"
+      },
+      {
+        "label": "Producteur",
+        "valeur": "Assane Diagne"
+      },
+      {
+        "label": "Directeur photo",
+        "valeur": "Médoune Ndiaye"
+      },
+      {
+        "label": "Montage",
+        "valeur": "El Hadj Malick Diop"
+      },
+      {
+        "label": "Son",
+        "valeur": "Jules Diagne / Lamine Fall"
+      },
+      {
+        "label": "Image",
+        "valeur": "Lamine Sarr"
+      },
+      {
+        "label": "Distribution principale",
+        "valeur": "Doudou Guillaume Faye, Ndèye Fatou Dione, Bassirou Diakhaté, Die Astou Diop, Mamadou Pène, Djibril Gueye, Moustapha Niang"
+      }
     ],
-    "distinctions": ["Prix spécial Plan International / Children's Rights — FESPACO 2001"],
-    "festivals": ["FESPACO 2001", "Festival de Milan", "Vues d'Afrique — Montréal"],
-    "sources": [{ "nom": "BnF" }, { "nom": "IMDb" }, { "nom": "Africultures" }]
+    "distinctions": [
+      "Prix spécial Plan International / Children's Rights — FESPACO 2001"
+    ],
+    "festivals": [
+      "FESPACO 2001",
+      "Festival de Milan",
+      "Vues d'Afrique — Montréal"
+    ],
+    "sources": [
+      {
+        "nom": "BnF"
+      },
+      {
+        "nom": "IMDb"
+      },
+      {
+        "nom": "Africultures"
+      }
+    ],
+    "image": "/images/oeuvres/Almodou.jpg"
   },
   {
     "slug": "mayelle",
@@ -113,18 +234,53 @@
     "dureeStatut": "a_confirmer",
     "pays": "Sénégal",
     "langue": "Wolof",
-    "role": { "fonction": "realisation", "label": "Réalisateur" },
+    "role": {
+      "fonction": "realisation",
+      "label": "Réalisateur"
+    },
     "synopsis": "Le père de Mayelle était autrefois un homme riche qui organisait de grandes fêtes. Mais sa femme est morte et lui-même est devenu aveugle. Mayelle et son frère vivent désormais dans la brousse dans des conditions difficiles, leur seule compagne de jeu étant une chèvre. Un jour, d'anciens troubadours reviennent dans la concession et le père décide de sacrifier la chèvre pour les honorer. Le film raconte les conséquences de cette décision, mêlant famille, pauvreté, tradition et enfance.",
     "ficheTechnique": [
-      { "label": "Scénario", "valeur": "Ababacar Diop" },
-      { "label": "Couleur", "valeur": "Couleur" },
-      { "label": "Production", "valeur": "Cinecom Production / Consultants et Réalisateurs Associés" },
-      { "label": "Interprètes", "valeur": "Mamadou Bâ, Yaya Ba, Labba Camara, Djeynaba Gadio, Hady Hamady Gadio" },
-      { "label": "Note durée", "valeur": "Le CV mentionne 26 minutes, IFcinéma et IMDb indiquent 27 minutes, la fiche BDFCI indique 32 minutes — durée à confirmer sur une source primaire" }
+      {
+        "label": "Scénario",
+        "valeur": "Ababacar Diop"
+      },
+      {
+        "label": "Couleur",
+        "valeur": "Couleur"
+      },
+      {
+        "label": "Production",
+        "valeur": "Cinecom Production / Consultants et Réalisateurs Associés"
+      },
+      {
+        "label": "Interprètes",
+        "valeur": "Mamadou Bâ, Yaya Ba, Labba Camara, Djeynaba Gadio, Hady Hamady Gadio"
+      },
+      {
+        "label": "Note durée",
+        "valeur": "Le CV mentionne 26 minutes, IFcinéma et IMDb indiquent 27 minutes, la fiche BDFCI indique 32 minutes — durée à confirmer sur une source primaire"
+      }
     ],
     "distinctions": [],
-    "festivals": ["FESPACO 2003", "Festival de Fribourg"],
-    "sources": [{ "nom": "CV Amadou Thior 2024" }, { "nom": "IFcinéma" }, { "nom": "IMDb" }, { "nom": "BDFCI" }]
+    "festivals": [
+      "FESPACO 2003",
+      "Festival de Fribourg"
+    ],
+    "sources": [
+      {
+        "nom": "CV Amadou Thior 2024"
+      },
+      {
+        "nom": "IFcinéma"
+      },
+      {
+        "nom": "IMDb"
+      },
+      {
+        "nom": "BDFCI"
+      }
+    ],
+    "image": "/images/oeuvres/mayelle.jpeg"
   },
   {
     "slug": "meissa-pote-ndiaye-milliardaire",
@@ -139,15 +295,28 @@
     "dureeStatut": "confirme",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "realisation", "label": "Réalisateur" },
+    "role": {
+      "fonction": "realisation",
+      "label": "Réalisateur"
+    },
     "synopsis": "Synopsis détaillé non retrouvé dans les sources publiques consultées. À afficher uniquement : téléfilm de fiction en deux épisodes de 45 minutes, réalisé par Amadou Thior en 2006.",
     "ficheTechnique": [
-      { "label": "Production", "valeur": "TAF Production" },
-      { "label": "Scénario", "valeur": "À confirmer" }
+      {
+        "label": "Production",
+        "valeur": "TAF Production"
+      },
+      {
+        "label": "Scénario",
+        "valeur": "À confirmer"
+      }
     ],
     "distinctions": [],
     "festivals": [],
-    "sources": [{ "nom": "CV Amadou Thior 2024" }]
+    "sources": [
+      {
+        "nom": "CV Amadou Thior 2024"
+      }
+    ]
   },
   {
     "slug": "nef",
@@ -161,15 +330,31 @@
     "dureeStatut": "a_confirmer",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "production_management", "label": "Production management" },
+    "role": {
+      "fonction": "production_management",
+      "label": "Production management"
+    },
     "synopsis": "Téléfilm produit dans le cadre du programme Bien-être pour Tous. Synopsis à compléter à partir des archives du film.",
     "ficheTechnique": [
-      { "label": "Réalisation", "valeur": "À confirmer" },
-      { "label": "Production", "valeur": "Bien-être pour Tous / Consultants et Réalisateurs Associés (à vérifier)" }
+      {
+        "label": "Réalisation",
+        "valeur": "À confirmer"
+      },
+      {
+        "label": "Production",
+        "valeur": "Bien-être pour Tous / Consultants et Réalisateurs Associés (à vérifier)"
+      }
     ],
     "distinctions": [],
     "festivals": [],
-    "sources": [{ "nom": "IMDb" }, { "nom": "CV Amadou Thior 2024" }]
+    "sources": [
+      {
+        "nom": "IMDb"
+      },
+      {
+        "nom": "CV Amadou Thior 2024"
+      }
+    ]
   },
   {
     "slug": "kine",
@@ -183,12 +368,24 @@
     "dureeStatut": "a_confirmer",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "production_management", "label": "Production management" },
+    "role": {
+      "fonction": "production_management",
+      "label": "Production management"
+    },
     "synopsis": "Téléfilm produit dans le cadre du programme Bien-être pour Tous. Synopsis complet non suffisamment documenté dans les sources accessibles.",
-    "ficheTechnique": [{ "label": "Réalisation", "valeur": "À confirmer" }],
+    "ficheTechnique": [
+      {
+        "label": "Réalisation",
+        "valeur": "À confirmer"
+      }
+    ],
     "distinctions": [],
     "festivals": [],
-    "sources": [{ "nom": "IMDb" }]
+    "sources": [
+      {
+        "nom": "IMDb"
+      }
+    ]
   },
   {
     "slug": "coumba",
@@ -202,12 +399,24 @@
     "dureeStatut": "a_confirmer",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "production_management", "label": "Production management" },
+    "role": {
+      "fonction": "production_management",
+      "label": "Production management"
+    },
     "synopsis": "Téléfilm produit dans le cadre du programme Bien-être pour Tous. Synopsis non suffisamment vérifié dans les sources publiques consultées.",
-    "ficheTechnique": [{ "label": "Réalisation", "valeur": "À confirmer" }],
+    "ficheTechnique": [
+      {
+        "label": "Réalisation",
+        "valeur": "À confirmer"
+      }
+    ],
     "distinctions": [],
     "festivals": [],
-    "sources": [{ "nom": "IMDb" }]
+    "sources": [
+      {
+        "nom": "IMDb"
+      }
+    ]
   },
   {
     "slug": "mbarane",
@@ -221,12 +430,24 @@
     "dureeStatut": "a_confirmer",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "production_management", "label": "Production management" },
+    "role": {
+      "fonction": "production_management",
+      "label": "Production management"
+    },
     "synopsis": "Fiche provisoire. Réalisation et scénario à confirmer.",
-    "ficheTechnique": [{ "label": "Réalisation", "valeur": "À confirmer" }],
+    "ficheTechnique": [
+      {
+        "label": "Réalisation",
+        "valeur": "À confirmer"
+      }
+    ],
     "distinctions": [],
     "festivals": [],
-    "sources": [{ "nom": "IMDb" }]
+    "sources": [
+      {
+        "nom": "IMDb"
+      }
+    ]
   },
   {
     "slug": "camp-de-thiaroye",
@@ -240,15 +461,32 @@
     "dureeStatut": "a_confirmer",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "assistant_realisateur", "label": "Assistant réalisateur — Ousmane Sembène et Thierno Faty Sow" },
+    "role": {
+      "fonction": "assistant_realisateur",
+      "label": "Assistant réalisateur — Ousmane Sembène et Thierno Faty Sow"
+    },
     "synopsis": "Amadou Thior a été assistant réalisateur sur ce film réalisé par Ousmane Sembène et Thierno Faty Sow. Il n'en est pas le réalisateur : cette page ne présente pas de synopsis complet du film afin d'éviter toute confusion sur les crédits de réalisation, qui appartiennent à Sembène et Faty Sow.",
     "ficheTechnique": [
-      { "label": "Réalisation", "valeur": "Ousmane Sembène et Thierno Faty Sow" },
-      { "label": "Rôle d'Amadou Thior", "valeur": "Assistant réalisateur" }
+      {
+        "label": "Réalisation",
+        "valeur": "Ousmane Sembène et Thierno Faty Sow"
+      },
+      {
+        "label": "Rôle d'Amadou Thior",
+        "valeur": "Assistant réalisateur"
+      }
     ],
     "distinctions": [],
     "festivals": [],
-    "sources": [{ "nom": "CV Amadou Thior 2024" }, { "nom": "Africultures" }]
+    "sources": [
+      {
+        "nom": "CV Amadou Thior 2024"
+      },
+      {
+        "nom": "Africultures"
+      }
+    ],
+    "image": "/images/oeuvres/Camp_de_thiaroye.jpeg"
   },
   {
     "slug": "guelwaar",
@@ -262,14 +500,30 @@
     "dureeStatut": "a_confirmer",
     "pays": "Sénégal",
     "langue": null,
-    "role": { "fonction": "assistant_realisateur", "label": "Assistant réalisateur — Ousmane Sembène" },
+    "role": {
+      "fonction": "assistant_realisateur",
+      "label": "Assistant réalisateur — Ousmane Sembène"
+    },
     "synopsis": "Amadou Thior a été assistant réalisateur sur ce film réalisé par Ousmane Sembène. Il n'en est pas le réalisateur : cette page ne présente pas de synopsis complet du film afin d'éviter toute confusion sur les crédits de réalisation.",
     "ficheTechnique": [
-      { "label": "Réalisation", "valeur": "Ousmane Sembène" },
-      { "label": "Rôle d'Amadou Thior", "valeur": "Assistant réalisateur" }
+      {
+        "label": "Réalisation",
+        "valeur": "Ousmane Sembène"
+      },
+      {
+        "label": "Rôle d'Amadou Thior",
+        "valeur": "Assistant réalisateur"
+      }
     ],
     "distinctions": [],
     "festivals": [],
-    "sources": [{ "nom": "CV Amadou Thior 2024" }, { "nom": "Africultures" }]
+    "sources": [
+      {
+        "nom": "CV Amadou Thior 2024"
+      },
+      {
+        "nom": "Africultures"
+      }
+    ]
   }
 ]

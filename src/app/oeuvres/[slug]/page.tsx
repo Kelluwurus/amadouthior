@@ -56,6 +56,16 @@ export default async function OeuvrePage({ params }: Props) {
           </Reveal>
         )}
 
+        {/* Image */}
+        {oeuvre.image && (
+          <Reveal delay={50}>
+            <div className="aspect-[16/9] overflow-hidden mb-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={oeuvre.image} alt={oeuvre.titre} className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </Reveal>
+        )}
+
         {/* Header */}
         <Reveal delay={60}>
           <div className="flex flex-wrap items-baseline gap-3 mb-2">
