@@ -35,6 +35,7 @@ export const mainNav: NavLink[] = [
   { label: "Parcours", href: "/parcours" },
   { label: "Œuvres", href: "/oeuvre" },
   { label: "Transmission", href: "/transmission" },
+  { label: "Expertise", href: "/expertise" },
   { label: "Archives", href: "/archives" },
   { label: "Projets", href: "/projets" },
   { label: "Contact", href: "/contact" },
