@@ -65,51 +65,51 @@ export default function HomePage() {
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
             <Reveal delay={60}>
-              <div className="flex gap-4">
+              <Link href="/oeuvre" className="flex gap-4 group">
                 <Film size={20} className="text-[--color-accent] shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
-                  <h3 className="text-h3 mb-2">Réalisation</h3>
+                  <h3 className="text-h3 mb-2 group-hover:text-[--color-accent] transition-colors">Réalisation</h3>
                   <p className="text-body text-[--color-fg-muted]">
                     Films de fiction, documentaires et téléfilms.
                   </p>
                 </div>
-              </div>
+              </Link>
             </Reveal>
             <Reveal delay={120}>
-              <div className="flex gap-4">
+              <Link href="/production" className="flex gap-4 group">
                 <Clapperboard size={20} className="text-[--color-accent] shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
-                  <h3 className="text-h3 mb-2">Production</h3>
+                  <h3 className="text-h3 mb-2 group-hover:text-[--color-accent] transition-colors">Production</h3>
                   <p className="text-body text-[--color-fg-muted]">
                     Production déléguée, production exécutive et développement
                     de projets audiovisuels.
                   </p>
                 </div>
-              </div>
+              </Link>
             </Reveal>
             <Reveal delay={180}>
-              <div className="flex gap-4">
+              <Link href="/transmission" className="flex gap-4 group">
                 <GraduationCap size={20} className="text-[--color-accent] shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
-                  <h3 className="text-h3 mb-2">Transmission</h3>
+                  <h3 className="text-h3 mb-2 group-hover:text-[--color-accent] transition-colors">Transmission</h3>
                   <p className="text-body text-[--color-fg-muted]">
                     Plusieurs décennies de formation aux métiers du cinéma et de
                     l&apos;audiovisuel.
                   </p>
                 </div>
-              </div>
+              </Link>
             </Reveal>
             <Reveal delay={240}>
-              <div className="flex gap-4">
+              <Link href="/expertise" className="flex gap-4 group">
                 <Building2 size={20} className="text-[--color-accent] shrink-0 mt-1" strokeWidth={1.5} />
                 <div>
-                  <h3 className="text-h3 mb-2">Expertise</h3>
+                  <h3 className="text-h3 mb-2 group-hover:text-[--color-accent] transition-colors">Expertise</h3>
                   <p className="text-body text-[--color-fg-muted]">
                     Politiques cinématographiques, industrie audiovisuelle,
                     patrimoine et transformation numérique.
                   </p>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           </div>
         </Container>
@@ -163,16 +163,16 @@ export default function HomePage() {
       </section>
 
       {/* ===== ALMODOU ===== */}
-      <section className="section-py bg-[--color-surface]">
+      <section className="section-py bg-[#5C2D20] text-[#FDFBF7]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 lg:gap-16 items-start">
             {/* Poster placeholder */}
             <Reveal>
               <Link
                 href="/oeuvre/almodou"
-                className="block aspect-[2/3] bg-[--color-surface-2] flex items-center justify-center group"
+                className="block aspect-[2/3] bg-[#7A4D3C] flex items-center justify-center group"
               >
-                <span className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl text-[--color-fg-subtle] group-hover:text-[--color-accent] transition-colors duration-300">
+                <span className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl text-[#FDFBF7]/60 group-hover:text-[#FDFBF7] transition-colors duration-300">
                   Almodou
                 </span>
               </Link>
@@ -181,11 +181,11 @@ export default function HomePage() {
             {/* Info */}
             <Reveal delay={100}>
               <div className="py-4">
-                <p className="text-meta text-[--color-accent] mb-3">
+                <p className="text-meta text-[#C86D51] mb-3">
                   Long métrage
                 </p>
-                <h2 className="text-h1 mb-3">Almodou</h2>
-                <div className="flex flex-wrap gap-x-4 gap-y-1 text-caption text-[--color-fg-subtle] mb-6">
+                <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.8rem,4vw,2.75rem)] font-normal leading-[1.2] text-[#FDFBF7] mb-3">Almodou</h2>
+                <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-[#FDFBF7]/70 mb-6">
                   <span>2000</span>
                   <span>·</span>
                   <span>Fiction</span>
@@ -195,20 +195,20 @@ export default function HomePage() {
                   <span>Wolof, sous-titré français</span>
                 </div>
 
-                <div className="space-y-3 text-caption text-[--color-fg-muted] mb-6">
-                  <p><span className="text-[--color-fg-subtle]">Réalisation et scénario</span> — Amadou Thior</p>
-                  <p><span className="text-[--color-fg-subtle]">Production</span> — Consultants et Réalisateurs Associés</p>
+                <div className="space-y-3 text-sm text-[#FDFBF7]/70 mb-6">
+                  <p><span className="text-[#FDFBF7]/50">Réalisation et scénario</span> — Amadou Thior</p>
+                  <p><span className="text-[#FDFBF7]/50">Production</span> — Consultants et Réalisateurs Associés</p>
                 </div>
 
-                <div className="border-l-2 border-[--color-accent] pl-6 mb-8">
-                  <p className="text-body text-[--color-fg] font-medium">
+                <div className="border-l-2 border-[#C86D51] pl-6 mb-8">
+                  <p className="text-base text-[#FDFBF7] font-medium">
                     Prix Plan International / Children&apos;s Right au FESPACO 2001.
                   </p>
                 </div>
 
                 <Link
                   href="/oeuvre/almodou"
-                  className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+                  className="inline-flex items-center gap-2 text-sm text-[#C86D51] hover:text-[#D4917A] transition-colors"
                 >
                   Voir la fiche complète <ArrowRight size={13} />
                 </Link>
@@ -219,17 +219,17 @@ export default function HomePage() {
       </section>
 
       {/* ===== FORMATION ===== */}
-      <section className="section-py border-t border-[--color-border]">
+      <section className="section-py bg-[#C86D51] text-[#FDFBF7]">
         <Container narrow>
           <Reveal>
-            <p className="text-meta text-[--color-accent] mb-3">Formation</p>
-            <h2 className="text-h2 mb-4">
+            <p className="text-[0.7rem] font-medium tracking-[0.14em] uppercase text-[#FDFBF7]/70 mb-3">Formation</p>
+            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.4rem,3vw,2rem)] font-normal leading-[1.25] text-[#FDFBF7] mb-4">
               École Nationale Vaugirard-Louis Lumière, Paris
             </h2>
-            <p className="text-body text-[--color-fg-muted] mb-2">
+            <p className="text-base text-[#FDFBF7]/80 mb-2">
               Études : 1974–1977
             </p>
-            <p className="text-body text-[--color-fg-muted]">
+            <p className="text-base text-[#FDFBF7]/80">
               BTS Cinéma, option image — 1977.
             </p>
           </Reveal>

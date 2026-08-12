@@ -30,18 +30,22 @@ export const siteConfig: SiteConfig = {
   locale: "fr_FR",
 };
 
+// Navigation principale — parcours logique du visiteur :
+// Qui est-il ? → Qu'a-t-il fait ? → Que transmet-il ? → Que fait-il maintenant ? → Contact
 export const mainNav: NavLink[] = [
-  { label: "Accueil", href: "/" },
+  { label: "À propos", href: "/a-propos" },
   { label: "Parcours", href: "/parcours" },
   { label: "Œuvres", href: "/oeuvre" },
-  { label: "Production", href: "/production" },
   { label: "Transmission", href: "/transmission" },
-  { label: "Expertise", href: "/expertise" },
   { label: "Projets", href: "/projets" },
   { label: "Contact", href: "/contact" },
 ];
 
+// Pages accessibles depuis les pages internes (liens contextuels, footer, etc.)
 export const secondaryNav: NavLink[] = [
+  { label: "Production", href: "/production" },
+  { label: "Expertise", href: "/expertise" },
   { label: "Distinctions", href: "/distinctions" },
+  { label: "Archives", href: "/archives" },
   { label: "Collaborations", href: "/collaborations" },
 ];

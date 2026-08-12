@@ -1,34 +1,63 @@
 import Link from "next/link";
-import { siteConfig, mainNav } from "@/content/site";
+import { siteConfig, mainNav, secondaryNav } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[--color-border] pt-12 pb-8 mt-16">
+    <footer className="border-t border-[--color-border] pt-14 pb-8 mt-16">
       <div className="max-w-5xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
+        {/* Top: brand + navigation */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-10 md:gap-16 mb-10">
+          {/* Brand */}
           <div>
             <span className="font-[family-name:var(--font-cormorant)] text-lg text-[--color-fg]">
               {siteConfig.name}
             </span>
-            <p className="text-caption text-[--color-fg-subtle] mt-0.5">
+            <p className="text-caption text-[--color-fg-subtle] mt-1 max-w-xs">
               {siteConfig.subtitle}
             </p>
           </div>
-          <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Pied de page">
-            {mainNav.filter(l => l.href !== "/").map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs text-[--color-fg-subtle] hover:text-[--color-accent] transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+
+          {/* Nav principale */}
+          <nav aria-label="Navigation">
+            <p className="text-meta text-[--color-accent] mb-3">Navigation</p>
+            <ul className="space-y-2">
+              {mainNav.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-caption text-[--color-fg-muted] hover:text-[--color-accent] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Nav secondaire */}
+          <nav aria-label="Pages complémentaires">
+            <p className="text-meta text-[--color-accent] mb-3">Voir aussi</p>
+            <ul className="space-y-2">
+              {secondaryNav.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-caption text-[--color-fg-muted] hover:text-[--color-accent] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </nav>
         </div>
-        <p className="text-xs text-[--color-fg-subtle]">
-          © {new Date().getFullYear()} {siteConfig.name}
-        </p>
+
+        {/* Bottom */}
+        <div className="border-t border-[--color-border] pt-6">
+          <p className="text-xs text-[--color-fg-subtle]">
+            © {new Date().getFullYear()} {siteConfig.name}
+          </p>
+        </div>
       </div>
     </footer>
   );

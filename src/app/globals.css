@@ -4,43 +4,33 @@
    AMADOU THIOR — DESIGN SYSTEM
    
    Direction Artistique :
-   Lumineuse · Chaleureuse · Éditoriale · Cinématographique
-   
-   Référence émotionnelle :
-   La terre du Sine après la lumière du soleil.
-   Le sable, les murs en terre, les paysages du Sine-Saloum.
-   Les textures naturelles et la photographie argentique.
+   Galerie d'Art & Patrimoine Luxe
+   Claire · Chaude · Organique · Haut de gamme
    
    Palette :
-   - Ivoire (#FDFBF7) — Fond principal, respiration, lumière
-   - Sable (#F3EDE4) — Surfaces, cartes, second plan
-   - Terre cuite (#C0653A) — Accent signature (sobre)
-   - Ocre doux (#D4A574) — Détails chaleureux
-   - Brun terreux (#3D2E22) — Texte principal, ancrage
-   - Brun moyen (#6B5744) — Texte secondaire
-   - Brun clair (#9E8E7E) — Éléments discrets
+   - Ivoire (#FDFBF7) — Fond principal, lumière
+   - Sable (#EFECE6) — Sections secondaires, cartes
+   - Blanc cassé (#F8F6F0) — Surélévations, badges
+   - Terre cuite (#C86D51) — Boutons, liens, accents
+   - Terre foncée (#5C2D20) — Texte principal, titres
    
-   Principes :
-   - Le terracotta = accent + signature, jamais dominant
-   - Fonds clairs, grands espaces blancs
-   - Films et photographies au premier plan
-   - Interface minimaliste, contenu prioritaire
-   - Cinéma d'auteur, mémoire, territoire
+   Règle : Interdire le noir pur (#000000).
+   Tout texte en terre-foncee ou variantes chaudes.
    ============================================ */
 
 @theme inline {
   --color-bg: #FDFBF7;
-  --color-surface: #F3EDE4;
-  --color-surface-2: #EAE3D8;
-  --color-fg: #3D2E22;
-  --color-fg-muted: #6B5744;
-  --color-fg-subtle: #9E8E7E;
-  --color-accent: #C0653A;
-  --color-accent-hover: #A8552E;
-  --color-accent-muted: #D4A574;
-  --color-accent-dark: #8B4422;
-  --color-border: #E5DDD3;
-  --color-border-accent: rgba(192, 101, 58, 0.15);
+  --color-surface: #EFECE6;
+  --color-surface-2: #F8F6F0;
+  --color-fg: #5C2D20;
+  --color-fg-muted: #7A4D3C;
+  --color-fg-subtle: #A08070;
+  --color-accent: #C86D51;
+  --color-accent-hover: #B35A40;
+  --color-accent-muted: #D4917A;
+  --color-accent-dark: #5C2D20;
+  --color-border: #EFECE6;
+  --color-border-accent: rgba(200, 109, 81, 0.2);
 
   --font-display: var(--font-cormorant);
   --font-body: var(--font-inter);
@@ -69,16 +59,14 @@ body {
   line-height: 1.75;
 }
 
-/* --- Typographie ---
-   Cormorant Garamond : titres, citations, noms de films
-   Inter : interface, paragraphes, métadonnées
-*/
+/* --- Typographie (Serif luxueux / Sans-Serif sobre) --- */
 .text-display {
   font-family: var(--font-display), serif;
   font-size: clamp(2.5rem, 5.5vw, 4rem);
   font-weight: 300;
   line-height: 1.1;
   letter-spacing: -0.01em;
+  color: var(--color-accent-dark);
 }
 
 .text-h1 {
@@ -86,6 +74,7 @@ body {
   font-size: clamp(1.8rem, 4vw, 2.75rem);
   font-weight: 400;
   line-height: 1.2;
+  color: var(--color-fg);
 }
 
 .text-h2 {
@@ -93,6 +82,7 @@ body {
   font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 400;
   line-height: 1.25;
+  color: var(--color-fg);
 }
 
 .text-h3 {
@@ -100,18 +90,21 @@ body {
   font-size: clamp(1.1rem, 1.8vw, 1.35rem);
   font-weight: 500;
   line-height: 1.35;
+  color: var(--color-fg);
 }
 
 .text-body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.75;
+  color: var(--color-fg-muted);
 }
 
 .text-caption {
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.6;
+  color: var(--color-fg-muted);
 }
 
 .text-meta {
@@ -120,9 +113,10 @@ body {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   line-height: 1.4;
+  color: var(--color-accent);
 }
 
-/* --- Espacements (généreux, le site respire) --- */
+/* --- Spacing --- */
 .section-py {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -136,7 +130,7 @@ body {
   .section-py { padding-top: 9rem; padding-bottom: 9rem; }
 }
 
-/* --- Animations (sobres, 400–500ms) --- */
+/* --- Animations (douces, organiques) --- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(14px); }
   to { opacity: 1; transform: translateY(0); }
@@ -148,7 +142,7 @@ body {
 }
 
 .animate-fade-up {
-  animation: fadeUp 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation: fadeUp 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   opacity: 0;
 }
 
@@ -162,7 +156,7 @@ body {
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
 
-/* --- Grain argentique (à peine perceptible) --- */
+/* --- Grain (à peine visible) --- */
 .grain {
   position: relative;
 }
@@ -171,7 +165,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.018;
+  opacity: 0.015;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
@@ -185,12 +179,12 @@ body {
 
 /* --- Selection --- */
 ::selection {
-  background-color: rgba(192, 101, 58, 0.1);
+  background-color: rgba(200, 109, 81, 0.12);
   color: var(--color-fg);
 }
 
-/* --- Scrollbar (discret) --- */
+/* --- Scrollbar --- */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
-::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-fg-subtle); }
+::-webkit-scrollbar-thumb { background: var(--color-surface); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-accent-muted); }
