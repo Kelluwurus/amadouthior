@@ -46,21 +46,21 @@
   --shadow-card: 0 1px 3px rgba(43, 32, 24, 0.04);
 }
 
-/* --- Thème CINECLUB (variante événementielle) --- */
+/* --- Thème CINECLUB (variante événementielle — couleurs logo Koom Com Group) --- */
 [data-theme="cineclub"] {
-  --color-bg: #7C3D1E;
-  --color-bg-alt: #6B3419;
-  --color-surface: #8F4A28;
-  --color-surface-2: #7C3D1E;
+  --color-bg: #0E5C2F;
+  --color-bg-alt: #0A4D27;
+  --color-surface: #137A3D;
+  --color-surface-2: #0E5C2F;
 
-  --color-fg: #F3EAD8;
-  --color-fg-muted: #E4D7C1;
-  --color-fg-subtle: #D8C3A0;
+  --color-fg: #F5F9F5;
+  --color-fg-muted: #D4E8D8;
+  --color-fg-subtle: #A8D4B0;
 
   --color-accent: #D8C3A0;
-  --color-accent-hover: #F3EAD8;
+  --color-accent-hover: #F5F9F5;
 
-  --color-border: rgba(243, 234, 216, 0.15);
+  --color-border: rgba(212, 232, 216, 0.15);
 }
 
 /* --- Base --- */
