@@ -1,147 +1,151 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Award } from "lucide-react";
-import { films } from "@/content/films";
+import { ArrowLeft, Award, ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Reveal from "@/components/ui/Reveal";
-import Badge from "@/components/ui/Badge";
+import { getFilmBySlug } from "@/content/films";
 
-const almodou = films.find((f) => f.slug === "almodou")!;
+const almodou = getFilmBySlug("almodou")!;
 
 export const metadata: Metadata = {
-  title: "Almodou — Un film d'Amadou Thior",
+  title: "Almodou — Amadou Thior",
   description: almodou.synopsis,
 };
 
 export default function AlmodouPage() {
   return (
-    <div className="min-h-screen">
+    <>
       {/* Hero */}
-      <section className="grain relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[--color-bg] via-[--color-surface] to-[--color-bg]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(192,101,58,0.03)_0%,transparent_60%)]" />
-
-        <div className="relative z-10">
-          <Container narrow>
-            <Reveal>
-              <Link
-                href="/oeuvre"
-                className="inline-flex items-center gap-2 text-sm text-[--color-fg-muted] hover:text-[--color-accent] transition-colors mb-10"
-              >
-                <ArrowLeft size={14} />
-                Filmographie
-              </Link>
-            </Reveal>
-
-            <Reveal delay={100}>
-              <div className="text-center">
-                <h1 className="text-display text-[--color-fg] mb-4">ALMODOU</h1>
-                <p className="text-caption text-[--color-fg-muted] mb-2">
-                  Un film d&apos;Amadou Thior
-                </p>
-                <p className="text-meta text-[--color-accent]">
-                  {almodou.year} · {almodou.country} · {almodou.duration}
-                </p>
-              </div>
-            </Reveal>
-          </Container>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="section-py">
+      <section className="grain pt-36 md:pt-44 pb-16 md:pb-20">
         <Container narrow>
-          {/* Prix principal — mis en avant */}
+          <Reveal>
+            <Link
+              href="/oeuvre"
+              className="inline-flex items-center gap-2 text-sm text-[--color-fg-subtle] hover:text-[--color-accent] transition-colors mb-10"
+            >
+              <ArrowLeft size={13} />
+              Filmographie
+            </Link>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <p className="text-meta text-[--color-accent] mb-3">
+              {almodou.roleOfAmadouThior}
+            </p>
+            <h1 className="text-display mb-4">Almodou</h1>
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-caption text-[--color-fg-subtle] mb-8">
+              <span>{almodou.year}</span>
+              <span>·</span>
+              <span>{almodou.type}</span>
+              <span>·</span>
+              <span>{almodou.duration}</span>
+              {almodou.language && (
+                <>
+                  <span>·</span>
+                  <span>{almodou.language}{almodou.subtitles && `, sous-titré ${almodou.subtitles}`}</span>
+                </>
+              )}
+            </div>
+          </Reveal>
+
+          {/* Prix principal */}
           {almodou.awards && almodou.awards.length > 0 && (
-            <Reveal>
-              <div className="bg-[--color-accent]/5 border border-[--color-accent]/20 rounded-xl p-6 md:p-8 mb-12 text-center">
-                <Award size={24} className="text-[--color-accent] mx-auto mb-3" />
-                <p className="text-base md:text-lg font-medium text-[--color-accent]">
-                  {almodou.awards[0]}
-                </p>
+            <Reveal delay={160}>
+              <div className="border-l-2 border-[--color-accent] pl-6 mb-10">
+                <div className="flex items-start gap-2">
+                  <Award size={16} className="text-[--color-accent] shrink-0 mt-0.5" />
+                  <p className="text-body text-[--color-fg] font-medium">
+                    {almodou.awards[0].title}
+                  </p>
+                </div>
               </div>
-            </Reveal>
-          )}
-
-          {/* Synopsis */}
-          <Reveal delay={100}>
-            <section className="mb-12">
-              <h2 className="text-h2 text-[--color-fg] mb-4">Présentation</h2>
-              <p className="text-body text-[--color-fg-muted] leading-relaxed text-lg">
-                {almodou.synopsis}
-              </p>
-            </section>
-          </Reveal>
-
-          {/* Fiche technique */}
-          <Reveal delay={150}>
-            <section className="mb-12">
-              <h2 className="text-h2 text-[--color-fg] mb-6">Fiche technique</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {[
-                  { label: "Réalisation", value: almodou.director },
-                  { label: "Scénario", value: almodou.writer },
-                  { label: "Production", value: almodou.production },
-                  { label: "Durée", value: almodou.duration },
-                  { label: "Pays", value: almodou.country },
-                  { label: "Langue", value: almodou.language },
-                  { label: "Année", value: almodou.year?.toString() },
-                  { label: "Type", value: almodou.type },
-                ].filter((item) => item.value).map((item) => (
-                  <div key={item.label} className="flex gap-3 text-caption">
-                    <span className="text-[--color-fg-subtle] w-28 shrink-0">{item.label}</span>
-                    <span className="text-[--color-fg-muted]">{item.value}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
-          </Reveal>
-
-          {/* Distribution */}
-          {almodou.cast && almodou.cast.length > 0 && (
-            <Reveal delay={200}>
-              <section className="mb-12">
-                <h2 className="text-h2 text-[--color-fg] mb-4">Distribution</h2>
-                <div className="flex flex-wrap gap-2">
-                  {almodou.cast.map((actor) => (
-                    <Badge key={actor}>{actor}</Badge>
-                  ))}
-                </div>
-              </section>
-            </Reveal>
-          )}
-
-          {/* Festivals */}
-          {almodou.festivals && almodou.festivals.length > 0 && (
-            <Reveal delay={250}>
-              <section className="mb-12">
-                <h2 className="text-h2 text-[--color-fg] mb-4">Festivals</h2>
-                <div className="flex flex-wrap gap-2">
-                  {almodou.festivals.map((festival) => (
-                    <Badge key={festival} variant="muted">{festival}</Badge>
-                  ))}
-                </div>
-              </section>
-            </Reveal>
-          )}
-
-          {/* Sources */}
-          {almodou.sources && almodou.sources.length > 0 && (
-            <Reveal delay={300}>
-              <section className="mt-12 pt-8 border-t border-[--color-border]">
-                <p className="text-xs text-[--color-fg-subtle] mb-3">Sources</p>
-                <div className="space-y-1">
-                  {almodou.sources.map((source) => (
-                    <p key={source.title} className="text-xs text-[--color-fg-subtle]">
-                      {source.title}{source.publisher && ` — ${source.publisher}`}
-                    </p>
-                  ))}
-                </div>
-              </section>
             </Reveal>
           )}
         </Container>
       </section>
+
+      {/* Content */}
+      <section className="pb-20">
+        <Container narrow>
+          <div className="space-y-12">
+            {/* Synopsis */}
+            {almodou.synopsis && (
+              <Reveal>
+                <div>
+                  <h2 className="text-meta text-[--color-accent] mb-3">Synopsis</h2>
+                  <p className="text-body text-[--color-fg-muted] leading-relaxed text-lg">
+                    {almodou.synopsis}
+                  </p>
+                </div>
+              </Reveal>
+            )}
+
+            {/* Fiche technique */}
+            <Reveal>
+              <div>
+                <h2 className="text-meta text-[--color-accent] mb-4">Fiche technique</h2>
+                <div className="space-y-2.5">
+                  <FicheRow label="Réalisation" value={almodou.director} />
+                  <FicheRow label="Scénario" value={almodou.screenplay} />
+                  <FicheRow label="Production" value={almodou.productionCompany} />
+                  <FicheRow label="Durée" value={almodou.duration} />
+                  <FicheRow label="Type" value={almodou.type} />
+                  <FicheRow label="Langue" value={almodou.language} />
+                  <FicheRow label="Sous-titrage" value={almodou.subtitles} />
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Festivals */}
+            {almodou.festivals && almodou.festivals.length > 0 && (
+              <Reveal>
+                <div>
+                  <h2 className="text-meta text-[--color-accent] mb-3">Festivals / Sélections</h2>
+                  <div className="flex flex-wrap gap-x-4 gap-y-2">
+                    {almodou.festivals.map((f) => (
+                      <span key={f} className="text-caption text-[--color-fg-muted]">{f}</span>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            )}
+
+            {/* Diffusions */}
+            {almodou.broadcasts && almodou.broadcasts.length > 0 && (
+              <Reveal>
+                <div>
+                  <h2 className="text-meta text-[--color-accent] mb-3">Diffusions</h2>
+                  <p className="text-caption text-[--color-fg-muted]">
+                    {almodou.broadcasts.join(" · ")}
+                  </p>
+                </div>
+              </Reveal>
+            )}
+
+            {/* Link to full page */}
+            <Reveal>
+              <div className="border-t border-[--color-border] pt-8">
+                <Link
+                  href="/oeuvre/almodou"
+                  className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+                >
+                  Fiche technique complète <ArrowRight size={13} />
+                </Link>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+    </>
+  );
+}
+
+function FicheRow({ label, value }: { label: string; value?: string }) {
+  if (!value) return null;
+  return (
+    <div className="flex flex-col sm:flex-row sm:gap-4">
+      <span className="text-caption text-[--color-fg-subtle] sm:w-36 shrink-0">{label}</span>
+      <span className="text-caption text-[--color-fg-muted]">{value}</span>
     </div>
   );
 }

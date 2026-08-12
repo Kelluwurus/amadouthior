@@ -1,146 +1,186 @@
 // content/films.ts
-// Filmographie d'Amadou Thior — données considérées comme confirmées
-// conformément à la synthèse de recherche fournie (Africultures, IFcinéma, BnF, IMDb).
+// Source unique de vérité pour toutes les fiches films.
+// Toute modification ici se répercute automatiquement
+// dans la filmographie, les fiches détaillées et la page d'accueil.
 
-import { Film } from "./types";
+// --- Interfaces ---
 
-export const films: Film[] = [
+export type DataStatus = "verified" | "to_confirm" | "incomplete";
+
+export interface FilmAward {
+  title: string;
+  year?: string;
+  status?: DataStatus;
+}
+
+export interface FilmData {
+  slug: string;
+  title: string;
+  originalTitle?: string;
+  year?: string;
+  yearStatus?: DataStatus;
+  type: string;
+  genre?: string;
+  duration?: string;
+  durationNote?: string;
+  format?: string;
+  director?: string;
+  screenplay?: string;
+  producer?: string;
+  productionCompany?: string;
+  language?: string;
+  subtitles?: string;
+  synopsis?: string;
+  synopsisStatus?: DataStatus;
+  technicalSheet?: string[];
+  roleOfAmadouThior: string;
+  awards?: FilmAward[];
+  festivals?: string[];
+  broadcasts?: string[];
+  distribution?: string[];
+  collection?: string;
+  audience?: string;
+  relatedWorks?: string[];
+  images?: string[];
+  notes?: string;
+  dataStatus: DataStatus;
+}
+
+// --- Données ---
+
+export const films: FilmData[] = [
   {
     slug: "xareek-maral",
-    title: "Xareek Maral",
-    year: 1985,
-    yearStatus: "confirmed",
+    title: "Xareek Maral / Halte au désert",
+    originalTitle: "Xareek Maral",
+    year: "1982",
+    yearStatus: "verified",
     type: "Documentaire",
+    genre: "Documentaire",
     duration: "30 min",
-    country: "Sénégal",
+    format: "16 mm couleur",
     director: "Amadou Thior",
-    synopsis:
-      "Documentaire consacré à la lutte contre la sécheresse au Sénégal, reconnu comme meilleur court-métrage sur le développement.",
-    awards: ["Grand Prix de la CEE — FESPACO 1985 (meilleur court-métrage sur le développement)"],
-    festivals: ["FESPACO 1985"],
-    sources: [
-      { title: "Fiche Amadou Thior", publisher: "Africultures" },
-      { title: "Article Grand Prix FESPACO 1985", publisher: "ladepeche.fr" },
+    roleOfAmadouThior: "Réalisateur",
+    awards: [
+      {
+        title: "1er Prix de la CEE au FESPACO 1985 — catégorie meilleur film sur le développement",
+        year: "1985",
+        status: "verified",
+      },
     ],
-    featured: true,
-    status: "confirmed",
-  },
-  {
-    slug: "halte-au-desert",
-    title: "Halte au Désert",
-    type: "Documentaire",
-    country: "Sénégal",
-    director: "Amadou Thior",
-    synopsis:
-      "Documentaire réalisé par Amadou Thior, référencé dans sa filmographie par Africultures.",
-    sources: [{ title: "Fiche Amadou Thior", publisher: "Africultures" }],
-    status: "confirmed",
-  },
-  {
-    slug: "mariage-precoce",
-    title: "Mariage précoce",
-    year: 1995,
-    yearStatus: "confirmed",
-    type: "Fiction",
-    duration: "19 min",
-    country: "Sénégal",
-    language: "Wolof",
-    director: "Amadou Thior",
-    production: "Consultants & Réalisateurs Associés",
-    synopsis:
-      "Bana, 13 ans, est mariée de force à un homme plus âgé. Le film suit sa tentative d'échapper à ce mariage, abordant les questions de droits des femmes et de droits humains.",
-    credits: ["Distribution : Cinémathèque Afrique / Institut français"],
-    sources: [
-      { title: "Catalogue Amadou Thior", publisher: "Institut français / IFcinéma" },
-      { title: "Fiche Mariage précoce", publisher: "Images Francophones" },
-    ],
-    featured: true,
-    status: "confirmed",
+    notes:
+      "Premier film à affirmer la vision cinématographique d'Amadou Thior. Œuvre fondatrice de son parcours, distinguée lors de la plus importante manifestation panafricaine de cinéma.",
+    dataStatus: "verified",
   },
   {
     slug: "exchange-cross-road",
     title: "Exchange Cross Road",
-    year: 1994,
-    yearStatus: "confirmed",
+    year: "1994",
+    yearStatus: "verified",
     type: "Documentaire",
-    country: "Sénégal",
+    genre: "Documentaire",
     director: "Amadou Thior",
-    sources: [{ title: "Fiche Amadou Thior", publisher: "Africultures" }],
-    status: "confirmed",
+    roleOfAmadouThior: "Réalisateur",
+    notes: "Données principalement issues du CV — fiche filmographique à compléter.",
+    dataStatus: "incomplete",
+  },
+  {
+    slug: "mariage-precoce",
+    title: "Mariage précoce",
+    year: "1995",
+    yearStatus: "verified",
+    type: "Fiction / Drame",
+    genre: "Fiction",
+    duration: "19 min",
+    director: "Amadou Thior",
+    roleOfAmadouThior: "Réalisateur",
+    productionCompany: "Consultants et Réalisateurs Associés",
+    notes: "Soutien de l'Organisation internationale de la Francophonie.",
+    festivals: ["Milan", "Carthage", "FESPACO"],
+    distribution: ["Cinémathèque Afrique"],
+    dataStatus: "verified",
   },
   {
     slug: "almodou",
     title: "Almodou",
-    year: 2000,
-    yearStatus: "confirmed",
-    type: "Long métrage",
+    year: "2000",
+    yearStatus: "verified",
+    type: "Fiction",
+    genre: "Fiction",
     duration: "85 min",
-    country: "Sénégal",
-    language: "Wolof",
     director: "Amadou Thior",
-    writer: "Amadou Thior",
-    production: "Consultants & Réalisateurs Associés",
+    screenplay: "Amadou Thior",
+    roleOfAmadouThior: "Réalisateur et scénariste",
+    productionCompany: "Consultants et Réalisateurs Associés",
+    language: "Wolof",
+    subtitles: "Français",
     synopsis:
-      "L'histoire de Modou, jeune garçon talibé confronté à l'exploitation et à la mendicité forcée.",
+      "Le film traite de la situation d'un jeune garçon confié à un maître coranique et confronté à la mendicité et aux violences liées à son exploitation.",
+    synopsisStatus: "verified",
     awards: [
-      "Prix spécial Plan International du film de long métrage pour les enfants — FESPACO 2001",
+      {
+        title: "Prix Plan International / Children's Right — FESPACO 2001",
+        year: "2001",
+        status: "verified",
+      },
     ],
-    festivals: ["FESPACO 2001", "Festival de Milan", "Vues d'Afrique — Montréal 2002"],
-    cast: [
-      "Doudou Guillaume Faye",
-      "Ndèye Fatou Dione",
-      "Bassirou Diakhate",
-      "Die Astou Diop",
-      "Mamadou Pene",
-      "Djibril Gueye",
-      "Moustapha Niang",
-    ],
-    sources: [
-      { title: "Notice Almodou", publisher: "BnF Catalogue général" },
-      { title: "Fiche Almodou", publisher: "IMDb" },
-      { title: "Prix Plan International — FESPACO 2001", publisher: "Africultures" },
-      { title: "Sélections festivals", publisher: "Wikipedia" },
-    ],
-    featured: true,
-    status: "confirmed",
+    festivals: ["Festival de Milan", "Vues d'Afrique, Montréal"],
+    broadcasts: ["RTS", "CFI", "TV5"],
+    dataStatus: "verified",
   },
   {
     slug: "mayelle",
     title: "Mayelle",
-    year: 2002,
-    yearStatus: "confirmed",
-    type: "Court métrage",
-    duration: "27 min",
-    country: "Sénégal",
+    type: "Fiction courte — Jeune public",
+    genre: "Fiction",
+    durationNote: "Durée à confirmer (sources divergentes : 26 min / 32 min)",
     director: "Amadou Thior",
-    synopsis:
-      "Une jeune fille et sa famille sont confrontées à des difficultés économiques et sociales. Le film s'inscrit dans la collection africaine \"Contes à Rebours\", destinée aux enfants de 8 à 12 ans.",
-    credits: [
-      "Diffusion : CFI, TV5, télévisions d'Afrique francophone, RTS",
-      "Collection : Contes à Rebours",
-    ],
-    sources: [
-      { title: "Catalogue Amadou Thior", publisher: "Institut français / IFcinéma" },
-      { title: "Fiche Amadou Thior", publisher: "Africultures" },
-    ],
-    featured: true,
-    status: "confirmed",
+    roleOfAmadouThior: "Réalisateur",
+    collection: "« Contes à Rebours »",
+    audience: "Enfants de 8 à 12 ans",
+    dataStatus: "to_confirm",
   },
   {
     slug: "meissa-pote-ndiaye-milliardaire",
     title: "Meissa Pote / Ndiaye Milliardaire",
-    year: 2006,
-    yearStatus: "confirmed",
-    type: "Téléfilm",
-    country: "Sénégal",
+    year: "2006",
+    yearStatus: "verified",
+    type: "Téléfilm de fiction",
+    genre: "Téléfilm",
+    duration: "2 × 45 min",
     director: "Amadou Thior",
-    sources: [{ title: "Fiche Amadou Thior", publisher: "Africultures" }],
-    status: "confirmed",
+    roleOfAmadouThior: "Réalisateur",
+    productionCompany: "TAF Production",
+    notes: "Données principalement issues du CV — fiche filmographique primaire à compléter.",
+    dataStatus: "incomplete",
+  },
+  {
+    slug: "bien-etre-pour-tous",
+    title: "Bien-être pour Tous",
+    year: "1996–1997",
+    yearStatus: "verified",
+    type: "Production déléguée",
+    genre: "Production",
+    roleOfAmadouThior: "Producteur délégué",
+    relatedWorks: ["Nef", "Kiné", "Coumba"],
+    awards: [
+      {
+        title: "Prix CILSS au FESPACO 1999",
+        year: "1999",
+        status: "verified",
+      },
+    ],
+    broadcasts: ["CFI", "TV5", "Télévisions d'Afrique francophone", "RTS"],
+    dataStatus: "verified",
   },
 ];
 
-// Productions portées par le GIE Consultants & Réalisateurs Associés,
-// mentionnées sans fiche technique complète disponible
-export const craProductions = ["Almodou", "Nef", "Kiné", "Coumba"];
+// --- Helpers ---
 
-export const featuredFilms = films.filter((f) => f.featured);
+export function getFilmBySlug(slug: string): FilmData | undefined {
+  return films.find((f) => f.slug === slug);
+}
+
+export const featuredFilms = films.filter(
+  (f) => f.slug === "xareek-maral" || f.slug === "almodou"
+);
