@@ -20,7 +20,7 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -29,30 +29,29 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[--color-bg]/95 backdrop-blur-sm border-b border-[--color-border] py-4"
-          : "py-5"
+          ? "bg-[--color-bg]/90 backdrop-blur-md border-b border-[--color-border] py-4"
+          : "bg-transparent py-6"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link
           href="/"
-          className="font-[family-name:var(--font-display)] text-xl font-medium text-[--color-fg]"
+          className="font-[family-name:var(--font-display)] text-2xl font-medium text-[--color-fg] tracking-wide"
         >
           Amadou Thior
         </Link>
 
-        {/* Desktop */}
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Navigation principale">
+        <nav className="hidden lg:flex items-center gap-8" aria-label="Navigation">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors duration-200 ${
+              className={`text-xs font-medium uppercase tracking-wider transition-colors duration-300 ${
                 pathname.startsWith(link.href)
                   ? "text-[--color-accent]"
-                  : "text-[--color-fg-muted] hover:text-[--color-accent]"
+                  : "text-[--color-fg-muted] hover:text-[--color-fg]"
               }`}
             >
               {link.label}
@@ -60,35 +59,32 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setOpen(!open)}
           className="lg:hidden p-2 text-[--color-fg]"
-          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
-          aria-expanded={open}
+          aria-label={open ? "Fermer" : "Menu"}
         >
-          {open ? <X size={20} /> : <Menu size={20} />}
+          {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile */}
       {open && (
-        <nav className="lg:hidden absolute top-full left-0 w-full bg-[--color-bg] border-b border-[--color-border] py-6 px-6">
-          <div className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className={`text-base ${
-                  pathname.startsWith(link.href) ? "text-[--color-accent]" : "text-[--color-fg]"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
+        <div className="lg:hidden fixed inset-0 bg-[--color-bg]/98 backdrop-blur-lg z-40 flex flex-col items-center justify-center gap-8">
+          <button onClick={() => setOpen(false)} className="absolute top-6 right-6 text-[--color-fg]">
+            <X size={24} />
+          </button>
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="text-2xl font-[family-name:var(--font-display)] text-[--color-fg] hover:text-[--color-accent] transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
       )}
     </header>
   );

@@ -16,13 +16,13 @@ export default function Bouton({
   external = false,
 }: BoutonProps) {
   const base =
-    "inline-flex items-center gap-2 px-6 py-3 text-sm font-medium rounded-md transition-colors duration-300";
+    "inline-flex items-center gap-2 px-7 py-3.5 text-sm font-medium tracking-wide transition-all duration-300";
 
   const variants = {
     primaire:
-      "bg-[--color-accent] text-[#FAF6EF] hover:bg-[--color-accent-hover]",
+      "bg-[--color-accent] text-white uppercase hover:bg-[--color-accent-hover] hover:shadow-lg",
     secondaire:
-      "border border-[--color-border] text-[--color-fg] hover:border-[--color-accent] hover:text-[--color-accent]",
+      "border border-[--color-fg]/20 text-[--color-fg] uppercase hover:border-[--color-accent] hover:text-[--color-accent]",
     ghost:
       "text-[--color-accent] hover:text-[--color-accent-hover]",
   };
@@ -30,16 +30,7 @@ export default function Bouton({
   const classes = `${base} ${variants[variant]} ${className}`;
 
   if (external) {
-    return (
-      <a href={href} className={classes} target="_blank" rel="noopener noreferrer">
-        {children}
-      </a>
-    );
+    return <a href={href} className={classes} target="_blank" rel="noopener noreferrer">{children}</a>;
   }
-
-  return (
-    <Link href={href} className={classes}>
-      {children}
-    </Link>
-  );
+  return <Link href={href} className={classes}>{children}</Link>;
 }

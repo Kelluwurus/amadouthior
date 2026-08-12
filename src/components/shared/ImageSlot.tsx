@@ -32,7 +32,7 @@ export default function ImageSlot({
 
   if (src) {
     return (
-      <div className={`${aspects[aspect]} ${sizes[size]} overflow-hidden ${className}`}>
+      <div className={`${aspects[aspect]} ${className.includes("!max-w-none") ? "" : sizes[size]} overflow-hidden ${className}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}
