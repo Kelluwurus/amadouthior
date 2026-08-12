@@ -47,7 +47,8 @@ export default function HomePage() {
                 src="/images/Amadou_Thior.jpg"
                 alt="Portrait d'Amadou Thior"
                 aspect="portrait"
-                className="max-w-sm lg:max-w-full mx-auto"
+                size="lg"
+                className="mx-auto"
               />
             </Reveal>
           </div>
@@ -100,7 +101,7 @@ export default function HomePage() {
             {/* Xareek Maral */}
             <Reveal delay={60}>
               <Link href="/oeuvres/xareek-maral" className="group grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-6 lg:gap-12 items-start">
-                <ImageSlot alt="Xareek Maral / Halte au désert" aspect="portrait" src="/images/oeuvres/Plateau_tournage.jpg" />
+                <ImageSlot alt="Xareek Maral / Halte au désert" aspect="portrait" size="md" src="/images/oeuvres/Plateau_tournage.jpg" />
                 <div className="py-2">
                   <Badge variant="accent">1982 · Documentaire · 16 mm · 30 min</Badge>
                   <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl text-[--color-fg] group-hover:text-[--color-accent] transition-colors mt-3 mb-3">
@@ -117,7 +118,7 @@ export default function HomePage() {
             {/* Mariage précoce */}
             <Reveal delay={80}>
               <Link href="/oeuvres/mariage-precoce" className="group grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-6 lg:gap-12 items-start">
-                <ImageSlot alt="Mariage précoce" aspect="portrait" src="/images/oeuvres/Mariage_precoce.jpeg" />
+                <ImageSlot alt="Mariage précoce" aspect="portrait" size="md" src="/images/oeuvres/Mariage_precoce.jpeg" />
                 <div className="py-2">
                   <Badge variant="accent">1995 · Fiction · Drame · 19 min</Badge>
                   <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl text-[--color-fg] group-hover:text-[--color-accent] transition-colors mt-3 mb-3">
@@ -131,7 +132,7 @@ export default function HomePage() {
             {/* Almodou */}
             <Reveal delay={100}>
               <Link href="/oeuvres/almodou" className="group grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-6 lg:gap-12 items-start">
-                <ImageSlot alt="Almodou" aspect="portrait" src="/images/oeuvres/Almodou.jpg" />
+                <ImageSlot alt="Almodou" aspect="portrait" size="md" src="/images/oeuvres/Almodou.jpg" />
                 <div className="py-2">
                   <Badge variant="accent">2000 · Fiction · 85 min</Badge>
                   <h3 className="font-[family-name:var(--font-display)] text-2xl md:text-3xl text-[--color-fg] group-hover:text-[--color-accent] transition-colors mt-3 mb-3">
@@ -166,6 +167,7 @@ export default function HomePage() {
                 src="/images/oeuvres/Camp_de_thiaroye.jpeg"
                 alt="Amadou Thior aux côtés d'Ousmane Sembène — archives de tournage"
                 aspect="landscape"
+                size="lg"
               />
             </Reveal>
             <Reveal delay={80}>
@@ -207,7 +209,7 @@ export default function HomePage() {
                 <div>
                   <h3 className="text-h3 group-hover:text-[--color-accent] transition-colors mb-2">Éveiller les consciences</h3>
                   <p className="text-caption mb-3">Donner une voix aux récits qui interrogent notre société.</p>
-                  <ImageSlot alt="Tournage — cinéma engagé" aspect="cinema" src="/images/oeuvres/Plateau_tournage.jpg" />
+                  <ImageSlot alt="Tournage — cinéma engagé" aspect="cinema" size="lg" src="/images/oeuvres/Plateau_tournage.jpg" />
                 </div>
               </Link>
             </Reveal>
@@ -218,7 +220,7 @@ export default function HomePage() {
                 <div>
                   <h3 className="text-h3 group-hover:text-[--color-accent] transition-colors mb-2">Transmettre les savoirs</h3>
                   <p className="text-caption mb-3">Former les nouvelles générations de cinéastes.</p>
-                  <ImageSlot alt="Formation — enseignement du cinéma" aspect="cinema" src="/images/archives/AT_Burkina.jpeg" />
+                  <ImageSlot alt="Formation — enseignement du cinéma" aspect="cinema" size="lg" src="/images/archives/AT_Burkina.jpeg" />
                 </div>
               </Link>
             </Reveal>
@@ -229,7 +231,7 @@ export default function HomePage() {
                 <div>
                   <h3 className="text-h3 group-hover:text-[--color-accent] transition-colors mb-2">Faire vivre une mémoire</h3>
                   <p className="text-caption mb-3">Préserver le patrimoine cinématographique sénégalais.</p>
-                  <ImageSlot alt="Archives — patrimoine cinématographique" aspect="cinema" src="/images/oeuvres/almodou_1.jpg" />
+                  <ImageSlot alt="Archives — patrimoine cinématographique" aspect="cinema" size="lg" src="/images/oeuvres/almodou_1.jpg" />
                 </div>
               </Link>
             </Reveal>

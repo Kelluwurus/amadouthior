@@ -16,7 +16,7 @@ export default function OeuvreCard({ oeuvre }: OeuvreCardProps) {
       className="group block border border-[--color-border] hover:border-[--color-accent]/30 transition-colors duration-300"
     >
       {/* Image placeholder */}
-      <div className="aspect-[3/2] bg-[--color-surface] flex items-center justify-center overflow-hidden">
+      <div className="aspect-[3/2] max-h-[200px] bg-[--color-surface] flex items-center justify-center overflow-hidden">
         {oeuvre.image ? (
           /* eslint-disable-next-line @next/next/no-img-element */
           <img src={oeuvre.image} alt={oeuvre.titre} className="w-full h-full object-cover" loading="lazy" />

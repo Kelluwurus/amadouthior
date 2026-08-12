@@ -1,19 +1,19 @@
 interface ImageSlotProps {
   alt: string;
   aspect?: "portrait" | "landscape" | "square" | "cinema";
+  size?: "sm" | "md" | "lg";
   className?: string;
   src?: string;
 }
 
 /**
- * Emplacement image élégant.
- * Si src est fourni → affiche l'image.
- * Sinon → fond sable subtil, prêt à recevoir la vraie image.
- * Jamais de gros placeholder gris.
+ * Emplacement image élégant avec tailles contrôlées.
+ * sm = max 200px, md = max 320px, lg = max 480px (par défaut md).
  */
 export default function ImageSlot({
   alt,
   aspect = "landscape",
+  size = "md",
   className = "",
   src,
 }: ImageSlotProps) {
@@ -24,9 +24,15 @@ export default function ImageSlot({
     cinema: "aspect-[16/9]",
   };
 
+  const sizes = {
+    sm: "max-w-[200px]",
+    md: "max-w-[320px]",
+    lg: "max-w-[480px]",
+  };
+
   if (src) {
     return (
-      <div className={`${aspects[aspect]} overflow-hidden ${className}`}>
+      <div className={`${aspects[aspect]} ${sizes[size]} overflow-hidden ${className}`}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}
@@ -40,7 +46,7 @@ export default function ImageSlot({
 
   return (
     <div
-      className={`${aspects[aspect]} bg-[--color-surface] border border-[--color-border] flex items-center justify-center ${className}`}
+      className={`${aspects[aspect]} ${sizes[size]} bg-[--color-surface] border border-[--color-border] flex items-center justify-center ${className}`}
     >
       <span className="text-[0.6rem] text-[--color-fg-subtle] tracking-wide uppercase">
         Image à fournir
