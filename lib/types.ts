@@ -162,12 +162,20 @@ export interface TransmissionDonnees {
 export interface CineclubDonnees {
   titre: string;
   sousTitre: string;
+  slogan: string;
   manifeste: string;
   accroche: string;
   porteurProjet: string;
   description: string;
+  resumeExecutif: string;
+  citation: string;
+  citationAuteur: string;
+  motDuPromoteur: string[];
   cinqTemps: CinqTemps[];
+  chaineDeValeur: string[];
+  distingue: string[];
   ecosysteme: string[];
+  cibles: string[];
   impact: ImpactItem[];
   editions: EditionCineclub[];
   partenariat: {
@@ -175,6 +183,17 @@ export interface CineclubDonnees {
     avantagesGeneraux: string[];
     categories: CategoriePartenariat[];
     note: string;
+    imageOffres?: string;
+  };
+  partenairesPrives: string[];
+  partenairesInstitutionnels: string[];
+  organisateur: {
+    structure: string;
+    gerant: string;
+    adresse: string;
+    telephones: string[];
+    email: string;
+    logo: string;
   };
   sources: Source[];
 }

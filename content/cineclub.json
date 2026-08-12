@@ -1,18 +1,43 @@
 {
   "titre": "CINECLUB — Dîner Débat",
   "sousTitre": "Le cinéma au service de l'humanitaire",
+  "slogan": "Mêler l'utile à l'événementiel !",
   "manifeste": "Cinéma · Dialogue · Solidarité · Action",
   "accroche": "Le film est le point de départ. Le dialogue est le moteur. L'action est la finalité.",
   "porteurProjet": "Amadou Thior",
-  "description": "Projet culturel et événementiel associant cinéma, dialogue, solidarité et action. Ce n'est pas un ciné-club classique : c'est un dispositif en cinq temps qui transforme une projection en dialogue, puis le dialogue en engagement.",
-  "cinqTemps": [
-    { "numero": 1, "titre": "Projection", "description": "Une œuvre choisie pour sa capacité à interroger notre société." },
-    { "numero": 2, "titre": "Dîner", "description": "Se rencontrer dans un cadre convivial, au-delà des rôles et des institutions." },
-    { "numero": 3, "titre": "Débat", "description": "Faire émerger les questions, les expériences et les propositions." },
-    { "numero": 4, "titre": "Mise en réseau", "description": "Connecter associations, institutions, entreprises, artistes et acteurs de terrain." },
-    { "numero": 5, "titre": "Action", "description": "Transformer le dialogue en engagements concrets." }
+  "description": "CINECLUB — DÎNER DÉBAT est un programme culturel, citoyen et humanitaire porté par KOOM COM GROUPE. Il transforme chaque projection cinématographique en une véritable plateforme de réflexion, de sensibilisation, de plaidoyer et d'engagement citoyen.",
+  "resumeExecutif": "Le concept repose sur une formule innovante associant la projection d'un film de qualité, un dîner favorisant les échanges, un débat animé par des experts et une mobilisation collective en faveur d'une cause sociale ou humanitaire. Chaque édition est organisée en lien avec une Journée Internationale reconnue par les Nations Unies.",
+  "citation": "Le cinéma ne change pas le monde à lui seul. Mais il peut changer notre regard sur le monde… et c'est ainsi que naissent les plus grandes transformations.",
+  "citationAuteur": "Amadou Thior",
+  "motDuPromoteur": [
+    "Depuis toujours, le cinéma constitue l'un des plus puissants moyens d'expression de notre humanité. Il raconte nos histoires, révèle nos différences, célèbre nos valeurs communes et nous invite à regarder l'autre avec davantage de compréhension, d'empathie et de respect.",
+    "À une époque où les défis sociaux, sanitaires, environnementaux et humanitaires se multiplient, il devient essentiel de créer des espaces capables de rassembler les citoyens, les institutions, les entreprises et les organisations autour d'un dialogue constructif et porteur de solutions.",
+    "C'est dans cet esprit qu'est né CINECLUB – DÎNER DÉBAT. Notre ambition est simple, mais profondément innovante : transformer chaque projection cinématographique en une véritable plateforme de réflexion, de sensibilisation, de plaidoyer et d'engagement citoyen.",
+    "Notre ambition est de faire de Dakar un rendez-vous incontournable du cinéma citoyen en Afrique, capable de rayonner progressivement à l'échelle régionale et internationale."
   ],
-  "ecosysteme": ["Institutions", "ONG & associations", "Entreprises", "Professionnels du cinéma", "Public & citoyens"],
+  "cinqTemps": [
+    { "numero": 1, "titre": "La Projection", "description": "Projection d'un film de référence internationale, sélectionné pour la qualité de son message et sa portée sociale. Le film est le point de départ de la réflexion collective." },
+    { "numero": 2, "titre": "Le Dîner", "description": "Un moment de convivialité favorisant les échanges informels entre invités, décideurs, partenaires, diplomatiques, artistes, universitaires, médias et membres de la société civile." },
+    { "numero": 3, "titre": "Le Débat", "description": "Animé par un modérateur expérimenté, le débat réunit les différentes parties prenantes autour des thématiques abordées par le film dans une session interactive de questions-réponses avec le public." },
+    { "numero": 4, "titre": "La Mise en réseau", "description": "Un espace privilégié de rencontres entre institutions publiques, entreprises, fondations, ONG, médias et porteurs de projets pour créer des synergies et bâtir des partenariats durables." },
+    { "numero": 5, "titre": "L'Action", "description": "Transformer les échanges en engagements concrets : campagnes, financement, soutien aux associations, projets collaboratifs, mécénat ou volontariat. Chaque édition laisse une empreinte durable." }
+  ],
+  "chaineDeValeur": ["Émouvoir", "Comprendre", "Dialoguer", "Mobiliser", "Agir"],
+  "distingue": [
+    "Une programmation alignée aux Journées Internationales des Nations Unies",
+    "Une sélection d'œuvres cinématographiques à fort impact social",
+    "Un format associant culture, débat et réseautage",
+    "Une plateforme de dialogue entre secteurs public, privé et société civile",
+    "Un dispositif favorisant la naissance de partenariats et d'actions concrètes",
+    "Un programme appelé à devenir un rendez-vous annuel de référence au Sénégal, avec une vocation régionale et internationale"
+  ],
+  "ecosysteme": ["Institutions publiques", "Organisations internationales", "Entreprises privées", "ONG et associations", "Fondations", "Médias", "Professionnels du cinéma", "Citoyens"],
+  "cibles": [
+    "Associations caritatives",
+    "Organisations féminines et pour l'enfance",
+    "Organisations professionnelles et sociales",
+    "ONG de développement communautaire"
+  ],
   "impact": [
     { "titre": "Sensibiliser", "description": "Faire émerger une réflexion autour d'une problématique sociale." },
     { "titre": "Connecter", "description": "Créer des rencontres entre acteurs qui ne se rencontrent pas toujours." },
@@ -23,38 +48,80 @@
     {
       "annee": "2016",
       "statut": "passee",
+      "titre": "Édition inaugurale",
       "lieu": "Grand Théâtre National de Dakar",
-      "film": { "titre": "Marcedes", "realisateur": null, "pourquoi": null },
-      "theme": "Première édition documentée du concept.",
+      "theme": "Promotion du cinéma international au Sénégal et renforcement des échanges culturels entre le Sénégal et le Liban",
+      "film": {
+        "titre": "Marcedes",
+        "realisateur": "Hady Zaccak",
+        "pays": "Liban",
+        "duree": "68 min",
+        "langue": "Arabe",
+        "genre": "Documentaire long métrage",
+        "synopsis": "Ce long métrage retrace les périodes noires de l'histoire du Liban à travers une voiture de marque Mercedes.",
+        "distinctions": ["Dubai International Film Festival 2011 — Nominé Muhr Arab Award", "2011 — Gagnant FIPRESCI Prize"]
+      },
+      "contexte": "Projection organisée par TAF PRODUCTION AFRIQUE sous le parrainage de M. Mbagnick Ndiaye, Ministre de la Culture et de la Communication, en présence de S.E. M. Khalil El Habre, Ambassadeur du Liban au Sénégal.",
+      "medias": ["Émission matinale « Kenkelibaa » sur la RTS", "Émission sur Vibe Radio en compagnie d'Amadou Thior"],
       "objectifs": [],
       "resultats": [],
-      "sources": [{ "nom": "Dossier interne CINECLUB" }]
+      "sources": [{ "nom": "Dossier CINECLUB — KOOM COM GROUPE" }]
     },
     {
       "annee": "2026",
       "statut": "a_venir",
+      "titre": "Le cinéma au service de l'inclusion",
       "lieu": "Dakar",
-      "date": "Décembre 2026 (date précise à confirmer)",
+      "date": "Décembre 2026",
+      "theme": "Journée Internationale des Personnes Handicapées",
       "film": {
         "titre": "Ghadi",
         "realisateur": "Amin Dora",
-        "pourquoi": "À documenter : le lien entre le film et le thème de l'inclusion doit être explicité avant publication."
+        "producteur": "Gabriel Chamoun",
+        "pays": "Liban",
+        "duree": "100 minutes",
+        "langue": "Arabe (sous-titré en français)",
+        "genre": "Fiction — Comédie dramatique",
+        "synopsis": "Après plusieurs années passées à l'étranger, Leba et Lara reviennent s'installer dans leur quartier d'enfance à Beyrouth. Leur bonheur est immense lorsqu'ils donnent naissance à leur troisième enfant, Ghadi. Mais très vite, ils découvrent que celui-ci est porteur d'une différence. Alors que le voisinage manifeste son incompréhension et son rejet, la famille va devoir faire face aux préjugés et apprendre à transformer cette différence en force. À travers humour, émotion et humanité, le film nous invite à porter un regard nouveau sur le handicap, la diversité et l'acceptation de l'autre.",
+        "succes": "Plus de 17 000 entrées dans les cinémas libanais lors de sa première semaine de sortie."
       },
-      "theme": "Le cinéma au service de l'inclusion — à l'occasion de la Journée internationale des personnes handicapées (3 décembre)",
       "objectifs": [
-        "Sensibiliser autour de l'inclusion des personnes en situation de handicap",
-        "Réunir institutions, ONG, entreprises et acteurs culturels autour d'un dialogue commun",
-        "Faire émerger des engagements concrets à l'issue du débat"
+        "Sensibiliser le grand public aux questions du handicap",
+        "Promouvoir les droits des personnes vivant avec un handicap",
+        "Valoriser les initiatives des associations spécialisées",
+        "Favoriser les échanges entre décideurs, experts, familles et société civile",
+        "Encourager le développement de partenariats en faveur de l'inclusion",
+        "Mobiliser des ressources au profit des organisations partenaires"
+      ],
+      "thematiques": [
+        "L'inclusion sociale",
+        "Le handicap et la différence",
+        "La lutte contre les préjugés",
+        "Le rôle de la famille",
+        "Le vivre-ensemble",
+        "La dignité humaine",
+        "L'espoir et la résilience"
+      ],
+      "publics": [
+        "Institutions publiques",
+        "Organisations internationales",
+        "Associations et ONG",
+        "Professionnels de la santé",
+        "Entreprises publiques et privées",
+        "Universités et établissements scolaires",
+        "Médias",
+        "Grand public"
       ],
       "resultats": [],
-      "sources": [{ "nom": "Dossier interne CINECLUB" }]
+      "sources": [{ "nom": "Dossier CINECLUB — KOOM COM GROUPE" }]
     },
     {
       "annee": "2027",
       "statut": "en_preparation",
+      "titre": "Édition 2027",
       "lieu": null,
       "film": null,
-      "theme": "En cours d'élaboration.",
+      "theme": "En cours d'élaboration",
       "objectifs": [],
       "resultats": [],
       "sources": []
@@ -63,8 +130,13 @@
   "partenariat": {
     "accroche": "Associer votre institution à une expérience qui transforme une projection en dialogue et le dialogue en action.",
     "avantagesGeneraux": [
-      "Visibilité", "Engagement RSE", "Positionnement institutionnel", "Networking",
-      "Association à une cause", "Présence événementielle", "Relations médias",
+      "Visibilité événementielle",
+      "Engagement RSE",
+      "Positionnement institutionnel",
+      "Networking",
+      "Association à une cause",
+      "Présence événementielle",
+      "Relations médias",
       "Accès aux acteurs institutionnels"
     ],
     "categories": [
@@ -74,7 +146,18 @@
       { "nom": "Partenaire média", "description": "Couverture et relais médiatique de l'événement.", "avantages": ["Accès presse", "Contenus exclusifs"] },
       { "nom": "Partenaire institutionnel", "description": "Association institutionnelle au projet.", "avantages": ["Présence lors des rencontres institutionnelles", "Networking ciblé"] }
     ],
-    "note": "Si un dossier de sponsoring impose des catégories Bronze/Argent/Or, ces catégories peuvent être conservées dans le dossier PDF de sponsoring tout en gardant une présentation éditoriale (les noms ci-dessus) sur le site public."
+    "note": "Un tableau détaillé des avantages par niveau de partenariat est disponible sur demande.",
+    "imageOffres": "/images/offres sponsors cineclub.png"
   },
-  "sources": [{ "nom": "Dossier interne CINECLUB — Dîner Débat" }]
+  "partenairesPrives": ["Opérateur de Mobile Money (Wave / Orange Money / Mixx by YAS) + E-Ticketing", "Novotel", "Seanema — Hôtel Sea Plaza", "Pathé Cinéma Dakar"],
+  "partenairesInstitutionnels": ["Musée des Civilisations Noires", "Monument de la Renaissance Africaine", "Place du Souvenir Africain", "Grand Théâtre National Doudou Ndiaye Rose", "Ambassades et Fondations au Sénégal", "Ministère de la Santé", "Ministère de la Femme et de l'Enfant", "Ministère de la Culture, de l'Artisanat et du Tourisme", "Ville de Dakar"],
+  "organisateur": {
+    "structure": "KOOM COM GROUPE",
+    "gerant": "Amadou Thior — Cinéaste, Producteur-Réalisateur",
+    "adresse": "N° 69 TE Cité Diamalaye 2, Dakar — Sénégal",
+    "telephones": ["+221 77 656 56 60", "+221 33 820 29 31"],
+    "email": "thioramadou@gmail.com",
+    "logo": "/images/Logo Koom Com Group.png"
+  },
+  "sources": [{ "nom": "Dossier CINECLUB — Dîner Débat, KOOM COM GROUPE" }]
 }

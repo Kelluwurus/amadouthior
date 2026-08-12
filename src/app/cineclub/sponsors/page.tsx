@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Reveal from "@/components/ui/Reveal";
 import Bouton from "@/components/ui/Bouton";
 import Carte from "@/components/ui/Carte";
-import { getPartenariats } from "@/lib/content";
+import ImageSlot from "@/components/shared/ImageSlot";
+import { getPartenariats, getCineclub } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Devenir partenaire — CINECLUB",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 
 export default function SponsorsPage() {
   const data = getPartenariats();
+  const cineclub = getCineclub();
 
   return (
     <div className="pt-32 md:pt-40 pb-16 md:pb-20">
@@ -25,22 +27,17 @@ export default function SponsorsPage() {
           </p>
         </Reveal>
 
-        {/* Avantages généraux */}
+        {/* Avantages */}
         <Reveal delay={60}>
           <p className="text-meta mb-4">Pourquoi devenir partenaire</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-16">
             {data.avantagesGeneraux.map((a) => (
-              <div
-                key={a}
-                className="border border-[--color-border] px-4 py-3 text-xs text-[--color-fg-muted]"
-              >
-                {a}
-              </div>
+              <div key={a} className="border border-[--color-border] px-4 py-3 text-xs text-[--color-fg-muted]">{a}</div>
             ))}
           </div>
         </Reveal>
 
-        {/* Catégories de partenariat */}
+        {/* Catégories */}
         <Reveal delay={100}>
           <p className="text-meta mb-6">Formules de partenariat</p>
         </Reveal>
@@ -63,15 +60,45 @@ export default function SponsorsPage() {
           ))}
         </div>
 
-        {/* Note */}
-        <Reveal delay={300}>
-          <p className="text-xs text-[--color-fg-subtle] italic mb-10 max-w-lg">
-            {data.note}
-          </p>
+        {/* Image offres */}
+        {data.imageOffres && (
+          <Reveal delay={200}>
+            <div className="mb-12">
+              <p className="text-meta mb-4">Tableau des offres</p>
+              <ImageSlot
+                src={data.imageOffres}
+                alt="Tableau comparatif des offres de sponsoring CINECLUB — Dîner Débat"
+                aspect="landscape"
+              />
+            </div>
+          </Reveal>
+        )}
+
+        {/* Partenaires visés */}
+        <Reveal delay={250}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div>
+              <p className="text-meta mb-3">Partenaires privés visés</p>
+              <ul className="space-y-1">
+                {cineclub.partenairesPrives.map((p) => (
+                  <li key={p} className="text-caption">{p}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <p className="text-meta mb-3">Partenaires institutionnels visés</p>
+              <ul className="space-y-1">
+                {cineclub.partenairesInstitutionnels.map((p) => (
+                  <li key={p} className="text-caption">{p}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </Reveal>
 
-        {/* CTA */}
-        <Reveal delay={320}>
+        {/* Note + CTA */}
+        <Reveal delay={300}>
+          <p className="text-xs text-[--color-fg-subtle] italic mb-10 max-w-lg">{data.note}</p>
           <Bouton href="/contact" variant="primaire">
             Prendre contact
           </Bouton>
