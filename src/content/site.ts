@@ -1,5 +1,4 @@
 // content/site.ts
-// Configuration du site et navigation
 
 export interface NavLink {
   label: string;
@@ -19,33 +18,32 @@ export interface SiteConfig {
 
 export const siteConfig: SiteConfig = {
   name: "Amadou Thior",
-  title: "Amadou Thior — Cinéaste · Producteur · Formateur · Consultant",
-  subtitle: "Cinéaste · Producteur · Formateur · Consultant",
+  title: "Amadou Thior — Cinéaste, Producteur-Réalisateur et Formateur",
+  subtitle: "Cinéaste · Producteur-réalisateur · Scénariste · Formateur",
   signature: "Créer. Transmettre. Préserver la mémoire.",
-  heroMessage: "Filmer l'humain. Transmettre. Construire l'avenir.",
+  heroMessage:
+    "Plus de 40 ans d'expérience au service du cinéma, de la production audiovisuelle, de la transmission et du développement de l'industrie cinématographique au Sénégal.",
   secondaryTagline:
     "Plus de quatre décennies au service du cinéma et de l'audiovisuel africains.",
   description:
-    "Site officiel d'Amadou Thior, cinéaste, producteur-réalisateur, scénariste, consultant et formateur audiovisuel sénégalais. Plus de quatre décennies au service du cinéma et de l'audiovisuel africains.",
+    "Site officiel d'Amadou Thior, cinéaste, producteur-réalisateur, scénariste, consultant et formateur audiovisuel sénégalais.",
   locale: "fr_FR",
 };
 
-// Navigation principale — parcours logique du visiteur :
-// Qui est-il ? → Qu'a-t-il fait ? → Que transmet-il ? → Que fait-il maintenant ? → Contact
+// Navigation principale — parcours éditorial du visiteur
 export const mainNav: NavLink[] = [
-  { label: "À propos", href: "/a-propos" },
+  { label: "Le cinéaste", href: "/a-propos" },
+  { label: "Filmographie", href: "/oeuvre" },
   { label: "Parcours", href: "/parcours" },
-  { label: "Œuvres", href: "/oeuvre" },
   { label: "Transmission", href: "/transmission" },
-  { label: "Projets", href: "/projets" },
+  { label: "Expertise", href: "/expertise" },
   { label: "Contact", href: "/contact" },
 ];
 
-// Pages accessibles depuis les pages internes (liens contextuels, footer, etc.)
+// Pages secondaires accessibles via footer et liens contextuels
 export const secondaryNav: NavLink[] = [
   { label: "Production", href: "/production" },
-  { label: "Expertise", href: "/expertise" },
   { label: "Distinctions", href: "/distinctions" },
   { label: "Archives", href: "/archives" },
-  { label: "Collaborations", href: "/collaborations" },
+  { label: "Projets", href: "/projets" },
 ];

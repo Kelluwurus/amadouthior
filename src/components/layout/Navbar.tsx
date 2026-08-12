@@ -27,24 +27,23 @@ export default function Navbar() {
           : "py-6"
       }`}
     >
-      <div className="max-w-5xl mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <Link
           href="/"
-          className="font-[family-name:var(--font-cormorant)] text-xl font-medium text-[--color-fg] tracking-wide"
+          className="font-[family-name:var(--font-cormorant)] text-xl font-medium text-[--color-fg]"
         >
           Amadou Thior
         </Link>
 
-        {/* Desktop */}
-        <nav className="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
-          {mainNav.filter(l => l.href !== "/").map((link) => (
+        <nav className="hidden lg:flex items-center gap-8" aria-label="Navigation">
+          {mainNav.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={`text-sm transition-colors duration-200 ${
                 pathname === link.href
                   ? "text-[--color-accent]"
-                  : "text-[--color-fg-muted] hover:text-[--color-fg]"
+                  : "text-[--color-fg-muted] hover:text-[--color-accent]"
               }`}
             >
               {link.label}
@@ -52,18 +51,16 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="lg:hidden p-2 text-[--color-fg]"
-          aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-label={isOpen ? "Fermer" : "Menu"}
           aria-expanded={isOpen}
         >
           {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
-      {/* Mobile */}
       {isOpen && (
         <nav className="lg:hidden absolute top-full left-0 w-full bg-[--color-bg] border-b border-[--color-border] py-6 px-6">
           <div className="flex flex-col gap-4">
@@ -72,7 +69,7 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className={`text-base transition-colors ${
+                className={`text-base ${
                   pathname === link.href ? "text-[--color-accent]" : "text-[--color-fg]"
                 }`}
               >

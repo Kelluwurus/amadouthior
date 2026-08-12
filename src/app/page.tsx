@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Film, Clapperboard, GraduationCap, Building2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Container from "@/components/ui/Container";
 import CTAButton from "@/components/ui/CTAButton";
 import Reveal from "@/components/ui/Reveal";
@@ -8,32 +8,30 @@ export default function HomePage() {
   return (
     <>
       {/* ===== HERO ===== */}
-      <section className="grain min-h-[80vh] flex items-end pb-16 md:pb-24 pt-36 md:pt-44">
+      <section className="grain min-h-[90vh] flex items-center pt-28">
         <Container narrow>
           <Reveal>
-            <p className="text-meta text-[--color-accent] mb-4">
-              Amadou Thior
-            </p>
+            <h1 className="text-display mb-6">Amadou Thior</h1>
           </Reveal>
           <Reveal delay={80}>
-            <h1 className="text-display text-[--color-fg] mb-6 max-w-3xl">
-              Cinéaste, producteur-réalisateur, formateur et acteur de la transformation du cinéma africain.
-            </h1>
+            <p className="text-meta mb-8">
+              Cinéaste · Producteur-réalisateur · Scénariste · Formateur
+            </p>
           </Reveal>
           <Reveal delay={160}>
-            <p className="text-body text-[--color-fg-muted] max-w-xl mb-10 leading-relaxed">
-              Depuis plusieurs décennies, Amadou Thior évolue au cœur du cinéma
-              et de l&apos;audiovisuel sénégalais, de la réalisation à la production,
-              de la formation à la réflexion sur les politiques cinématographiques.
+            <p className="text-body text-lg max-w-lg mb-12 leading-relaxed">
+              Plus de 40 ans d&apos;expérience au service du cinéma, de la
+              production audiovisuelle, de la transmission et du développement
+              de l&apos;industrie cinématographique au Sénégal.
             </p>
           </Reveal>
           <Reveal delay={240}>
             <div className="flex flex-wrap gap-4">
               <CTAButton href="/parcours" variant="primary">
-                Découvrir son parcours
+                Découvrir le parcours
               </CTAButton>
               <CTAButton href="/oeuvre" variant="ghost">
-                Voir les films
+                Voir la filmographie
                 <ArrowRight size={14} />
               </CTAButton>
             </div>
@@ -41,219 +39,193 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ===== SIGNATURE ===== */}
-      <section className="py-12 md:py-16 border-t border-[--color-border]">
-        <Container narrow>
-          <Reveal>
-            <p className="text-caption text-[--color-fg-subtle] leading-relaxed">
-              Cinéaste — Producteur Réalisateur, Consultant et Formateur Audiovisuel.
-              Plus de 40 ans d&apos;expérience en réalisation et production de films
-              au cinéma et à la télévision, ainsi que dans l&apos;administration du
-              cinéma au Sénégal. Plus de 25 ans comme cinéaste indépendant.
-            </p>
-          </Reveal>
+      {/* ===== UNE VIE DE CINÉMA ===== */}
+      <section className="section-py border-t border-[--color-border]">
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-20">
+            <Reveal>
+              <p className="text-meta mb-3">Présentation</p>
+              <h2 className="text-h2">Une vie de cinéma</h2>
+            </Reveal>
+            <Reveal delay={80}>
+              <div>
+                <p className="text-body text-lg leading-relaxed mb-8">
+                  Depuis plus de quatre décennies, Amadou Thior évolue au cœur
+                  du cinéma et de l&apos;audiovisuel africain. Réalisateur,
+                  producteur, scénariste, formateur et consultant, son parcours
+                  traverse la création, la production, la télévision,
+                  l&apos;enseignement et la réflexion sur les politiques
+                  cinématographiques.
+                </p>
+                <div className="grid grid-cols-3 gap-6">
+                  <div>
+                    <span className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl text-[--color-accent]">
+                      40+
+                    </span>
+                    <p className="text-caption mt-1">ans d&apos;expérience</p>
+                  </div>
+                  <div>
+                    <span className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl text-[--color-accent]">
+                      25+
+                    </span>
+                    <p className="text-caption mt-1">ans cinéaste indépendant</p>
+                  </div>
+                  <div>
+                    <span className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl text-[--color-accent]">
+                      1977
+                    </span>
+                    <p className="text-caption mt-1">BTS Cinéma — Louis-Lumière</p>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
-      {/* ===== LES 4 DIMENSIONS ===== */}
-      <section className="section-py bg-[--color-surface]">
+      {/* ===== DE LA CRÉATION À LA TRANSMISSION ===== */}
+      <section className="section-py bg-[--color-white]">
         <Container>
           <Reveal>
-            <p className="text-meta text-[--color-accent] mb-10">
-              Un parcours, quatre dimensions
-            </p>
+            <p className="text-meta mb-3">Le parcours</p>
+            <h2 className="text-h2 mb-12">De la création à la transmission</h2>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <Reveal delay={60}>
-              <Link href="/oeuvre" className="flex gap-4 group">
-                <Film size={20} className="text-[--color-accent] shrink-0 mt-1" strokeWidth={1.5} />
-                <div>
-                  <h3 className="text-h3 mb-2 group-hover:text-[--color-accent] transition-colors">Réalisation</h3>
-                  <p className="text-body text-[--color-fg-muted]">
-                    Films de fiction, documentaires et téléfilms.
-                  </p>
-                </div>
+              <Link href="/oeuvre" className="group block">
+                <span className="font-[family-name:var(--font-cormorant)] text-5xl text-[--color-accent]/30 group-hover:text-[--color-accent] transition-colors">01</span>
+                <h3 className="text-h3 mt-3 mb-2 group-hover:text-[--color-accent] transition-colors">Réalisation</h3>
+                <p className="text-caption">Films de fiction, documentaires et téléfilms.</p>
               </Link>
             </Reveal>
             <Reveal delay={120}>
-              <Link href="/production" className="flex gap-4 group">
-                <Clapperboard size={20} className="text-[--color-accent] shrink-0 mt-1" strokeWidth={1.5} />
-                <div>
-                  <h3 className="text-h3 mb-2 group-hover:text-[--color-accent] transition-colors">Production</h3>
-                  <p className="text-body text-[--color-fg-muted]">
-                    Production déléguée, production exécutive et développement
-                    de projets audiovisuels.
-                  </p>
-                </div>
+              <Link href="/production" className="group block">
+                <span className="font-[family-name:var(--font-cormorant)] text-5xl text-[--color-accent]/30 group-hover:text-[--color-accent] transition-colors">02</span>
+                <h3 className="text-h3 mt-3 mb-2 group-hover:text-[--color-accent] transition-colors">Production</h3>
+                <p className="text-caption">Production indépendante et production exécutive.</p>
               </Link>
             </Reveal>
             <Reveal delay={180}>
-              <Link href="/transmission" className="flex gap-4 group">
-                <GraduationCap size={20} className="text-[--color-accent] shrink-0 mt-1" strokeWidth={1.5} />
-                <div>
-                  <h3 className="text-h3 mb-2 group-hover:text-[--color-accent] transition-colors">Transmission</h3>
-                  <p className="text-body text-[--color-fg-muted]">
-                    Plusieurs décennies de formation aux métiers du cinéma et de
-                    l&apos;audiovisuel.
-                  </p>
-                </div>
+              <Link href="/transmission" className="group block">
+                <span className="font-[family-name:var(--font-cormorant)] text-5xl text-[--color-accent]/30 group-hover:text-[--color-accent] transition-colors">03</span>
+                <h3 className="text-h3 mt-3 mb-2 group-hover:text-[--color-accent] transition-colors">Transmission</h3>
+                <p className="text-caption">Formation aux métiers du cinéma et de l&apos;audiovisuel.</p>
               </Link>
             </Reveal>
             <Reveal delay={240}>
-              <Link href="/expertise" className="flex gap-4 group">
-                <Building2 size={20} className="text-[--color-accent] shrink-0 mt-1" strokeWidth={1.5} />
-                <div>
-                  <h3 className="text-h3 mb-2 group-hover:text-[--color-accent] transition-colors">Expertise</h3>
-                  <p className="text-body text-[--color-fg-muted]">
-                    Politiques cinématographiques, industrie audiovisuelle,
-                    patrimoine et transformation numérique.
-                  </p>
-                </div>
+              <Link href="/expertise" className="group block">
+                <span className="font-[family-name:var(--font-cormorant)] text-5xl text-[--color-accent]/30 group-hover:text-[--color-accent] transition-colors">04</span>
+                <h3 className="text-h3 mt-3 mb-2 group-hover:text-[--color-accent] transition-colors">Expertise</h3>
+                <p className="text-caption">Politiques cinématographiques, industrie et développement.</p>
               </Link>
             </Reveal>
           </div>
         </Container>
       </section>
 
-      {/* ===== XAREEK MARAL — BLOC PATRIMONIAL ===== */}
+      {/* ===== FILMS À RETENIR ===== */}
       <section className="section-py">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-20 items-start">
-            <Reveal>
-              <div>
-                <p className="text-meta text-[--color-accent] mb-3">
-                  Œuvre fondatrice
-                </p>
-                <h2 className="text-h1 mb-4">Xareek Maral / Halte au désert</h2>
-                <div className="flex flex-wrap gap-x-4 gap-y-1 text-caption text-[--color-fg-subtle] mb-4">
-                  <span>1982</span>
-                  <span>·</span>
-                  <span>Documentaire</span>
-                  <span>·</span>
-                  <span>16 mm couleur</span>
-                  <span>·</span>
-                  <span>30 min</span>
-                </div>
-              </div>
-            </Reveal>
-            <Reveal delay={100}>
-              <div>
-                <div className="border-l-2 border-[--color-accent] pl-6 mb-6">
-                  <p className="text-body text-[--color-fg] font-medium leading-relaxed">
-                    1er Prix de la CEE au FESPACO 1985 dans la catégorie du
-                    meilleur film sur le développement.
-                  </p>
-                </div>
-                <p className="text-body text-[--color-fg-muted] leading-relaxed">
-                  Premier film à affirmer la vision cinématographique d&apos;Amadou
-                  Thior : un regard documentaire engagé sur les réalités sociales
-                  du Sénégal, porté par une rigueur technique forgée à
-                  l&apos;École Louis-Lumière.
-                </p>
-                <Link
-                  href="/oeuvre/xareek-maral"
-                  className="inline-flex items-center gap-2 mt-6 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
-                >
-                  Voir la fiche du film <ArrowRight size={13} />
-                </Link>
-              </div>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
+          <Reveal>
+            <p className="text-meta mb-3">Filmographie</p>
+            <h2 className="text-h2 mb-12">Films à retenir</h2>
+          </Reveal>
 
-      {/* ===== ALMODOU ===== */}
-      <section className="section-py bg-[#5C2D20] text-[#FDFBF7]">
-        <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-10 lg:gap-16 items-start">
-            {/* Poster placeholder */}
-            <Reveal>
-              <Link
-                href="/oeuvre/almodou"
-                className="block aspect-[2/3] bg-[#7A4D3C] flex items-center justify-center group"
-              >
-                <span className="font-[family-name:var(--font-cormorant)] text-3xl md:text-4xl text-[#FDFBF7]/60 group-hover:text-[#FDFBF7] transition-colors duration-300">
-                  Almodou
-                </span>
+          <div className="space-y-16">
+            {/* Xareek Maral */}
+            <Reveal delay={60}>
+              <Link href="/oeuvre/xareek-maral" className="group grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-14 items-start">
+                <div className="aspect-[3/4] bg-[--color-surface] flex items-center justify-center">
+                  <span className="font-[family-name:var(--font-cormorant)] text-xl text-[--color-fg-subtle] group-hover:text-[--color-accent] transition-colors">
+                    Image à ajouter
+                  </span>
+                </div>
+                <div className="py-2">
+                  <h3 className="font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl text-[--color-fg] group-hover:text-[--color-accent] transition-colors mb-2">
+                    Xareek Maral — Halte au désert
+                  </h3>
+                  <p className="text-caption text-[--color-fg-subtle] mb-4">1982 · Documentaire · 16 mm · 30 min</p>
+                  <p className="text-body leading-relaxed mb-4">
+                    1er Prix de la CEE au FESPACO 1985 — catégorie meilleur film sur le développement.
+                  </p>
+                  <span className="text-sm text-[--color-accent]">Découvrir le film →</span>
+                </div>
               </Link>
             </Reveal>
 
-            {/* Info */}
-            <Reveal delay={100}>
-              <div className="py-4">
-                <p className="text-meta text-[#C86D51] mb-3">
-                  Long métrage
-                </p>
-                <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.8rem,4vw,2.75rem)] font-normal leading-[1.2] text-[#FDFBF7] mb-3">Almodou</h2>
-                <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-[#FDFBF7]/70 mb-6">
-                  <span>2000</span>
-                  <span>·</span>
-                  <span>Fiction</span>
-                  <span>·</span>
-                  <span>85 min</span>
-                  <span>·</span>
-                  <span>Wolof, sous-titré français</span>
+            {/* Mariage précoce */}
+            <Reveal delay={120}>
+              <Link href="/oeuvre/mariage-precoce" className="group grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-14 items-start">
+                <div className="aspect-[3/4] bg-[--color-surface] flex items-center justify-center">
+                  <span className="font-[family-name:var(--font-cormorant)] text-xl text-[--color-fg-subtle] group-hover:text-[--color-accent] transition-colors">
+                    Image à ajouter
+                  </span>
                 </div>
-
-                <div className="space-y-3 text-sm text-[#FDFBF7]/70 mb-6">
-                  <p><span className="text-[#FDFBF7]/50">Réalisation et scénario</span> — Amadou Thior</p>
-                  <p><span className="text-[#FDFBF7]/50">Production</span> — Consultants et Réalisateurs Associés</p>
-                </div>
-
-                <div className="border-l-2 border-[#C86D51] pl-6 mb-8">
-                  <p className="text-base text-[#FDFBF7] font-medium">
-                    Prix Plan International / Children&apos;s Right au FESPACO 2001.
+                <div className="py-2">
+                  <h3 className="font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl text-[--color-fg] group-hover:text-[--color-accent] transition-colors mb-2">
+                    Mariage précoce
+                  </h3>
+                  <p className="text-caption text-[--color-fg-subtle] mb-4">1995 · Fiction · Drame · 19 min</p>
+                  <p className="text-body leading-relaxed mb-4">
+                    Drame autour du mariage forcé et précoce.
                   </p>
+                  <span className="text-sm text-[--color-accent]">Découvrir le film →</span>
                 </div>
+              </Link>
+            </Reveal>
 
-                <Link
-                  href="/oeuvre/almodou"
-                  className="inline-flex items-center gap-2 text-sm text-[#C86D51] hover:text-[#D4917A] transition-colors"
-                >
-                  Voir la fiche complète <ArrowRight size={13} />
-                </Link>
-              </div>
+            {/* Almodou */}
+            <Reveal delay={180}>
+              <Link href="/oeuvre/almodou" className="group grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-8 lg:gap-14 items-start">
+                <div className="aspect-[3/4] bg-[--color-surface] flex items-center justify-center">
+                  <span className="font-[family-name:var(--font-cormorant)] text-xl text-[--color-fg-subtle] group-hover:text-[--color-accent] transition-colors">
+                    Image à ajouter
+                  </span>
+                </div>
+                <div className="py-2">
+                  <h3 className="font-[family-name:var(--font-cormorant)] text-2xl md:text-3xl text-[--color-fg] group-hover:text-[--color-accent] transition-colors mb-2">
+                    Almodou
+                  </h3>
+                  <p className="text-caption text-[--color-fg-subtle] mb-4">2000 · Fiction · 85 min</p>
+                  <p className="text-body leading-relaxed mb-2">
+                    Réalisation et scénario : Amadou Thior.
+                  </p>
+                  <p className="text-body text-[--color-accent] font-medium mb-4">
+                    Prix Plan International / Children&apos;s Right — FESPACO 2001
+                  </p>
+                  <span className="text-sm text-[--color-accent]">Découvrir le film →</span>
+                </div>
+              </Link>
             </Reveal>
           </div>
-        </Container>
-      </section>
 
-      {/* ===== FORMATION ===== */}
-      <section className="section-py bg-[#C86D51] text-[#FDFBF7]">
-        <Container narrow>
-          <Reveal>
-            <p className="text-[0.7rem] font-medium tracking-[0.14em] uppercase text-[#FDFBF7]/70 mb-3">Formation</p>
-            <h2 className="font-[family-name:var(--font-cormorant)] text-[clamp(1.4rem,3vw,2rem)] font-normal leading-[1.25] text-[#FDFBF7] mb-4">
-              École Nationale Vaugirard-Louis Lumière, Paris
-            </h2>
-            <p className="text-base text-[#FDFBF7]/80 mb-2">
-              Études : 1974–1977
-            </p>
-            <p className="text-base text-[#FDFBF7]/80">
-              BTS Cinéma, option image — 1977.
-            </p>
+          <Reveal delay={240}>
+            <div className="mt-14">
+              <Link
+                href="/oeuvre"
+                className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+              >
+                Voir toute la filmographie <ArrowRight size={13} />
+              </Link>
+            </div>
           </Reveal>
         </Container>
       </section>
 
       {/* ===== CTA FINAL ===== */}
-      <section className="section-py bg-[--color-surface]">
+      <section className="section-py bg-[--color-white] border-t border-[--color-border]">
         <Container narrow>
           <Reveal>
             <div className="text-center">
-              <h2 className="text-h2 mb-4">Explorer le parcours complet</h2>
-              <p className="text-body text-[--color-fg-muted] mb-8 max-w-md mx-auto">
-                Filmographie, collaborations, enseignement, projets contemporains
-                et archives.
+              <p className="text-meta mb-3">Contact</p>
+              <h2 className="text-h2 mb-4">Parlons cinéma</h2>
+              <p className="text-body mb-8 max-w-md mx-auto">
+                Pour une collaboration, une formation, un projet audiovisuel ou
+                une demande d&apos;information.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <CTAButton href="/parcours" variant="primary">
-                  Le parcours
-                </CTAButton>
-                <CTAButton href="/oeuvre" variant="secondary">
-                  La filmographie
-                </CTAButton>
-              </div>
+              <CTAButton href="/contact" variant="primary">
+                Prendre contact
+              </CTAButton>
             </div>
           </Reveal>
         </Container>
