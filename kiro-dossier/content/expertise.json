@@ -1,0 +1,33 @@
+{
+  "intro": "Mettre l'expérience de terrain, la connaissance de la production et l'expertise sectorielle au service du développement de l'écosystème cinématographique.",
+  "domaines": [
+    {
+      "titre": "Production audiovisuelle",
+      "description": "Production déléguée et production management sur des séries et téléfilms (Bien-être pour Tous et ses volets Nef, Kiné, Coumba, Mbarane) ; production exécutive de films institutionnels pour l'UNICEF, le BIT, Plan Sénégal, entre autres."
+    },
+    {
+      "titre": "Politiques cinématographiques",
+      "description": "Réflexion et études sur les politiques cinématographiques et le développement de l'industrie audiovisuelle, notamment une proposition d'étude en 2015 pour le Plan Quinquennal de Développement Intégré du Cinéma et de l'Audiovisuel du Sénégal, dans le cadre d'un appel à propositions du Ministère de la Culture."
+    },
+    {
+      "titre": "Formation",
+      "description": "Conception et direction des études d'IPMICA, co-conception de la Licence Professionnelle de Création Multimédia dans plusieurs universités, enseignement à l'ISMA, au CESTI et à l'ISAC."
+    },
+    {
+      "titre": "Développement de projets",
+      "description": "Structuration de projets de fiction et de documentaire via le GIE Consultants et Réalisateurs Associés (fondé en 1994 avec Assane Diagne), puis via des structures individuelles à partir de 2004."
+    },
+    {
+      "titre": "Numérisation de l'écosystème cinématographique",
+      "description": "Conception en 2016, avec la société SIAMOIS-IT, d'une plateforme numérique de gestion des activités cinématographiques comprenant une application de billetterie nationale numérique sécurisée pour le cinéma."
+    },
+    {
+      "titre": "Patrimoine audiovisuel",
+      "description": "Réflexion sur la conservation et la valorisation de la mémoire cinématographique sénégalaise, notamment évoquée dans une publication du Sud Quotidien (juillet 2025) sur la nécessité d'une cinémathèque nationale."
+    }
+  ],
+  "fonctionsAssociatives": [
+    { "titre": "Président de CINESEAS", "periode": "1998–2000", "description": "Association des Cinéastes Sénégalais Associés." }
+  ],
+  "sources": [{ "nom": "CV Amadou Thior 2024" }, { "nom": "Sud Quotidien, juillet 2025" }]
+}

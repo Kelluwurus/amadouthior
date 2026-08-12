@@ -2,44 +2,64 @@
 
 /* ============================================
    AMADOU THIOR — DESIGN SYSTEM
-   
-   Direction : Éditorial · Cinématographique · Patrimonial
-   Inspiration : Terre du Sine-Saloum, lumière, mémoire
+   Charte : Luxury Ivoire / Sable
+   Source : design/charte-graphique-luxury.md
    
    Palette :
-   - Fond : Ivoire / Sable (#F5EFE5, #EAE0D2)
-   - Accent : Terracotta (#B85C3A) — signature
-   - Texte : Brun profond (#29231F)
-   - Blanc chaud : #FBF9F5
+   - Blanc cassé (#FAF6EF) — fond principal
+   - Ivoire (#F3EAD8) — sections alternées, cartes
+   - Sable (#D8C3A0) — séparateurs, badges, hover
+   - Terre cuite (#B5622F) — accent, CTA, liens
+   - Terre cuite foncée (#7C3D1E) — titres forts, CINECLUB fond
+   - Brun encre (#2B2018) — texte principal (jamais #000)
+   - Brun sable (#6B5A46) — texte secondaire
+   - Sable clair (#E4D7C1) — bordures
    
-   Proportions : Ivoire dominant, terracotta en accent discret
-   Atmosphère : Cinéma + Terre + Mémoire + Sénégal
+   Dosage : 65-70% blanc/ivoire · 20-25% sable/brun · 10% terre cuite
    ============================================ */
 
 @theme inline {
-  --color-bg: #F5EFE5;
-  --color-bg-alt: #EAE0D2;
-  --color-white: #FBF9F5;
-  --color-surface: #EAE0D2;
-  --color-surface-2: #F5EFE5;
+  /* --- Palette principale --- */
+  --color-bg: #FAF6EF;
+  --color-bg-alt: #F3EAD8;
+  --color-surface: #F3EAD8;
+  --color-surface-2: #FAF6EF;
+  --color-sand: #D8C3A0;
 
-  --color-fg: #29231F;
-  --color-fg-muted: #5F554D;
-  --color-fg-subtle: #81766C;
+  --color-fg: #2B2018;
+  --color-fg-muted: #6B5A46;
+  --color-fg-subtle: #8E7D6B;
 
-  --color-accent: #B85C3A;
-  --color-accent-hover: #8F432D;
-  --color-accent-light: #D48768;
-  --color-accent-muted: #D8C3A5;
+  --color-accent: #B5622F;
+  --color-accent-hover: #7C3D1E;
+  --color-accent-light: #D8C3A0;
 
-  --color-earth: #6F4B3A;
-  --color-sand: #D8C3A5;
+  --color-border: #E4D7C1;
+  --color-border-accent: rgba(181, 98, 47, 0.2);
 
-  --color-border: rgba(111, 75, 58, 0.12);
-  --color-border-accent: rgba(184, 92, 58, 0.2);
-
+  /* --- Typographie --- */
   --font-display: var(--font-cormorant);
   --font-body: var(--font-inter);
+
+  /* --- Ombre (très légère, style papier) --- */
+  --shadow-card: 0 1px 3px rgba(43, 32, 24, 0.04);
+}
+
+/* --- Thème CINECLUB (variante événementielle) --- */
+[data-theme="cineclub"] {
+  --color-bg: #7C3D1E;
+  --color-bg-alt: #6B3419;
+  --color-surface: #8F4A28;
+  --color-surface-2: #7C3D1E;
+
+  --color-fg: #F3EAD8;
+  --color-fg-muted: #E4D7C1;
+  --color-fg-subtle: #D8C3A0;
+
+  --color-accent: #D8C3A0;
+  --color-accent-hover: #F3EAD8;
+
+  --color-border: rgba(243, 234, 216, 0.15);
 }
 
 /* --- Base --- */
@@ -65,38 +85,34 @@ body {
   line-height: 1.7;
 }
 
-/* --- Typography --- */
+/* --- Échelle typographique --- */
 .text-display {
   font-family: var(--font-display), serif;
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
-  font-weight: 300;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: var(--color-fg);
+  font-size: clamp(2.8rem, 5.5vw, 4rem);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
 }
 
 .text-h1 {
   font-family: var(--font-display), serif;
-  font-size: clamp(2rem, 4.5vw, 3rem);
-  font-weight: 400;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500;
   line-height: 1.15;
-  color: var(--color-fg);
 }
 
 .text-h2 {
   font-family: var(--font-display), serif;
   font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
-  color: var(--color-fg);
 }
 
 .text-h3 {
   font-family: var(--font-display), serif;
-  font-size: clamp(1.15rem, 2vw, 1.4rem);
-  font-weight: 500;
+  font-size: clamp(1.15rem, 1.8vw, 1.5rem);
+  font-weight: 600;
   line-height: 1.3;
-  color: var(--color-fg);
 }
 
 .text-body {
@@ -136,47 +152,22 @@ body {
   .section-py { padding-top: 8rem; padding-bottom: 8rem; }
 }
 
-/* --- Animations (discrètes, lentes) --- */
+/* --- Animations (400-500ms, sobres) --- */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
 .animate-fade-up {
-  animation: fadeUp 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-  opacity: 0;
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.5s ease-out forwards;
+  animation: fadeUp 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   opacity: 0;
 }
 
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
 
-/* --- Grain (subtil) --- */
-.grain {
-  position: relative;
-}
-
-.grain::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  opacity: 0.02;
-  pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* --- Focus --- */
+/* --- Focus (accessibilité) --- */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
@@ -184,12 +175,12 @@ body {
 
 /* --- Selection --- */
 ::selection {
-  background-color: rgba(184, 92, 58, 0.12);
+  background-color: rgba(181, 98, 47, 0.12);
   color: var(--color-fg);
 }
 
 /* --- Scrollbar --- */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--color-bg); }
-::-webkit-scrollbar-thumb { background: var(--color-sand); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-accent-muted); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-sand); }

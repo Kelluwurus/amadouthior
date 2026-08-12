@@ -1,0 +1,32 @@
+{
+  "intro": "De la formation universitaire aux ateliers professionnels, accompagner les nouvelles générations dans les métiers de la création, de la réalisation et de l'audiovisuel.",
+  "blocs": [
+    {
+      "titre": "Enseignement",
+      "items": [
+        { "nom": "ISMA — Institut Supérieur des Métiers de l'Audiovisuel", "lieu": "Cotonou, Bénin", "periode": "depuis juin 2014", "description": "Enseignant associé." },
+        { "nom": "CESTI — Centre d'Études des Sciences et Techniques de l'Information", "lieu": "Dakar", "periode": "2021–2023", "description": "Cours de Techniques de réalisation et découpage technique de film." },
+        { "nom": "ISAC — Institut Supérieur des Arts et de la Culture", "lieu": "Dakar", "periode": "2021–2022", "description": "Cours de Langage cinématographique." },
+        { "nom": "Université de Ziguinchor", "periode": "2008–2009", "description": "Co-concepteur de la Licence Professionnelle de Création Multimédia (LPCM)." },
+        { "nom": "Université de Thiès", "periode": "2008–2013", "description": "Co-concepteur de la LPCM." },
+        { "nom": "Université Cheikh Anta Diop de Dakar", "periode": "2014–2015", "description": "Co-concepteur de la LPCM." }
+      ]
+    },
+    {
+      "titre": "Formation professionnelle",
+      "items": [
+        { "nom": "« Scénario pour tous »", "periode": "2017–2018", "description": "Trois ateliers financés par le FOPICA, thème : concevoir la « Bible » d'une série télévisée." },
+        { "nom": "Ateliers URAC Sénégal", "periode": "août 2024", "description": "Formation animée avec Martin Faye pour les correspondants de la Radio Télévision Communautaire : couverture de l'actualité locale, collecte et exploitation de sujets, veille locale, respect des délais, travail en équipe." },
+        { "nom": "Formation de formateurs aux métiers de l'audiovisuel", "lieu": "Forum Media Centre, Dakar", "periode": "1999" }
+      ]
+    },
+    {
+      "titre": "Ingénierie pédagogique",
+      "items": [
+        { "nom": "IPMICA — Institut Panafricain des Métiers de la Communication Audiovisuelle", "description": "Concepteur et Directeur des Études." },
+        { "nom": "LPCM — Licence Professionnelle de Création Multimédia", "description": "Co-conception du programme, déployé dans plusieurs universités sénégalaises (2008–2015)." }
+      ]
+    }
+  ],
+  "sources": [{ "nom": "CV Amadou Thior 2024" }, { "nom": "Africultures" }, { "nom": "URAC Sénégal, août 2024" }]
+}

@@ -19,7 +19,10 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/content/*": ["./content/*"],
+      "@/messages/*": ["./messages/*"]
     }
   },
   "include": [

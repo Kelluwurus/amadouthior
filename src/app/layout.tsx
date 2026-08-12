@@ -1,54 +1,40 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
-import Navbar from "@/components/layout/Navbar";
+import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { siteConfig } from "@/content/site";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.title,
-    template: `%s | ${siteConfig.name}`,
+    default: "Amadou Thior — Cinéaste, Producteur-Réalisateur et Formateur",
+    template: "%s | Amadou Thior",
   },
-  description: siteConfig.description,
-  keywords: [
-    "Amadou Thior",
-    "cinéaste sénégalais",
-    "producteur audiovisuel",
-    "formateur cinéma",
-    "consultant audiovisuel",
-    "cinéma africain",
-    "FESPACO",
-    "Almodou",
-    "Louis-Lumière",
-    "Ousmane Sembène",
-    "patrimoine audiovisuel",
-  ],
+  description:
+    "Site officiel d'Amadou Thior, cinéaste, producteur-réalisateur, scénariste, consultant et formateur audiovisuel sénégalais.",
   openGraph: {
-    title: siteConfig.title,
-    description: siteConfig.description,
+    title: "Amadou Thior — Cinéaste, Producteur-Réalisateur et Formateur",
+    description:
+      "Plus de quatre décennies au service du cinéma et de l'audiovisuel africains.",
     type: "website",
-    locale: siteConfig.locale,
-    siteName: siteConfig.name,
+    locale: "fr_FR",
+    siteName: "Amadou Thior",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -62,7 +48,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col">
-        <Navbar />
+        <Header />
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

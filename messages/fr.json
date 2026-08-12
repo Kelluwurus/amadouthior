@@ -1,0 +1,56 @@
+{
+  "nav": {
+    "accueil": "Accueil",
+    "parcours": "Parcours",
+    "oeuvres": "Œuvres",
+    "transmission": "Transmission",
+    "expertise": "Expertise",
+    "archives": "Archives",
+    "cineclub": "CINECLUB",
+    "contact": "Contact"
+  },
+  "cta": {
+    "explorer_oeuvres": "Explorer les œuvres",
+    "decouvrir_parcours": "Découvrir le parcours",
+    "voir_filmographie": "Voir la filmographie",
+    "prendre_contact": "Prendre contact",
+    "en_savoir_plus": "En savoir plus",
+    "decouvrir": "Découvrir",
+    "devenir_partenaire": "Devenir partenaire"
+  },
+  "labels": {
+    "sources": "Sources",
+    "a_confirmer": "À confirmer",
+    "informations_a_completer": "Informations à compléter",
+    "en_preparation": "En préparation",
+    "edition_passee": "Édition passée",
+    "edition_a_venir": "Édition à venir",
+    "objectifs": "Objectifs",
+    "resultats": "Résultats",
+    "assistant_realisateur": "Assistant réalisateur",
+    "realisateur": "Réalisateur",
+    "image_a_ajouter": "Image à ajouter",
+    "tout": "Tout",
+    "realisation": "Réalisation",
+    "production": "Production",
+    "collaboration": "Collaboration"
+  },
+  "contact": {
+    "titre": "Parlons cinéma",
+    "intro": "Pour une collaboration, une formation, un projet audiovisuel ou une demande d'information.",
+    "champ_nom": "Nom",
+    "champ_email": "Email",
+    "champ_organisation": "Organisation",
+    "champ_message": "Message",
+    "placeholder_nom": "Votre nom",
+    "placeholder_email": "votre@email.com",
+    "placeholder_organisation": "Institution, festival, école...",
+    "placeholder_message": "Décrivez votre projet ou votre demande...",
+    "bouton_envoyer": "Envoyer",
+    "message_envoye": "Message envoyé",
+    "fallback": "Vous pouvez également nous écrire directement."
+  },
+  "footer": {
+    "copyright": "© {year} Amadou Thior"
+  }
+}

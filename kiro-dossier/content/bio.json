@@ -1,0 +1,44 @@
+{
+  "nom": "Amadou Thior",
+  "nationalite": "Sénégalaise",
+  "naissance": {
+    "date": "23 juillet 1951",
+    "lieu": "Boulel, Sine-Saloum, Sénégal",
+    "statut": "confirme",
+    "sources": [{ "nom": "Africultures" }, { "nom": "Presse française d'époque" }]
+  },
+  "titreCourt": "Cinéaste · Producteur · Formateur · Consultant",
+  "signatureMarque": "Créer. Transmettre. Préserver la mémoire.",
+  "resumeExecutif": "Amadou Thior est un cinéaste, producteur-réalisateur, scénariste, consultant et formateur audiovisuel sénégalais, actif depuis plus de quatre décennies. Son parcours couvre la réalisation cinématographique et télévisuelle, la production et la gestion de projets audiovisuels, la formation aux métiers du cinéma, et l'expertise sur les politiques cinématographiques et l'organisation de l'industrie.",
+  "dureeCarriere": "Plus de quatre décennies au service du cinéma et de l'audiovisuel africains",
+  "fonctions": [
+    "Cinéaste", "Réalisateur", "Producteur", "Scénariste",
+    "Consultant audiovisuel", "Formateur audiovisuel", "Enseignant",
+    "Expert des problématiques cinématographiques"
+  ],
+  "formation": {
+    "principale": {
+      "etablissement": "École Nationale Vaugirard-Louis Lumière, Paris",
+      "periode": "1974–1977",
+      "diplome": "BTS Cinéma, option image (1977)",
+      "sources": [{ "nom": "CV Amadou Thior 2024" }, { "nom": "École Nationale Louis-Lumière" }]
+    },
+    "complementaires": [
+      { "annee": "1989", "intitule": "Stage gestion de la production télévisuelle et cinématographique", "lieu": "École Internationale de Bordeaux" },
+      { "annee": "1999", "intitule": "Formation de formateurs aux métiers de l'audiovisuel", "lieu": "Forum Media Centre de Dakar" },
+      { "annee": "2001", "intitule": "Certificat de producteur — projet Africa & Pinocchio (Suisse-Sénégal-France)" },
+      { "annee": "2015", "intitule": "Certificat de formation à Movie Magic Scheduling", "lieu": "CIFAP Paris" }
+    ],
+    "outils": ["Movie Magic Scheduling", "Final Draft"]
+  },
+  "filRouge": {
+    "texte": "Mettre l'audiovisuel au service des enjeux humains et sociaux.",
+    "note": "Interprétation éditoriale fondée sur les œuvres et activités documentées — à présenter comme telle, non comme citation officielle d'Amadou Thior."
+  },
+  "sourcesGenerales": [
+    { "nom": "CV Amadou Thior 2024" },
+    { "nom": "Africultures" },
+    { "nom": "BnF" },
+    { "nom": "IMDb" }
+  ]
+}

@@ -1,5 +1,0 @@
-import { redirect } from "next/navigation";
-
-export default function ConceptPage() {
-  redirect("/projets/cineclub-diner-debat/deroulement");
-}

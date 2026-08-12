@@ -1,0 +1,80 @@
+{
+  "titre": "CINECLUB — Dîner Débat",
+  "sousTitre": "Le cinéma au service de l'humanitaire",
+  "manifeste": "Cinéma · Dialogue · Solidarité · Action",
+  "accroche": "Le film est le point de départ. Le dialogue est le moteur. L'action est la finalité.",
+  "porteurProjet": "Amadou Thior",
+  "description": "Projet culturel et événementiel associant cinéma, dialogue, solidarité et action. Ce n'est pas un ciné-club classique : c'est un dispositif en cinq temps qui transforme une projection en dialogue, puis le dialogue en engagement.",
+  "cinqTemps": [
+    { "numero": 1, "titre": "Projection", "description": "Une œuvre choisie pour sa capacité à interroger notre société." },
+    { "numero": 2, "titre": "Dîner", "description": "Se rencontrer dans un cadre convivial, au-delà des rôles et des institutions." },
+    { "numero": 3, "titre": "Débat", "description": "Faire émerger les questions, les expériences et les propositions." },
+    { "numero": 4, "titre": "Mise en réseau", "description": "Connecter associations, institutions, entreprises, artistes et acteurs de terrain." },
+    { "numero": 5, "titre": "Action", "description": "Transformer le dialogue en engagements concrets." }
+  ],
+  "ecosysteme": ["Institutions", "ONG & associations", "Entreprises", "Professionnels du cinéma", "Public & citoyens"],
+  "impact": [
+    { "titre": "Sensibiliser", "description": "Faire émerger une réflexion autour d'une problématique sociale." },
+    { "titre": "Connecter", "description": "Créer des rencontres entre acteurs qui ne se rencontrent pas toujours." },
+    { "titre": "Mobiliser", "description": "Faire émerger des engagements." },
+    { "titre": "Agir", "description": "Orienter ces engagements vers des actions concrètes." }
+  ],
+  "editions": [
+    {
+      "annee": "2016",
+      "statut": "passee",
+      "lieu": "Grand Théâtre National de Dakar",
+      "film": { "titre": "Marcedes", "realisateur": null, "pourquoi": null },
+      "theme": "Première édition documentée du concept.",
+      "objectifs": [],
+      "resultats": [],
+      "sources": [{ "nom": "Dossier interne CINECLUB" }]
+    },
+    {
+      "annee": "2026",
+      "statut": "a_venir",
+      "lieu": "Dakar",
+      "date": "Décembre 2026 (date précise à confirmer)",
+      "film": {
+        "titre": "Ghadi",
+        "realisateur": "Amin Dora",
+        "pourquoi": "À documenter : le lien entre le film et le thème de l'inclusion doit être explicité avant publication."
+      },
+      "theme": "Le cinéma au service de l'inclusion — à l'occasion de la Journée internationale des personnes handicapées (3 décembre)",
+      "objectifs": [
+        "Sensibiliser autour de l'inclusion des personnes en situation de handicap",
+        "Réunir institutions, ONG, entreprises et acteurs culturels autour d'un dialogue commun",
+        "Faire émerger des engagements concrets à l'issue du débat"
+      ],
+      "resultats": [],
+      "sources": [{ "nom": "Dossier interne CINECLUB" }]
+    },
+    {
+      "annee": "2027",
+      "statut": "en_preparation",
+      "lieu": null,
+      "film": null,
+      "theme": "En cours d'élaboration.",
+      "objectifs": [],
+      "resultats": [],
+      "sources": []
+    }
+  ],
+  "partenariat": {
+    "accroche": "Associer votre institution à une expérience qui transforme une projection en dialogue et le dialogue en action.",
+    "avantagesGeneraux": [
+      "Visibilité", "Engagement RSE", "Positionnement institutionnel", "Networking",
+      "Association à une cause", "Présence événementielle", "Relations médias",
+      "Accès aux acteurs institutionnels"
+    ],
+    "categories": [
+      { "nom": "Partenaire principal", "description": "Association complète à l'édition, visibilité maximale.", "avantages": ["Naming de l'édition", "Prise de parole", "Visibilité premium sur tous les supports"] },
+      { "nom": "Partenaire engagement", "description": "Soutien fort à la dimension dialogue et réseau.", "avantages": ["Table dédiée au dîner-débat", "Visibilité sur les supports de l'édition"] },
+      { "nom": "Partenaire solidarité", "description": "Association à la dimension humanitaire et inclusive du projet.", "avantages": ["Association à la cause de l'édition", "Mentions presse"] },
+      { "nom": "Partenaire média", "description": "Couverture et relais médiatique de l'événement.", "avantages": ["Accès presse", "Contenus exclusifs"] },
+      { "nom": "Partenaire institutionnel", "description": "Association institutionnelle au projet.", "avantages": ["Présence lors des rencontres institutionnelles", "Networking ciblé"] }
+    ],
+    "note": "Si un dossier de sponsoring impose des catégories Bronze/Argent/Or, ces catégories peuvent être conservées dans le dossier PDF de sponsoring tout en gardant une présentation éditoriale (les noms ci-dessus) sur le site public."
+  },
+  "sources": [{ "nom": "Dossier interne CINECLUB — Dîner Débat" }]
+}

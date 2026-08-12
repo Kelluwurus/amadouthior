@@ -1,0 +1,22 @@
+[
+  { "periode": "1974–1977", "titre": "Formation", "description": "École Nationale Louis-Lumière, Paris — BTS Cinéma, option image." },
+  { "periode": "1981–1988", "titre": "Bureau du Cinéma", "description": "Réalisateur chargé des études techniques, Ministère de la Culture et de la Communication du Sénégal." },
+  { "periode": "1985", "titre": "Grand Prix CEE — FESPACO", "description": "Pour Xareek Maral / Halte au désert, meilleur film sur le développement.", "lienOeuvreSlug": "xareek-maral" },
+  { "periode": "1987", "titre": "Camp de Thiaroye", "description": "Assistant réalisateur auprès d'Ousmane Sembène (et Thierno Faty Sow).", "lienOeuvreSlug": "camp-de-thiaroye", "role": "assistant_realisateur" },
+  { "periode": "1988–1989", "titre": "RTS", "description": "Réalisateur détaché à la Radiodiffusion Télévision du Sénégal." },
+  { "periode": "1990 →", "titre": "Cinéaste indépendant", "description": "Producteur-réalisateur indépendant, consultant et formateur audiovisuel." },
+  { "periode": "1992", "titre": "Guelwaar", "description": "Assistant réalisateur auprès d'Ousmane Sembène.", "lienOeuvreSlug": "guelwaar", "role": "assistant_realisateur" },
+  { "periode": "1994", "titre": "Consultants & Réalisateurs Associés", "description": "GIE fondé avec Assane Diagne pour autoproduire des projets de fiction et de documentaire." },
+  { "periode": "1995", "titre": "Mariage précoce", "description": "Réalisation.", "lienOeuvreSlug": "mariage-precoce" },
+  { "periode": "1996–1997", "titre": "Bien-être pour Tous", "description": "Producteur délégué de la série (Nef, Kiné, Coumba)." },
+  { "periode": "1998–2000", "titre": "Président de CINESEAS", "description": "Association des Cinéastes Sénégalais Associés." },
+  { "periode": "2000/2001", "titre": "Almodou", "description": "Réalisation et scénario. Prix Plan International / Children's Right, FESPACO 2001.", "lienOeuvreSlug": "almodou" },
+  { "periode": "2008–2015", "titre": "Formation universitaire", "description": "Co-concepteur de la Licence Professionnelle de Création Multimédia — Ziguinchor, Thiès, UCAD Dakar." },
+  { "periode": "2014 →", "titre": "ISMA Cotonou", "description": "Enseignant associé, Institut Supérieur des Métiers de l'Audiovisuel, Bénin." },
+  { "periode": "2015", "titre": "Plan de développement du cinéma", "description": "Proposition d'étude : Plan Quinquennal de Développement Intégré du Cinéma et de l'Audiovisuel du Sénégal." },
+  { "periode": "2016", "titre": "Billetterie numérique", "description": "Conception d'une plateforme numérique de gestion des activités cinématographiques, avec SIAMOIS-IT." },
+  { "periode": "2017–2018", "titre": "Scénario pour tous", "description": "Ateliers financés par le FOPICA — concevoir la « Bible » d'une série télévisée." },
+  { "periode": "2021–2023", "titre": "CESTI / ISAC", "description": "Cours de techniques de réalisation (CESTI) et de langage cinématographique (ISAC)." },
+  { "periode": "2024", "titre": "Formation URAC", "description": "Ateliers pour correspondants de la Radio Télévision Communautaire, avec Martin Faye." },
+  { "periode": "Aujourd'hui", "titre": "Nouveaux projets", "description": "Transmission continue et projet CINECLUB — Dîner Débat.", "lienOeuvreSlug": null }
+]
