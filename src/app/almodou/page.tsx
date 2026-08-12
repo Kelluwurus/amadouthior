@@ -19,7 +19,7 @@ export default function AlmodouPage() {
       {/* Hero */}
       <section className="grain relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-[--color-bg] via-[--color-surface] to-[--color-bg]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(196,114,58,0.05)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_30%,rgba(200,162,74,0.05)_0%,transparent_60%)]" />
 
         <div className="relative z-10">
           <Container narrow>

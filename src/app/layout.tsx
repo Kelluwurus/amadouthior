@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Cormorant_Garamond, Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { siteConfig } from "@/content/site";
 import "./globals.css";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
@@ -27,14 +27,16 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Amadou Thior",
-    "réalisateur sénégalais",
+    "cinéaste sénégalais",
+    "producteur audiovisuel",
+    "formateur cinéma",
+    "consultant audiovisuel",
     "cinéma africain",
-    "producteur",
-    "formateur audiovisuel",
     "FESPACO",
     "Almodou",
     "Louis-Lumière",
     "Ousmane Sembène",
+    "patrimoine audiovisuel",
   ],
   openGraph: {
     title: siteConfig.title,
@@ -57,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${playfair.variable} ${inter.variable} antialiased`}
+      className={`${cormorant.variable} ${inter.variable} antialiased`}
     >
       <body className="min-h-screen flex flex-col">
         <Navbar />

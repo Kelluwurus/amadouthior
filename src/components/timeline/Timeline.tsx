@@ -25,7 +25,7 @@ export default function Timeline({ events, limit }: TimelineProps) {
             <span className="text-meta text-[--color-accent]">
               {event.year}
             </span>
-            <h4 className="font-[family-name:var(--font-playfair)] text-base md:text-lg text-[--color-fg] mt-1 mb-1.5">
+            <h4 className="font-[family-name:var(--font-cormorant)] text-base md:text-lg text-[--color-fg] mt-1 mb-1.5">
               {event.title}
             </h4>
             <p className="text-caption text-[--color-fg-muted] leading-relaxed">

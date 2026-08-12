@@ -54,16 +54,16 @@ export default function ProjetsPage() {
 
                 {/* Visual */}
                 <div className="hidden md:flex flex-col items-center justify-center w-36 h-36 rounded-2xl bg-[#0F382C]/10 border border-[#0F382C]/20">
-                  <span className="font-[family-name:var(--font-playfair)] text-sm text-[#C8A24A]/60 mb-1">
+                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[#C8A24A]/60 mb-1">
                     CINÉMA
                   </span>
-                  <span className="font-[family-name:var(--font-playfair)] text-sm text-[#C8A24A]/60 mb-1">
+                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[#C8A24A]/60 mb-1">
                     DIALOGUE
                   </span>
-                  <span className="font-[family-name:var(--font-playfair)] text-sm text-[#C8A24A]/60 mb-1">
+                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[#C8A24A]/60 mb-1">
                     SOLIDARITÉ
                   </span>
-                  <span className="font-[family-name:var(--font-playfair)] text-sm text-[#C8A24A]">
+                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[#C8A24A]">
                     ACTION
                   </span>
                 </div>

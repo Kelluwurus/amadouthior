@@ -15,7 +15,7 @@ export default function FilmCard({ film }: FilmCardProps) {
     >
       {/* Image placeholder */}
       <div className="relative h-48 bg-gradient-to-br from-[--color-surface-2] to-[--color-surface] flex items-center justify-center overflow-hidden">
-        <span className="font-[family-name:var(--font-playfair)] text-xl text-[--color-fg-subtle] group-hover:text-[--color-fg-muted] transition-colors duration-500">
+        <span className="font-[family-name:var(--font-cormorant)] text-xl text-[--color-fg-subtle] group-hover:text-[--color-fg-muted] transition-colors duration-500">
           {film.title}
         </span>
         {film.year && (
@@ -30,7 +30,7 @@ export default function FilmCard({ film }: FilmCardProps) {
         <span className="text-meta text-[--color-accent] block mb-1.5">
           {film.type}
         </span>
-        <h3 className="font-[family-name:var(--font-playfair)] text-lg text-[--color-fg] mb-2">
+        <h3 className="font-[family-name:var(--font-cormorant)] text-lg text-[--color-fg] mb-2">
           {film.title}
         </h3>
         {film.synopsis && (

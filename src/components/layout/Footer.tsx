@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Top */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-10">
           <div>
-            <span className="font-[family-name:var(--font-playfair)] text-xl text-[--color-fg] block mb-1">
+            <span className="font-[family-name:var(--font-cormorant)] text-xl text-[--color-fg] block mb-1">
               {siteConfig.name}
             </span>
             <p className="text-caption text-[--color-fg-muted]">

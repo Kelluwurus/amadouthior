@@ -11,27 +11,32 @@ export interface SiteConfig {
   title: string;
   subtitle: string;
   signature: string;
+  heroMessage: string;
+  secondaryTagline: string;
   description: string;
   locale: string;
 }
 
 export const siteConfig: SiteConfig = {
   name: "Amadou Thior",
-  title: "Amadou Thior — Réalisateur · Producteur · Scénariste · Formateur",
-  subtitle: "Réalisateur · Producteur · Scénariste · Formateur",
-  signature: "Une vie consacrée au cinéma, à l'audiovisuel et à la transmission.",
+  title: "Amadou Thior — Cinéaste · Producteur · Formateur · Consultant",
+  subtitle: "Cinéaste · Producteur · Formateur · Consultant",
+  signature: "Créer. Transmettre. Préserver la mémoire.",
+  heroMessage: "Filmer l'humain. Transmettre. Construire l'avenir.",
+  secondaryTagline:
+    "Plus de quatre décennies au service du cinéma et de l'audiovisuel africains.",
   description:
-    "Site officiel d'Amadou Thior, réalisateur, producteur, scénariste et formateur audiovisuel sénégalais. Plus de quatre décennies au service du cinéma africain.",
+    "Site officiel d'Amadou Thior, cinéaste, producteur-réalisateur, scénariste, consultant et formateur audiovisuel sénégalais. Plus de quatre décennies au service du cinéma et de l'audiovisuel africains.",
   locale: "fr_FR",
 };
 
 export const mainNav: NavLink[] = [
   { label: "Accueil", href: "/" },
-  { label: "Œuvre", href: "/oeuvre" },
   { label: "Parcours", href: "/parcours" },
-  { label: "Projets", href: "/projets" },
-  { label: "Archives", href: "/archives" },
+  { label: "Œuvres", href: "/oeuvre" },
   { label: "Transmission", href: "/transmission" },
+  { label: "Archives", href: "/archives" },
+  { label: "Projets", href: "/projets" },
   { label: "Contact", href: "/contact" },
 ];
 

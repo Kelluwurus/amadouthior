@@ -29,7 +29,7 @@ export default function CineclubMainPage() {
                 <p className="text-meta text-[#C8A24A] mb-6">
                   {cineclubContact.structure}
                 </p>
-                <h1 className="font-[family-name:var(--font-playfair)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[--color-fg] leading-[1.05] mb-6">
+                <h1 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[--color-fg] leading-[1.05] mb-6">
                   {title}
                 </h1>
                 <p className="text-sm md:text-base font-medium tracking-[0.15em] uppercase text-[#C8A24A]/80 mb-4">
@@ -84,7 +84,7 @@ export default function CineclubMainPage() {
           </Reveal>
           <Reveal delay={200}>
             <div className="bg-[#0F382C]/10 border border-[#0F382C]/20 rounded-xl p-8 text-center">
-              <p className="text-base md:text-lg text-[#C8A24A] font-medium leading-relaxed font-[family-name:var(--font-playfair)]">
+              <p className="text-base md:text-lg text-[#C8A24A] font-medium leading-relaxed font-[family-name:var(--font-cormorant)]">
                 {concept.closingStatement}
               </p>
             </div>

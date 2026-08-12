@@ -27,7 +27,7 @@ export default function CollaborationsPage() {
           {collaborations.map((collab, i) => (
             <Reveal key={collab.name} delay={i * 60}>
               <div className="bg-[--color-surface] border border-[--color-border] rounded-lg p-6 h-full">
-                <h3 className="font-[family-name:var(--font-playfair)] text-lg text-[--color-fg] mb-2">
+                <h3 className="font-[family-name:var(--font-cormorant)] text-lg text-[--color-fg] mb-2">
                   {collab.name}
                 </h3>
                 {collab.period && (

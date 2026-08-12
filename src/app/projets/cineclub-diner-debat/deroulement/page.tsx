@@ -54,7 +54,7 @@ export default function DeroulementPage() {
                     <div className="relative flex gap-6 md:gap-10 items-start py-8 md:py-12 group">
                       <div className="shrink-0 flex flex-col items-center">
                         <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl bg-[#0F382C]/15 border border-[#0F382C]/30 flex flex-col items-center justify-center transition-all duration-300 group-hover:border-[#C8A24A]/40 group-hover:bg-[#0F382C]/25">
-                          <span className="text-2xl md:text-4xl font-[family-name:var(--font-playfair)] text-[#C8A24A]/60 leading-none">
+                          <span className="text-2xl md:text-4xl font-[family-name:var(--font-cormorant)] text-[#C8A24A]/60 leading-none">
                             {String(step.order).padStart(2, "0")}
                           </span>
                         </div>

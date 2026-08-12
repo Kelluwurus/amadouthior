@@ -55,7 +55,7 @@ export default function EditionsPage() {
                   <div className="h-2 bg-gradient-to-r from-[#0F382C] to-[#C8A24A]/50" />
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="flex items-center gap-2 text-2xl font-[family-name:var(--font-playfair)] text-[#C8A24A]">
+                      <span className="flex items-center gap-2 text-2xl font-[family-name:var(--font-cormorant)] text-[#C8A24A]">
                         <Calendar size={16} />
                         {edition.year}
                       </span>

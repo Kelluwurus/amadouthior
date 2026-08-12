@@ -7,6 +7,7 @@ import Reveal from "@/components/ui/Reveal";
 import Badge from "@/components/ui/Badge";
 import FilmCard from "@/components/films/FilmCard";
 import Timeline from "@/components/timeline/Timeline";
+import { siteConfig } from "@/content/site";
 import { identity, biographySections } from "@/content/biography";
 import { featuredFilms } from "@/content/films";
 import { timeline } from "@/content/timeline";
@@ -15,34 +16,39 @@ import { cineclubProject } from "@/data/cineclub-project";
 export default function HomePage() {
   return (
     <>
-      {/* ===== HERO ===== */}
+      {/* ===== HERO — « L'Empreinte » ===== */}
       <section className="grain relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[--color-bg] via-[--color-surface] to-[--color-bg]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,rgba(196,114,58,0.04)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[--color-bg] via-[--color-surface] to-[--color-bg]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_40%_30%,rgba(200,162,74,0.03)_0%,transparent_50%)]" />
 
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <Reveal>
-            <h1 className="text-display text-[--color-fg] mb-4">
-              {identity.fullName.toUpperCase()}
-            </h1>
+            <p className="text-meta text-[--color-accent] mb-6">
+              {identity.fullName.toUpperCase()} — {siteConfig.subtitle.toUpperCase()}
+            </p>
           </Reveal>
           <Reveal delay={100}>
-            <p className="text-meta text-[--color-accent] mb-8">
-              {identity.roles.join(" · ")}
-            </p>
+            <h1 className="text-display text-[--color-fg] mb-6">
+              {siteConfig.heroMessage}
+            </h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="text-h3 text-[--color-fg-muted] font-normal max-w-xl mx-auto mb-12 leading-relaxed">
-              {identity.tagline}
+            <p className="text-body text-[--color-fg-muted] max-w-xl mx-auto mb-4 leading-relaxed text-lg">
+              {siteConfig.secondaryTagline}
             </p>
           </Reveal>
-          <Reveal delay={300}>
+          <Reveal delay={250}>
+            <p className="text-caption text-[--color-fg-subtle] italic max-w-md mx-auto mb-12">
+              {siteConfig.signature}
+            </p>
+          </Reveal>
+          <Reveal delay={350}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <CTAButton href="/parcours" variant="primary">
-                Découvrir son parcours
+              <CTAButton href="/oeuvre" variant="primary">
+                Explorer les œuvres
               </CTAButton>
-              <CTAButton href="/oeuvre" variant="secondary">
-                Explorer l&apos;œuvre
+              <CTAButton href="/parcours" variant="secondary">
+                Découvrir le parcours
               </CTAButton>
             </div>
           </Reveal>

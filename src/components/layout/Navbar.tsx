@@ -33,7 +33,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-[family-name:var(--font-playfair)] text-lg md:text-xl font-medium text-[--color-fg] tracking-wide"
+          className="font-[family-name:var(--font-cormorant)] text-lg md:text-xl font-medium text-[--color-fg] tracking-wide"
         >
           AMADOU THIOR
         </Link>
@@ -77,7 +77,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 py-5">
           <Link
             href="/"
-            className="font-[family-name:var(--font-playfair)] text-lg font-medium text-[--color-fg]"
+            className="font-[family-name:var(--font-cormorant)] text-lg font-medium text-[--color-fg]"
             onClick={() => setIsOpen(false)}
           >
             AMADOU THIOR
@@ -96,7 +96,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className={`text-xl font-[family-name:var(--font-playfair)] transition-colors duration-300 ${
+              className={`text-xl font-[family-name:var(--font-cormorant)] transition-colors duration-300 ${
                 pathname === link.href
                   ? "text-[--color-accent]"
                   : "text-[--color-fg] hover:text-[--color-accent]"
