@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
+  { label: "Portfolio", href: "/oeuvres" },
   { label: "Parcours", href: "/parcours" },
-  { label: "Œuvres", href: "/oeuvres" },
   { label: "Transmission", href: "/transmission" },
   { label: "Expertise", href: "/expertise" },
   { label: "CINECLUB", href: "/cineclub" },
@@ -31,16 +31,18 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[--color-bg]/90 backdrop-blur-md border-b border-[--color-border] py-4"
+          ? "bg-[--color-bg]/90 backdrop-blur-md py-4"
           : "bg-transparent py-6"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-[family-name:var(--font-display)] text-2xl font-medium text-[--color-fg] tracking-wide"
-        >
-          Amadou Thior
+        <Link href="/" className="flex items-center gap-3">
+          <span className="font-[family-name:var(--font-display)] text-xl text-[--color-fg]">
+            Amadou Thior
+          </span>
+          <span className="hidden sm:block text-[0.6rem] text-[--color-fg-subtle] uppercase tracking-widest">
+            cinéaste
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8" aria-label="Navigation">
@@ -48,7 +50,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className={`text-xs font-medium uppercase tracking-wider transition-colors duration-300 ${
+              className={`text-xs tracking-wider transition-colors duration-300 ${
                 pathname.startsWith(link.href)
                   ? "text-[--color-accent]"
                   : "text-[--color-fg-muted] hover:text-[--color-fg]"
@@ -57,6 +59,11 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          {/* Social icons placeholder */}
+          <div className="flex gap-2 ml-4">
+            <span className="w-7 h-7 rounded-full border border-[--color-border] flex items-center justify-center text-[--color-fg-subtle] text-[10px]">f</span>
+            <span className="w-7 h-7 rounded-full border border-[--color-border] flex items-center justify-center text-[--color-fg-subtle] text-[10px]">in</span>
+          </div>
         </nav>
 
         <button
@@ -68,19 +75,12 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile */}
       {open && (
-        <div className="lg:hidden fixed inset-0 bg-[--color-bg]/98 backdrop-blur-lg z-40 flex flex-col items-center justify-center gap-8">
-          <button onClick={() => setOpen(false)} className="absolute top-6 right-6 text-[--color-fg]">
-            <X size={24} />
-          </button>
+        <div className="lg:hidden fixed inset-0 bg-[--color-bg]/98 z-40 flex flex-col items-center justify-center gap-8">
+          <button onClick={() => setOpen(false)} className="absolute top-6 right-6 text-[--color-fg]"><X size={24} /></button>
           {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="text-2xl font-[family-name:var(--font-display)] text-[--color-fg] hover:text-[--color-accent] transition-colors"
-            >
+            <Link key={link.href} href={link.href} onClick={() => setOpen(false)}
+              className="text-2xl font-[family-name:var(--font-display)] text-[--color-fg] hover:text-[--color-accent] transition-colors">
               {link.label}
             </Link>
           ))}
