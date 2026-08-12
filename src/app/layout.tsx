@@ -61,7 +61,7 @@ export default function RootLayout({
       lang="fr"
       className={`${cormorant.variable} ${inter.variable} antialiased`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col bg-[#FAF7F2] text-[#2C2118]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

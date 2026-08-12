@@ -43,7 +43,7 @@ export default async function EditionPage({ params }: EditionPageProps) {
                 {edition.status === "in-progress" && "En cours d'élaboration"}
               </Badge>
               <h1 className="text-display text-[--color-fg] mb-3">{edition.year}</h1>
-              <h2 className="text-h2 text-[#C8A24A] mb-4">{edition.title}</h2>
+              <h2 className="text-h2 text-[--color-accent] mb-4">{edition.title}</h2>
               {edition.internationalDay && (
                 <p className="text-caption text-[--color-fg-muted]">
                   {edition.internationalDay}
@@ -84,25 +84,25 @@ export default async function EditionPage({ params }: EditionPageProps) {
         <section className="pb-12 border-t border-[--color-border] pt-12">
           <Container narrow>
             <Reveal>
-              <span className="text-meta text-[#C8A24A] block mb-4">Le film</span>
+              <span className="text-meta text-[--color-accent] block mb-4">Le film</span>
               <h3 className="text-h2 text-[--color-fg] mb-6">{edition.film.title}</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 <div className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-                  <Clapperboard size={14} className="text-[#9A7D3C]" />
+                  <Clapperboard size={14} className="text-[--color-accent-muted]" />
                   {edition.film.director}
                 </div>
                 {edition.film.producer && (
                   <div className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-                    <Target size={14} className="text-[#9A7D3C]" />
+                    <Target size={14} className="text-[--color-accent-muted]" />
                     {edition.film.producer}
                   </div>
                 )}
                 <div className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-                  <MapPin size={14} className="text-[#9A7D3C]" />
+                  <MapPin size={14} className="text-[--color-accent-muted]" />
                   {edition.film.country}
                 </div>
                 <div className="flex items-center gap-2 text-sm text-[--color-fg-muted]">
-                  <Clock size={14} className="text-[#9A7D3C]" />
+                  <Clock size={14} className="text-[--color-accent-muted]" />
                   {edition.film.duration}
                 </div>
               </div>
@@ -111,7 +111,7 @@ export default async function EditionPage({ params }: EditionPageProps) {
                 <Badge>{edition.film.language}{edition.film.subtitles ? ` (sous-titré ${edition.film.subtitles})` : ""}</Badge>
               </div>
               {edition.film.recognition && (
-                <p className="text-sm italic text-[#C8A24A] mb-6">{edition.film.recognition}</p>
+                <p className="text-sm italic text-[--color-accent] mb-6">{edition.film.recognition}</p>
               )}
               <h4 className="text-sm font-semibold text-[--color-fg] mb-2">Synopsis</h4>
               <p className="text-body text-[--color-fg-muted] leading-relaxed">{edition.film.synopsis}</p>
@@ -125,11 +125,11 @@ export default async function EditionPage({ params }: EditionPageProps) {
         <section className="pb-12 border-t border-[--color-border] pt-12">
           <Container narrow>
             <Reveal>
-              <span className="text-meta text-[#C8A24A] block mb-4">Contexte</span>
+              <span className="text-meta text-[--color-accent] block mb-4">Contexte</span>
               <p className="text-body text-[--color-fg-muted] leading-relaxed mb-4">{edition.eventStory}</p>
               {edition.venue && (
                 <div className="flex items-center gap-2 text-sm text-[--color-fg-subtle]">
-                  <MapPin size={14} className="text-[#C8A24A]" />
+                  <MapPin size={14} className="text-[--color-accent]" />
                   {edition.venue}
                 </div>
               )}
@@ -144,13 +144,13 @@ export default async function EditionPage({ params }: EditionPageProps) {
           <Container narrow>
             <Reveal>
               <div className="flex items-center gap-2 mb-4">
-                <Radio size={16} className="text-[#C8A24A]" />
-                <span className="text-meta text-[#C8A24A]">Couverture médiatique</span>
+                <Radio size={16} className="text-[--color-accent]" />
+                <span className="text-meta text-[--color-accent]">Couverture médiatique</span>
               </div>
               <ul className="space-y-2">
                 {edition.mediaAppearances.map((item) => (
                   <li key={item} className="flex items-center gap-2.5 text-caption text-[--color-fg-muted]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C8A24A]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent)]" />
                     {item}
                   </li>
                 ))}
@@ -166,13 +166,13 @@ export default async function EditionPage({ params }: EditionPageProps) {
           <Container narrow>
             <Reveal>
               <div className="flex items-center gap-2 mb-6">
-                <Award size={16} className="text-[#C8A24A]" />
-                <span className="text-meta text-[#C8A24A]">Objectifs de l&apos;édition</span>
+                <Award size={16} className="text-[--color-accent]" />
+                <span className="text-meta text-[--color-accent]">Objectifs de l&apos;édition</span>
               </div>
               <ul className="space-y-3">
                 {edition.objectives.map((obj) => (
                   <li key={obj} className="flex items-start gap-3 text-body text-[--color-fg-muted]">
-                    <span className="w-2 h-2 rounded-full bg-[#C8A24A] shrink-0 mt-2" />
+                    <span className="w-2 h-2 rounded-full bg-[var(--color-accent)] shrink-0 mt-2" />
                     {obj}
                   </li>
                 ))}
@@ -188,12 +188,12 @@ export default async function EditionPage({ params }: EditionPageProps) {
           <Container narrow>
             <Reveal>
               <div className="flex items-center gap-2 mb-6">
-                <Tag size={16} className="text-[#C8A24A]" />
-                <span className="text-meta text-[#C8A24A]">Thématiques</span>
+                <Tag size={16} className="text-[--color-accent]" />
+                <span className="text-meta text-[--color-accent]">Thématiques</span>
               </div>
               <div className="flex flex-wrap gap-2">
                 {edition.themes.map((theme) => (
-                  <span key={theme} className="px-4 py-2 text-sm bg-[#0F382C]/10 border border-[#0F382C]/25 rounded-full text-[#C8A24A]">
+                  <span key={theme} className="px-4 py-2 text-sm bg-[--color-accent]/10 border border-[--color-accent]/25 rounded-full text-[--color-accent]">
                     {theme}
                   </span>
                 ))}
@@ -209,13 +209,13 @@ export default async function EditionPage({ params }: EditionPageProps) {
           <Container narrow>
             <Reveal>
               <div className="flex items-center gap-2 mb-6">
-                <Users size={16} className="text-[#C8A24A]" />
-                <span className="text-meta text-[#C8A24A]">Publics cibles</span>
+                <Users size={16} className="text-[--color-accent]" />
+                <span className="text-meta text-[--color-accent]">Publics cibles</span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 {edition.targetAudiences.map((audience) => (
                   <div key={audience} className="flex items-center gap-2.5 text-caption text-[--color-fg-muted]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#9A7D3C]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-accent-muted)]" />
                     {audience}
                   </div>
                 ))}

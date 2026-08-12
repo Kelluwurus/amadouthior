@@ -25,7 +25,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[--color-bg]/95 backdrop-blur-md border-b border-[--color-border] py-3"
+          ? "bg-[--color-bg]/95 backdrop-blur-md border-b border-[--color-border] py-3 shadow-sm"
           : "bg-transparent py-5"
       }`}
     >
@@ -33,7 +33,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="font-[family-name:var(--font-cormorant)] text-lg md:text-xl font-medium text-[--color-fg] tracking-wide"
+          className="font-[family-name:var(--font-cormorant)] text-lg md:text-xl font-semibold text-[--color-accent-dark] tracking-wide"
         >
           AMADOU THIOR
         </Link>
@@ -46,8 +46,8 @@ export default function Navbar() {
               href={link.href}
               className={`text-sm transition-colors duration-300 ${
                 pathname === link.href
-                  ? "text-[--color-accent]"
-                  : "text-[--color-fg-muted] hover:text-[--color-fg]"
+                  ? "text-[--color-accent] font-medium"
+                  : "text-[--color-fg-muted] hover:text-[--color-accent]"
               }`}
             >
               {link.label}
@@ -77,7 +77,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between px-6 py-5">
           <Link
             href="/"
-            className="font-[family-name:var(--font-cormorant)] text-lg font-medium text-[--color-fg]"
+            className="font-[family-name:var(--font-cormorant)] text-lg font-semibold text-[--color-accent-dark]"
             onClick={() => setIsOpen(false)}
           >
             AMADOU THIOR

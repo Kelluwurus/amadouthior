@@ -27,7 +27,7 @@ export default function DeroulementPage() {
         <Container narrow>
           <Reveal>
             <div className="text-center">
-              <span className="text-meta text-[#C8A24A] block mb-4">Le concept en action</span>
+              <span className="text-meta text-[--color-accent] block mb-4">Le concept en action</span>
               <h1 className="text-h1 text-[--color-fg] mb-6">Le Déroulement</h1>
               <p className="text-body text-[--color-fg-muted] max-w-2xl mx-auto">
                 De la projection à l&apos;action : les 5 temps forts du {cineclubProject.title}.
@@ -49,20 +49,20 @@ export default function DeroulementPage() {
                 <Reveal key={step.order} delay={index * 80}>
                   <div className="relative">
                     {!isLast && (
-                      <div className="absolute left-8 md:left-12 top-full w-px h-8 md:h-12 bg-gradient-to-b from-[#0F382C]/50 to-transparent z-0" />
+                      <div className="absolute left-8 md:left-12 top-full w-px h-8 md:h-12 bg-gradient-to-b from-[var(--color-emerald)]/50 to-transparent z-0" />
                     )}
                     <div className="relative flex gap-6 md:gap-10 items-start py-8 md:py-12 group">
                       <div className="shrink-0 flex flex-col items-center">
-                        <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl bg-[#0F382C]/15 border border-[#0F382C]/30 flex flex-col items-center justify-center transition-all duration-300 group-hover:border-[#C8A24A]/40 group-hover:bg-[#0F382C]/25">
-                          <span className="text-2xl md:text-4xl font-[family-name:var(--font-cormorant)] text-[#C8A24A]/60 leading-none">
+                        <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl bg-[--color-accent]/15 border border-[--color-accent]/30 flex flex-col items-center justify-center transition-all duration-300 group-hover:border-[var(--color-accent)]/40 group-hover:bg-[--color-accent]/25">
+                          <span className="text-2xl md:text-4xl font-[family-name:var(--font-cormorant)] text-[--color-accent]/60 leading-none">
                             {String(step.order).padStart(2, "0")}
                           </span>
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-3 mb-2">
-                          <Icon size={18} className="text-[#C8A24A]" strokeWidth={1.5} />
-                          <span className="text-meta text-[#C8A24A]">{step.subtitle}</span>
+                          <Icon size={18} className="text-[--color-accent]" strokeWidth={1.5} />
+                          <span className="text-meta text-[--color-accent]">{step.subtitle}</span>
                         </div>
                         <h3 className="text-h3 text-[--color-fg] mb-3">{step.title}</h3>
                         <p className="text-body text-[--color-fg-muted] leading-relaxed max-w-xl">
@@ -79,11 +79,11 @@ export default function DeroulementPage() {
       </section>
 
       {/* CHAÎNE DE VALEUR */}
-      <section className="section-py bg-[--color-surface] border-t border-[#0F382C]/15">
+      <section className="section-py bg-[--color-surface] border-t border-[--color-accent]/15">
         <Container narrow>
           <Reveal>
             <div className="text-center mb-12">
-              <span className="text-meta text-[#C8A24A] block mb-3">La progression</span>
+              <span className="text-meta text-[--color-accent] block mb-3">La progression</span>
               <h2 className="text-h2 text-[--color-fg]">De l&apos;émotion à l&apos;action</h2>
             </div>
           </Reveal>
@@ -91,11 +91,11 @@ export default function DeroulementPage() {
             <div className="flex flex-col items-center gap-0">
               {valueChain.map((item, index) => (
                 <div key={item} className="flex flex-col items-center">
-                  <div className="w-48 md:w-56 py-4 text-center bg-[#0F382C]/10 border border-[#0F382C]/25 rounded-lg transition-all duration-300 hover:border-[#C8A24A]/40 hover:bg-[#0F382C]/20">
-                    <span className="text-base md:text-lg font-medium text-[#C8A24A]">{item}</span>
+                  <div className="w-48 md:w-56 py-4 text-center bg-[--color-accent]/10 border border-[--color-accent]/25 rounded-lg transition-all duration-300 hover:border-[var(--color-accent)]/40 hover:bg-[--color-accent]/20">
+                    <span className="text-base md:text-lg font-medium text-[--color-accent]">{item}</span>
                   </div>
                   {index < valueChain.length - 1 && (
-                    <div className="w-px h-6 bg-[#C8A24A]/30 my-1" />
+                    <div className="w-px h-6 bg-[var(--color-accent)]/30 my-1" />
                   )}
                 </div>
               ))}
@@ -107,8 +107,8 @@ export default function DeroulementPage() {
                 <div key={step.order} className="space-y-1">
                   <span className="text-xs text-[--color-fg-subtle]">{String(step.order).padStart(2, "0")}</span>
                   <p className="text-caption text-[--color-fg-muted] font-medium">{step.title}</p>
-                  <p className="text-xs text-[#C8A24A]">↓</p>
-                  <p className="text-sm text-[#C8A24A] font-medium">{valueChain[i]}</p>
+                  <p className="text-xs text-[--color-accent]">↓</p>
+                  <p className="text-sm text-[--color-accent] font-medium">{valueChain[i]}</p>
                 </div>
               ))}
             </div>

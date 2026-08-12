@@ -18,7 +18,7 @@ export default function SponsorsPage() {
         <Container narrow>
           <Reveal>
             <div className="text-center">
-              <span className="text-meta text-[#C8A24A] block mb-4">Partenariat</span>
+              <span className="text-meta text-[--color-accent] block mb-4">Partenariat</span>
               <h1 className="text-h1 text-[--color-fg] mb-4">Devenez partenaire</h1>
               <p className="text-body text-[--color-fg-muted] max-w-xl mx-auto">
                 Associez votre marque à une initiative culturelle, citoyenne et engagée.
@@ -37,7 +37,7 @@ export default function SponsorsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {sponsorReasons.map((reason) => (
                   <div key={reason} className="flex items-start gap-3 p-4 bg-[--color-surface] border border-[--color-border] rounded-lg">
-                    <Check size={16} className="text-[#C8A24A] shrink-0 mt-0.5" />
+                    <Check size={16} className="text-[--color-accent] shrink-0 mt-0.5" />
                     <span className="text-caption text-[--color-fg-muted]">{reason}</span>
                   </div>
                 ))}
@@ -144,20 +144,20 @@ export default function SponsorsPage() {
 
               <div className="space-y-3 mb-8">
                 <div className="flex items-start gap-3 text-sm text-[--color-fg-muted]">
-                  <MapPin size={16} className="text-[#C8A24A] shrink-0 mt-0.5" />
+                  <MapPin size={16} className="text-[--color-accent] shrink-0 mt-0.5" />
                   {cineclubContact.address}
                 </div>
                 {cineclubContact.phones.map((phone) => (
                   <div key={phone} className="flex items-center gap-3 text-sm text-[--color-fg-muted]">
-                    <Phone size={16} className="text-[#C8A24A] shrink-0" />
-                    <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className="hover:text-[#C8A24A] transition-colors">
+                    <Phone size={16} className="text-[--color-accent] shrink-0" />
+                    <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} className="hover:text-[--color-accent] transition-colors">
                       {phone}
                     </a>
                   </div>
                 ))}
                 <div className="flex items-center gap-3 text-sm text-[--color-fg-muted]">
-                  <Mail size={16} className="text-[#C8A24A] shrink-0" />
-                  <a href={`mailto:${cineclubContact.email}`} className="hover:text-[#C8A24A] transition-colors">
+                  <Mail size={16} className="text-[--color-accent] shrink-0" />
+                  <a href={`mailto:${cineclubContact.email}`} className="hover:text-[--color-accent] transition-colors">
                     {cineclubContact.email}
                   </a>
                 </div>

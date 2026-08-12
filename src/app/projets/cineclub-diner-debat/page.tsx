@@ -19,23 +19,23 @@ export default function CineclubMainPage() {
     <>
       {/* HERO */}
       <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0F382C]/15 via-[#0C0C0C] to-[#0C0C0C]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[--color-emerald]/10 via-[--color-bg] to-[--color-bg]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(31,77,30,0.12)_0%,transparent_60%)]" />
 
         <div className="relative z-10">
           <Container narrow>
             <Reveal>
               <div className="text-center">
-                <p className="text-meta text-[#C8A24A] mb-6">
+                <p className="text-meta text-[--color-accent] mb-6">
                   {cineclubContact.structure}
                 </p>
                 <h1 className="font-[family-name:var(--font-cormorant)] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium text-[--color-fg] leading-[1.05] mb-6">
                   {title}
                 </h1>
-                <p className="text-sm md:text-base font-medium tracking-[0.15em] uppercase text-[#C8A24A]/80 mb-4">
+                <p className="text-sm md:text-base font-medium tracking-[0.15em] uppercase text-[--color-accent]/80 mb-4">
                   {slogan}
                 </p>
-                <p className="text-meta text-[#164A3A] mb-8">{tagline}</p>
+                <p className="text-meta text-[var(--color-emerald-light)] mb-8">{tagline}</p>
                 <p className="text-base md:text-lg text-[--color-fg-muted] leading-relaxed max-w-2xl mx-auto mb-6">
                   {heroDescription}
                 </p>
@@ -57,11 +57,11 @@ export default function CineclubMainPage() {
       </section>
 
       {/* CONCEPT */}
-      <section className="section-py bg-[--color-surface] border-t border-[#0F382C]/15">
+      <section className="section-py bg-[--color-surface] border-t border-[--color-accent]/15">
         <Container narrow>
           <Reveal>
             <div className="text-center mb-8">
-              <span className="text-meta text-[#C8A24A] block mb-3">Le concept</span>
+              <span className="text-meta text-[--color-accent] block mb-3">Le concept</span>
               <h2 className="text-h2 text-[--color-fg]">Cinéma, dialogue et action</h2>
             </div>
           </Reveal>
@@ -75,7 +75,7 @@ export default function CineclubMainPage() {
               {concept.audiences.map((audience) => (
                 <span
                   key={audience}
-                  className="px-3 py-1.5 text-xs font-medium bg-[#0F382C]/15 border border-[#0F382C]/25 rounded-full text-[--color-fg-muted]"
+                  className="px-3 py-1.5 text-xs font-medium bg-[--color-accent]/15 border border-[--color-accent]/25 rounded-full text-[--color-fg-muted]"
                 >
                   {audience}
                 </span>
@@ -83,8 +83,8 @@ export default function CineclubMainPage() {
             </div>
           </Reveal>
           <Reveal delay={200}>
-            <div className="bg-[#0F382C]/10 border border-[#0F382C]/20 rounded-xl p-8 text-center">
-              <p className="text-base md:text-lg text-[#C8A24A] font-medium leading-relaxed font-[family-name:var(--font-cormorant)]">
+            <div className="bg-[--color-accent]/10 border border-[--color-accent]/20 rounded-xl p-8 text-center">
+              <p className="text-base md:text-lg text-[--color-accent] font-medium leading-relaxed font-[family-name:var(--font-cormorant)]">
                 {concept.closingStatement}
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function CineclubMainPage() {
             <div className="text-center mt-8">
               <Link
                 href="/projets/cineclub-diner-debat/deroulement"
-                className="inline-flex items-center gap-2 text-sm text-[#C8A24A] hover:text-[#D4B05C] transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
               >
                 Voir le déroulement du concept
                 <ArrowRight size={14} />
@@ -107,9 +107,9 @@ export default function CineclubMainPage() {
       <section className="section-py border-t border-[--color-border]">
         <Container narrow>
           <Reveal>
-            <span className="text-meta text-[#C8A24A] block mb-3">Le mot du promoteur</span>
+            <span className="text-meta text-[--color-accent] block mb-3">Le mot du promoteur</span>
             <h2 className="text-h2 text-[--color-fg] mb-2">{promoterWord.author}</h2>
-            <p className="text-xs text-[#9A7D3C] font-medium uppercase tracking-wider mb-8">
+            <p className="text-xs text-[--color-accent-muted] font-medium uppercase tracking-wider mb-8">
               {promoterWord.role}
             </p>
           </Reveal>

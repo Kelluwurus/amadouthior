@@ -3,15 +3,15 @@ import { siteConfig, mainNav } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-[--color-bg] border-t border-[--color-border] pt-12 pb-8">
+    <footer className="bg-[--color-surface] border-t border-[--color-border] pt-12 pb-8">
       <div className="max-w-6xl mx-auto px-6">
         {/* Top */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-10">
           <div>
-            <span className="font-[family-name:var(--font-cormorant)] text-xl text-[--color-fg] block mb-1">
+            <span className="font-[family-name:var(--font-cormorant)] text-xl font-semibold text-[--color-accent-dark] block mb-1">
               {siteConfig.name}
             </span>
-            <p className="text-caption text-[--color-fg-muted]">
+            <p className="text-caption">
               {siteConfig.subtitle}
             </p>
           </div>
@@ -20,7 +20,7 @@ export default function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-caption text-[--color-fg-muted] hover:text-[--color-accent] transition-colors"
+                className="text-caption text-[--color-fg-subtle] hover:text-[--color-accent] transition-colors"
               >
                 {link.label}
               </Link>

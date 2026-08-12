@@ -11,15 +11,15 @@ export default function FilmCard({ film }: FilmCardProps) {
   return (
     <Link
       href={`/oeuvre/${film.slug}`}
-      className="group block bg-[--color-surface] border border-[--color-border] rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[--color-border-accent] hover:shadow-[0_16px_48px_rgba(0,0,0,0.4)]"
+      className="group block bg-white border border-[--color-border] rounded-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-[--color-accent]/5"
     >
       {/* Image placeholder */}
-      <div className="relative h-48 bg-gradient-to-br from-[--color-surface-2] to-[--color-surface] flex items-center justify-center overflow-hidden">
-        <span className="font-[family-name:var(--font-cormorant)] text-xl text-[--color-fg-subtle] group-hover:text-[--color-fg-muted] transition-colors duration-500">
+      <div className="relative aspect-[3/4] bg-[--color-surface] flex items-center justify-center overflow-hidden">
+        <span className="font-[family-name:var(--font-cormorant)] text-xl text-[--color-fg-subtle] group-hover:text-[--color-accent] transition-colors duration-500 text-center px-4">
           {film.title}
         </span>
         {film.year && (
-          <div className="absolute top-3 right-3">
+          <div className="absolute top-3 left-3">
             <Badge variant="accent">{film.year}</Badge>
           </div>
         )}
@@ -27,14 +27,14 @@ export default function FilmCard({ film }: FilmCardProps) {
 
       {/* Content */}
       <div className="p-5">
-        <span className="text-meta text-[--color-accent] block mb-1.5">
+        <span className="text-meta block mb-2">
           {film.type}
         </span>
-        <h3 className="font-[family-name:var(--font-cormorant)] text-lg text-[--color-fg] mb-2">
+        <h3 className="font-[family-name:var(--font-cormorant)] text-lg font-medium text-[--color-fg] mb-2 group-hover:text-[--color-accent] transition-colors">
           {film.title}
         </h3>
         {film.synopsis && (
-          <p className="text-caption text-[--color-fg-muted] line-clamp-2 mb-3">
+          <p className="text-caption line-clamp-2 mb-3">
             {film.synopsis}
           </p>
         )}

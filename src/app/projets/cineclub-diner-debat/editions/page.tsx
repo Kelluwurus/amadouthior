@@ -32,7 +32,7 @@ export default function EditionsPage() {
         <Container narrow>
           <Reveal>
             <div className="text-center">
-              <span className="text-meta text-[#C8A24A] block mb-4">Archives & programmation</span>
+              <span className="text-meta text-[--color-accent] block mb-4">Archives & programmation</span>
               <h1 className="text-h1 text-[--color-fg] mb-4">Éditions</h1>
               <p className="text-body text-[--color-fg-muted] max-w-xl mx-auto">
                 Chaque édition est adossée à une Journée Internationale de l&apos;ONU
@@ -50,12 +50,12 @@ export default function EditionsPage() {
               <Reveal key={edition.year} delay={i * 100}>
                 <Link
                   href={`/projets/cineclub-diner-debat/editions/${edition.year}`}
-                  className="group block bg-[--color-surface] border border-[--color-border] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#0F382C]/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]"
+                  className="group block bg-[--color-surface] border border-[--color-border] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.3)]"
                 >
-                  <div className="h-2 bg-gradient-to-r from-[#0F382C] to-[#C8A24A]/50" />
+                  <div className="h-2 bg-gradient-to-r from-[var(--color-emerald)] to-[var(--color-accent)]/50" />
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="flex items-center gap-2 text-2xl font-[family-name:var(--font-cormorant)] text-[#C8A24A]">
+                      <span className="flex items-center gap-2 text-2xl font-[family-name:var(--font-cormorant)] text-[--color-accent]">
                         <Calendar size={16} />
                         {edition.year}
                       </span>
@@ -65,7 +65,7 @@ export default function EditionsPage() {
                     </div>
                     <h3 className="text-h3 text-[--color-fg] mb-2 text-lg">{edition.title}</h3>
                     {edition.theme && (
-                      <p className="text-xs text-[#C8A24A] font-medium mb-3">{edition.theme}</p>
+                      <p className="text-xs text-[--color-accent] font-medium mb-3">{edition.theme}</p>
                     )}
                     {edition.film && (
                       <p className="text-caption text-[--color-fg-muted] mb-4">
@@ -77,7 +77,7 @@ export default function EditionsPage() {
                         {edition.description}
                       </p>
                     )}
-                    <span className="inline-flex items-center gap-1.5 text-xs text-[#C8A24A] group-hover:gap-2.5 transition-all">
+                    <span className="inline-flex items-center gap-1.5 text-xs text-[--color-accent] group-hover:gap-2.5 transition-all">
                       Voir l&apos;édition <ArrowRight size={12} />
                     </span>
                   </div>

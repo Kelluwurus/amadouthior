@@ -28,10 +28,10 @@ export default function ProjetsPage() {
         <Reveal delay={100}>
           <Link
             href="/projets/cineclub-diner-debat"
-            className="group block bg-[--color-surface] border border-[--color-border] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[#0F382C]/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.4)]"
+            className="group block bg-[--color-surface] border border-[--color-border] rounded-xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-[--color-accent]/40 hover:shadow-[0_16px_48px_rgba(0,0,0,0.4)]"
           >
             {/* Top accent */}
-            <div className="h-1.5 bg-gradient-to-r from-[#0F382C] via-[#C8A24A] to-[#0F382C]" />
+            <div className="h-1.5 bg-gradient-to-r from-[var(--color-emerald)] via-[var(--color-accent)] to-[var(--color-emerald)]" />
 
             <div className="p-8 md:p-12">
               <div className="flex flex-col md:flex-row md:items-start justify-between gap-6">
@@ -40,30 +40,30 @@ export default function ProjetsPage() {
                   <h2 className="text-h2 text-[--color-fg] mb-3">
                     {cineclubProject.title}
                   </h2>
-                  <p className="text-meta text-[#C8A24A] mb-4">
+                  <p className="text-meta text-[--color-accent] mb-4">
                     {cineclubProject.slogan}
                   </p>
                   <p className="text-body text-[--color-fg-muted] leading-relaxed mb-6 max-w-xl">
                     {cineclubProject.heroDescription}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-[#C8A24A] group-hover:gap-3 transition-all duration-300">
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-[--color-accent] group-hover:gap-3 transition-all duration-300">
                     Découvrir CINECLUB
                     <ArrowRight size={16} />
                   </span>
                 </div>
 
                 {/* Visual */}
-                <div className="hidden md:flex flex-col items-center justify-center w-36 h-36 rounded-2xl bg-[#0F382C]/10 border border-[#0F382C]/20">
-                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[#C8A24A]/60 mb-1">
+                <div className="hidden md:flex flex-col items-center justify-center w-36 h-36 rounded-2xl bg-[--color-accent]/10 border border-[--color-accent]/20">
+                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[--color-accent]/60 mb-1">
                     CINÉMA
                   </span>
-                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[#C8A24A]/60 mb-1">
+                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[--color-accent]/60 mb-1">
                     DIALOGUE
                   </span>
-                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[#C8A24A]/60 mb-1">
+                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[--color-accent]/60 mb-1">
                     SOLIDARITÉ
                   </span>
-                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[#C8A24A]">
+                  <span className="font-[family-name:var(--font-cormorant)] text-sm text-[--color-accent]">
                     ACTION
                   </span>
                 </div>

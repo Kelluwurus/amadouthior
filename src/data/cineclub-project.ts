@@ -282,7 +282,7 @@ export const sponsorTiers: SponsorTier[] = [
   },
   {
     name: "Or",
-    colorHex: "#C8A24A",
+    colorHex: "#8C6B2A",
     description:
       "Visibilité maximale avec présence personnalisée et expérience VIP complète.",
     benefits: [
@@ -333,14 +333,14 @@ export const cineclubNav = [
 // --- Palette CineClub ---
 
 export const cineclubColors = {
-  green: "#0F382C",
-  greenLight: "#164A3A",
-  gold: "#C8A24A",
-  goldLight: "#D4B05C",
-  accentMuted: "#9A7D3C",
+  green: "#2C5E4A",
+  greenLight: "#3A7A60",
+  accent: "#B85C38",
+  accentDark: "#8C4028",
+  accentMuted: "#C4785A",
   silver: "#A8A8A8",
-  ivory: "#F8F5EF",
-  black: "#121212",
+  ivory: "#FAF7F2",
+  text: "#2C2118",
 };
 
 export type CineclubProject = typeof cineclubProject;

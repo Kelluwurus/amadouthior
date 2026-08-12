@@ -16,29 +16,26 @@ import { cineclubProject } from "@/data/cineclub-project";
 export default function HomePage() {
   return (
     <>
-      {/* ===== HERO — « L'Empreinte » ===== */}
-      <section className="grain relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[--color-bg] via-[--color-surface] to-[--color-bg]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_40%_30%,rgba(200,162,74,0.03)_0%,transparent_50%)]" />
-
+      {/* ===== HERO ===== */}
+      <section className="grain relative min-h-screen flex items-center justify-center overflow-hidden bg-[--color-bg]">
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <Reveal>
-            <p className="text-meta text-[--color-accent] mb-6">
+            <p className="text-meta mb-6">
               {identity.fullName.toUpperCase()} — {siteConfig.subtitle.toUpperCase()}
             </p>
           </Reveal>
           <Reveal delay={100}>
-            <h1 className="text-display text-[--color-fg] mb-6">
+            <h1 className="text-display mb-8">
               {siteConfig.heroMessage}
             </h1>
           </Reveal>
           <Reveal delay={200}>
-            <p className="text-body text-[--color-fg-muted] max-w-xl mx-auto mb-4 leading-relaxed text-lg">
+            <p className="text-body text-lg max-w-xl mx-auto mb-4 leading-relaxed">
               {siteConfig.secondaryTagline}
             </p>
           </Reveal>
           <Reveal delay={250}>
-            <p className="text-caption text-[--color-fg-subtle] italic max-w-md mx-auto mb-12">
+            <p className="text-caption italic text-[--color-fg-subtle] max-w-md mx-auto mb-14">
               {siteConfig.signature}
             </p>
           </Reveal>
@@ -56,15 +53,15 @@ export default function HomePage() {
       </section>
 
       {/* ===== INTRODUCTION ===== */}
-      <section className="section-py bg-[--color-surface]">
+      <section className="section-py bg-white">
         <Container narrow>
           <Reveal>
-            <p className="text-body text-[--color-fg-muted] leading-relaxed text-lg">
+            <p className="text-body text-lg leading-relaxed">
               {biographySections.formation.text} {biographySections.realisation.text.split(". Voir")[0]}.
             </p>
             <Link
               href="/parcours"
-              className="inline-flex items-center gap-2 mt-6 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+              className="inline-flex items-center gap-2 mt-6 text-sm font-medium text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
             >
               Lire la biographie
               <ArrowRight size={14} />
@@ -74,7 +71,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== ŒUVRES MAJEURES ===== */}
-      <section className="section-py">
+      <section className="section-py bg-[--color-bg]">
         <Container>
           <Reveal>
             <SectionHeader
@@ -82,7 +79,7 @@ export default function HomePage() {
               title="Œuvres majeures"
             />
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredFilms.slice(0, 4).map((film, i) => (
               <Reveal key={film.slug} delay={i * 100}>
                 <FilmCard film={film} />
@@ -93,7 +90,7 @@ export default function HomePage() {
             <div className="mt-10">
               <Link
                 href="/oeuvre"
-                className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
               >
                 Voir toute la filmographie
                 <ArrowRight size={14} />
@@ -104,7 +101,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== TIMELINE ===== */}
-      <section className="section-py bg-[--color-surface]">
+      <section className="section-py bg-white">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-16">
             <Reveal>
@@ -115,7 +112,7 @@ export default function HomePage() {
                 />
                 <Link
                   href="/parcours"
-                  className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
                 >
                   Parcours complet
                   <ArrowRight size={14} />
@@ -130,7 +127,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== TRANSMISSION ===== */}
-      <section className="section-py">
+      <section className="section-py bg-[--color-bg]">
         <Container narrow>
           <Reveal>
             <SectionHeader
@@ -152,7 +149,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== PROJET EN VEDETTE ===== */}
-      <section className="section-py border-t border-[#0F382C]/15">
+      <section className="section-py bg-white">
         <Container>
           <Reveal>
             <SectionHeader
@@ -164,21 +161,21 @@ export default function HomePage() {
           <Reveal delay={100}>
             <Link
               href="/projets/cineclub-diner-debat"
-              className="group block bg-[#0F382C]/8 border border-[#0F382C]/20 rounded-xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:border-[#C8A24A]/30"
+              className="group block bg-[--color-surface] border border-[--color-border] rounded-sm p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-[--color-accent]/30"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div className="flex-1">
                   <Badge variant="accent" className="mb-3">Nouveau projet</Badge>
-                  <p className="text-body text-[--color-fg-muted] leading-relaxed mb-4 max-w-xl">
+                  <p className="text-body leading-relaxed mb-4 max-w-xl">
                     {cineclubProject.heroDescription}
                   </p>
-                  <span className="inline-flex items-center gap-2 text-sm font-medium text-[#C8A24A] group-hover:gap-3 transition-all duration-300">
+                  <span className="inline-flex items-center gap-2 text-sm font-medium text-[--color-accent] group-hover:gap-3 transition-all duration-300">
                     Découvrir CINECLUB
                     <ArrowRight size={14} />
                   </span>
                 </div>
                 <div className="hidden md:block text-right">
-                  <span className="text-meta text-[#C8A24A]/60">
+                  <span className="text-meta text-[--color-fg-subtle]">
                     {cineclubProject.tagline}
                   </span>
                 </div>
@@ -189,7 +186,7 @@ export default function HomePage() {
       </section>
 
       {/* ===== ARCHIVES ===== */}
-      <section className="section-py bg-[--color-surface]">
+      <section className="section-py bg-[--color-bg]">
         <Container>
           <Reveal>
             <SectionHeader
@@ -199,12 +196,12 @@ export default function HomePage() {
             />
           </Reveal>
           <Reveal delay={100}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {["Photographies", "Tournages", "Affiches", "Presse"].map(
                 (cat) => (
                   <div
                     key={cat}
-                    className="aspect-square bg-[--color-surface-2] border border-[--color-border] rounded-lg flex items-center justify-center"
+                    className="aspect-square bg-[--color-surface] border border-[--color-border] rounded-sm flex items-center justify-center transition-all duration-300 hover:border-[--color-accent]/30 hover:shadow-sm"
                   >
                     <span className="text-caption text-[--color-fg-subtle]">
                       {cat}
@@ -216,7 +213,7 @@ export default function HomePage() {
             <div className="mt-8">
               <Link
                 href="/archives"
-                className="inline-flex items-center gap-2 text-sm text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[--color-accent] hover:text-[--color-accent-hover] transition-colors"
               >
                 Explorer les archives
                 <ArrowRight size={14} />
@@ -226,12 +223,13 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* ===== CONTACT ===== */}
-      <section className="section-py">
+      {/* ===== CTA FINAL ===== */}
+      <section className="section-py bg-white border-t border-[--color-border]">
         <Container narrow>
           <Reveal>
             <div className="text-center">
-              <p className="text-body text-[--color-fg-muted] mb-8 max-w-lg mx-auto">
+              <h2 className="text-h2 mb-4">Prolonger l&apos;histoire</h2>
+              <p className="text-body mb-8 max-w-lg mx-auto">
                 Vous souhaitez inviter Amadou Thior, organiser une projection,
                 une formation, une interview ou collaborer sur un projet ?
               </p>
