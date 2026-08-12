@@ -12,42 +12,39 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 50);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [pathname]);
+  useEffect(() => { setIsOpen(false); }, [pathname]);
 
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[--color-bg]/95 backdrop-blur-md border-b border-[--color-border] py-3 shadow-sm"
-          : "bg-transparent py-5"
+          ? "bg-[--color-bg]/95 backdrop-blur-sm border-b border-[--color-border] py-4"
+          : "py-6"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
+      <div className="max-w-5xl mx-auto px-6 flex items-center justify-between">
         <Link
           href="/"
-          className="font-[family-name:var(--font-cormorant)] text-lg md:text-xl font-semibold text-[--color-accent-dark] tracking-wide"
+          className="font-[family-name:var(--font-cormorant)] text-xl font-medium text-[--color-fg] tracking-wide"
         >
-          AMADOU THIOR
+          Amadou Thior
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Navigation principale">
-          {mainNav.map((link) => (
+        {/* Desktop */}
+        <nav className="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          {mainNav.filter(l => l.href !== "/").map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm transition-colors duration-300 ${
+              className={`text-sm transition-colors duration-200 ${
                 pathname === link.href
-                  ? "text-[--color-accent] font-medium"
-                  : "text-[--color-fg-muted] hover:text-[--color-accent]"
+                  ? "text-[--color-accent]"
+                  : "text-[--color-fg-muted] hover:text-[--color-fg]"
               }`}
             >
               {link.label}
@@ -62,51 +59,29 @@ export default function Navbar() {
           aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={isOpen}
         >
-          {isOpen ? <X size={22} /> : <Menu size={22} />}
+          {isOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
-      <div
-        className={`lg:hidden fixed inset-0 top-0 bg-[--color-bg]/98 backdrop-blur-lg z-40 transition-all duration-300 ${
-          isOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
-        }`}
-      >
-        <div className="flex items-center justify-between px-6 py-5">
-          <Link
-            href="/"
-            className="font-[family-name:var(--font-cormorant)] text-lg font-semibold text-[--color-accent-dark]"
-            onClick={() => setIsOpen(false)}
-          >
-            AMADOU THIOR
-          </Link>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="p-2 text-[--color-fg]"
-            aria-label="Fermer le menu"
-          >
-            <X size={22} />
-          </button>
-        </div>
-        <nav className="flex flex-col items-start px-6 pt-8 gap-6" aria-label="Navigation mobile">
-          {mainNav.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className={`text-xl font-[family-name:var(--font-cormorant)] transition-colors duration-300 ${
-                pathname === link.href
-                  ? "text-[--color-accent]"
-                  : "text-[--color-fg] hover:text-[--color-accent]"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+      {/* Mobile */}
+      {isOpen && (
+        <nav className="lg:hidden absolute top-full left-0 w-full bg-[--color-bg] border-b border-[--color-border] py-6 px-6">
+          <div className="flex flex-col gap-4">
+            {mainNav.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`text-base transition-colors ${
+                  pathname === link.href ? "text-[--color-accent]" : "text-[--color-fg]"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
         </nav>
-      </div>
+      )}
     </header>
   );
 }

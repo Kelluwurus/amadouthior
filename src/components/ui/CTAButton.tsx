@@ -15,19 +15,19 @@ export default function CTAButton({
   className = "",
   external = false,
 }: CTAButtonProps) {
-  const baseStyles =
-    "inline-flex items-center gap-2 px-7 py-3 text-sm font-medium rounded-sm transition-all duration-300 hover:-translate-y-0.5";
+  const base =
+    "inline-flex items-center gap-2 px-6 py-3 text-sm font-medium transition-all duration-300";
 
   const variants = {
     primary:
-      "bg-[--color-accent] text-white hover:bg-[--color-accent-hover] hover:shadow-md",
+      "bg-[--color-accent] text-white hover:bg-[--color-accent-hover]",
     secondary:
-      "border border-[--color-accent] text-[--color-accent] hover:bg-[--color-accent] hover:text-white",
+      "border border-[--color-fg] text-[--color-fg] hover:border-[--color-accent] hover:text-[--color-accent]",
     ghost:
-      "text-[--color-accent] hover:text-[--color-accent-hover] hover:bg-[--color-accent]/5",
+      "text-[--color-accent] hover:text-[--color-accent-hover]",
   };
 
-  const classes = `${baseStyles} ${variants[variant]} ${className}`;
+  const classes = `${base} ${variants[variant]} ${className}`;
 
   if (external) {
     return (

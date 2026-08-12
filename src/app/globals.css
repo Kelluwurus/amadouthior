@@ -4,40 +4,44 @@
    AMADOU THIOR — DESIGN SYSTEM
    
    Direction Artistique :
-   Claire · Élégante · Chaleureuse · Cinématographique · Éditoriale
+   Lumineuse · Chaleureuse · Éditoriale · Cinématographique
+   
+   Référence émotionnelle :
+   La terre du Sine après la lumière du soleil.
+   Le sable, les murs en terre, les paysages du Sine-Saloum.
+   Les textures naturelles et la photographie argentique.
    
    Palette :
-   - Ivoire / Écru (#FAF7F2) — Fond principal, respiration
-   - Terracotta (#B85C38) — Accent principal, chaleur des terres
-   - Terracotta foncé (#8C4028) — Titres, éléments actifs
-   - Sable / Beige (#F0EBE3) — Fonds secondaires, cartes
-   - Brun très foncé (#2C2118) — Texte principal
-   - Brun doux (#5C4A3A) — Texte secondaire
+   - Ivoire (#FDFBF7) — Fond principal, respiration, lumière
+   - Sable (#F3EDE4) — Surfaces, cartes, second plan
+   - Terre cuite (#C0653A) — Accent signature (sobre)
+   - Ocre doux (#D4A574) — Détails chaleureux
+   - Brun terreux (#3D2E22) — Texte principal, ancrage
+   - Brun moyen (#6B5744) — Texte secondaire
+   - Brun clair (#9E8E7E) — Éléments discrets
    
-   Ambiance :
-   Culturelle · Éditoriale · Artistique · Premium
-   Affiches = éléments visuels forts
-   Beaucoup d'espace blanc, interface qui respire
+   Principes :
+   - Le terracotta = accent + signature, jamais dominant
+   - Fonds clairs, grands espaces blancs
+   - Films et photographies au premier plan
+   - Interface minimaliste, contenu prioritaire
+   - Cinéma d'auteur, mémoire, territoire
    ============================================ */
 
 @theme inline {
-  /* --- Palette principale --- */
-  --color-bg: #FAF7F2;
-  --color-surface: #F0EBE3;
-  --color-surface-2: #E8E2D8;
-  --color-fg: #2C2118;
-  --color-fg-muted: #5C4A3A;
-  --color-fg-subtle: #8A7B6E;
-  --color-accent: #B85C38;
-  --color-accent-hover: #A04E2E;
-  --color-accent-muted: #C4785A;
-  --color-accent-dark: #8C4028;
-  --color-emerald: #2C5E4A;
-  --color-emerald-light: #3A7A60;
-  --color-border: #E0D8CC;
-  --color-border-accent: rgba(184, 92, 56, 0.2);
+  --color-bg: #FDFBF7;
+  --color-surface: #F3EDE4;
+  --color-surface-2: #EAE3D8;
+  --color-fg: #3D2E22;
+  --color-fg-muted: #6B5744;
+  --color-fg-subtle: #9E8E7E;
+  --color-accent: #C0653A;
+  --color-accent-hover: #A8552E;
+  --color-accent-muted: #D4A574;
+  --color-accent-dark: #8B4422;
+  --color-border: #E5DDD3;
+  --color-border-accent: rgba(192, 101, 58, 0.15);
 
-  /* --- Typography --- */
   --font-display: var(--font-cormorant);
   --font-body: var(--font-inter);
 }
@@ -48,9 +52,7 @@ html {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -64,99 +66,80 @@ body {
   font-family: var(--font-body), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-/* --- Typography Scale --- */
+/* --- Typographie ---
+   Cormorant Garamond : titres, citations, noms de films
+   Inter : interface, paragraphes, métadonnées
+*/
 .text-display {
   font-family: var(--font-display), serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
   font-weight: 300;
-  line-height: 1.08;
+  line-height: 1.1;
   letter-spacing: -0.01em;
-  color: var(--color-accent-dark);
 }
 
 .text-h1 {
   font-family: var(--font-display), serif;
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
   font-weight: 400;
-  line-height: 1.15;
-  color: var(--color-fg);
+  line-height: 1.2;
 }
 
 .text-h2 {
   font-family: var(--font-display), serif;
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-size: clamp(1.4rem, 3vw, 2rem);
   font-weight: 400;
-  line-height: 1.2;
-  color: var(--color-fg);
+  line-height: 1.25;
 }
 
 .text-h3 {
   font-family: var(--font-display), serif;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
   font-weight: 500;
-  line-height: 1.3;
-  color: var(--color-fg);
+  line-height: 1.35;
 }
 
 .text-body {
-  font-family: var(--font-body), sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.7;
-  color: var(--color-fg-muted);
+  line-height: 1.75;
 }
 
 .text-caption {
-  font-family: var(--font-body), sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--color-fg-muted);
 }
 
 .text-meta {
-  font-family: var(--font-body), sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   line-height: 1.4;
-  color: var(--color-accent);
 }
 
-/* --- Section Spacing (généreux) --- */
+/* --- Espacements (généreux, le site respire) --- */
 .section-py {
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
-  .section-py {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
-  }
+  .section-py { padding-top: 7rem; padding-bottom: 7rem; }
 }
 
 @media (min-width: 1024px) {
-  .section-py {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-  }
+  .section-py { padding-top: 9rem; padding-bottom: 9rem; }
 }
 
-/* --- Animations (douces, 400–600ms) --- */
+/* --- Animations (sobres, 400–500ms) --- */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
@@ -165,12 +148,12 @@ body {
 }
 
 .animate-fade-up {
-  animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: fadeUp 0.45s cubic-bezier(0.25, 1, 0.5, 1) forwards;
   opacity: 0;
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.45s ease-out forwards;
+  animation: fadeIn 0.4s ease-out forwards;
   opacity: 0;
 }
 
@@ -178,9 +161,8 @@ body {
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
-.delay-500 { animation-delay: 500ms; }
 
-/* --- Grain subtil (très léger sur fond clair) --- */
+/* --- Grain argentique (à peine perceptible) --- */
 .grain {
   position: relative;
 }
@@ -189,38 +171,26 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.02;
+  opacity: 0.018;
   pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-/* --- Focus (Accessibilité) --- */
+/* --- Focus --- */
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 1px;
 }
 
 /* --- Selection --- */
 ::selection {
-  background-color: rgba(184, 92, 56, 0.12);
+  background-color: rgba(192, 101, 58, 0.1);
   color: var(--color-fg);
 }
 
-/* --- Scrollbar --- */
-::-webkit-scrollbar {
-  width: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(184, 92, 56, 0.2);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(184, 92, 56, 0.35);
-}
+/* --- Scrollbar (discret) --- */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-fg-subtle); }

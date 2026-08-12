@@ -3,51 +3,32 @@ import { siteConfig, mainNav } from "@/content/site";
 
 export default function Footer() {
   return (
-    <footer className="bg-[--color-surface] border-t border-[--color-border] pt-12 pb-8">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Top */}
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-10">
+    <footer className="border-t border-[--color-border] pt-12 pb-8 mt-16">
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
           <div>
-            <span className="font-[family-name:var(--font-cormorant)] text-xl font-semibold text-[--color-accent-dark] block mb-1">
+            <span className="font-[family-name:var(--font-cormorant)] text-lg text-[--color-fg]">
               {siteConfig.name}
             </span>
-            <p className="text-caption">
+            <p className="text-caption text-[--color-fg-subtle] mt-0.5">
               {siteConfig.subtitle}
             </p>
           </div>
-          <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Navigation pied de page">
-            {mainNav.filter((l) => l.href !== "/").map((link) => (
+          <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Pied de page">
+            {mainNav.filter(l => l.href !== "/").map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-caption text-[--color-fg-subtle] hover:text-[--color-accent] transition-colors"
+                className="text-xs text-[--color-fg-subtle] hover:text-[--color-accent] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
         </div>
-
-        {/* Bottom */}
-        <div className="border-t border-[--color-border] pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-[--color-fg-subtle]">
-            © {new Date().getFullYear()} {siteConfig.name}. Tous droits réservés.
-          </p>
-          <div className="flex gap-6">
-            <Link
-              href="/distinctions"
-              className="text-xs text-[--color-fg-subtle] hover:text-[--color-accent] transition-colors"
-            >
-              Distinctions
-            </Link>
-            <Link
-              href="/collaborations"
-              className="text-xs text-[--color-fg-subtle] hover:text-[--color-accent] transition-colors"
-            >
-              Collaborations
-            </Link>
-          </div>
-        </div>
+        <p className="text-xs text-[--color-fg-subtle]">
+          © {new Date().getFullYear()} {siteConfig.name}
+        </p>
       </div>
     </footer>
   );

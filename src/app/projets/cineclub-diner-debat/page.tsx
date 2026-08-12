@@ -20,7 +20,7 @@ export default function CineclubMainPage() {
       {/* HERO */}
       <section className="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[--color-emerald]/10 via-[--color-bg] to-[--color-bg]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(31,77,30,0.12)_0%,transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(192,101,58,0.04)_0%,transparent_60%)]" />
 
         <div className="relative z-10">
           <Container narrow>
